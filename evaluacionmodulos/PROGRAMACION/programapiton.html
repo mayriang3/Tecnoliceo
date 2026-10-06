@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Programación en Python</title>
+
+   <link rel="stylesheet" href="/Estilos/piton.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>PROGRAMACIÓN EN PYTHON</h1>
+
+        <p>Cuestionario de conocimientos</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre los fundamentos de
+                programación en Python. Lee cuidadosamente cada pregunta y
+                selecciona una sola respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. ¿Cuál de las siguientes características describe mejor
+                    al lenguaje Python?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Es un lenguaje de bajo nivel, difícil de leer y
+                        utilizado únicamente para manipular directamente el
+                        hardware.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Es un lenguaje de alto nivel, interpretado y con una
+                        sintaxis sencilla y cercana al lenguaje humano.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Es un lenguaje exclusivo para diseñar páginas web,
+                        sin posibilidad de usarse en otro tipo de proyectos.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Es un lenguaje compilado que requiere generar un
+                        archivo ejecutable antes de poder ejecutarse.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        nombre = "Camila"<br>
+                        edad = 20
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué está ocurriendo en estas dos líneas?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. Se están creando dos variables, nombre y edad, y se
+                        les están asignando los valores "Camila" y 20.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. Se está comparando si nombre es igual a "Camila" y
+                        si edad es igual a 20.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. Se está definiendo una función llamada nombre que
+                        recibe el parámetro edad.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. El programa genera un error porque en Python no se
+                        pueden crear variables de texto y de número juntas.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        edad = input("¿Cuántos años tienes? ")<br>
+                        print(type(edad))
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué tipo de dato imprimirá este programa, sin importar
+                    el número que escriba el usuario?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. int, porque el usuario está escribiendo un número.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. str, porque la función input() siempre devuelve el
+                        valor como texto.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. float, porque cualquier dato ingresado por teclado
+                        se convierte automáticamente en decimal.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. bool, porque input() siempre evalúa si el dato
+                        ingresado es verdadero o falso.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        numeros = [10, 20, 30, 40]<br>
+                        print(numeros[1])
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué valor se mostrará en pantalla?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A. 10, porque es el primer valor de la lista.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B. 20, porque en Python el primer elemento de una lista
+                        ocupa el índice 0 y el segundo el índice 1.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C. 40, porque el número 1 indica el último elemento
+                        de la lista.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D. El programa genera un error porque las listas no
+                        pueden usar índices numéricos.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        for i in range(3):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Hola")
+                    </code>
+
+                    <br><br>
+
+                    ¿Cuántas veces se mostrará la palabra "Hola" en pantalla?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. Una vez.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. Dos veces.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. Tres veces.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. El programa se repite de manera infinita.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        contador = 0<br><br>
+
+                        while contador &lt; 3:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print(contador)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;contador = contador + 1
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué ocurrirá si se elimina la línea
+                    <code>contador = contador + 1</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. El programa mostrará únicamente el número 0 y
+                        terminará normalmente.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. El programa entrará en un bucle infinito, porque la
+                        condición contador &lt; 3 nunca dejará de cumplirse.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. El programa mostrará los números del 0 al 3 y se
+                        detendrá sin problema.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. El programa genera un error de sintaxis al eliminar
+                        esa línea.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        def sumar(a, b):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br><br>
+
+                        resultado = sumar(3, 4)<br>
+                        print(resultado)
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué se mostrará en pantalla?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. 7, porque la función sumar recibe los valores 3 y 4,
+                        los suma y devuelve el resultado.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. 34, porque Python une los dos números como si
+                        fueran texto.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. El programa genera un error porque las funciones no
+                        pueden recibir dos parámetros.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. No se muestra nada, porque la función sumar no
+                        tiene la instrucción print() en su interior.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. ¿Por qué es importante la indentación (los espacios al
+                    inicio de cada línea) dentro de un programa en Python?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. Porque en Python la indentación es solo un detalle
+                        estético que no afecta el funcionamiento del programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Porque Python utiliza la indentación para definir
+                        qué instrucciones pertenecen a un bloque, como el de un
+                        if, un for o una función.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. Porque la indentación reemplaza por completo la
+                        necesidad de usar paréntesis en las funciones.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. Porque sin indentación, Python convierte
+                        automáticamente el programa a otro lenguaje.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "B",
+                p2: "A",
+                p3: "B",
+                p4: "B",
+                p5: "C",
+                p6: "B",
+                p7: "A",
+                p8: "B"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Es un lenguaje de bajo nivel, difícil de leer y utilizado únicamente para manipular directamente el hardware.",
+                    B: "Es un lenguaje de alto nivel, interpretado y con una sintaxis sencilla y cercana al lenguaje humano.",
+                    C: "Es un lenguaje exclusivo para diseñar páginas web, sin posibilidad de usarse en otro tipo de proyectos.",
+                    D: "Es un lenguaje compilado que requiere generar un archivo ejecutable antes de poder ejecutarse."
+                },
+
+                p2: {
+                    A: "Se están creando dos variables, nombre y edad, y se les están asignando los valores \"Camila\" y 20.",
+                    B: "Se está comparando si nombre es igual a \"Camila\" y si edad es igual a 20.",
+                    C: "Se está definiendo una función llamada nombre que recibe el parámetro edad.",
+                    D: "El programa genera un error porque en Python no se pueden crear variables de texto y de número juntas."
+                },
+
+                p3: {
+                    A: "int, porque el usuario está escribiendo un número.",
+                    B: "str, porque la función input() siempre devuelve el valor como texto.",
+                    C: "float, porque cualquier dato ingresado por teclado se convierte automáticamente en decimal.",
+                    D: "bool, porque input() siempre evalúa si el dato ingresado es verdadero o falso."
+                },
+
+                p4: {
+                    A: "10, porque es el primer valor de la lista.",
+                    B: "20, porque en Python el primer elemento de una lista ocupa el índice 0 y el segundo el índice 1.",
+                    C: "40, porque el número 1 indica el último elemento de la lista.",
+                    D: "El programa genera un error porque las listas no pueden usar índices numéricos."
+                },
+
+                p5: {
+                    A: "Una vez.",
+                    B: "Dos veces.",
+                    C: "Tres veces.",
+                    D: "El programa se repite de manera infinita."
+                },
+
+                p6: {
+                    A: "El programa mostrará únicamente el número 0 y terminará normalmente.",
+                    B: "El programa entrará en un bucle infinito, porque la condición contador &lt; 3 nunca dejará de cumplirse.",
+                    C: "El programa mostrará los números del 0 al 3 y se detendrá sin problema.",
+                    D: "El programa genera un error de sintaxis al eliminar esa línea."
+                },
+
+                p7: {
+                    A: "7, porque la función sumar recibe los valores 3 y 4, los suma y devuelve el resultado.",
+                    B: "34, porque Python une los dos números como si fueran texto.",
+                    C: "El programa genera un error porque las funciones no pueden recibir dos parámetros.",
+                    D: "No se muestra nada, porque la función sumar no tiene la instrucción print() en su interior."
+                },
+
+                p8: {
+                    A: "Porque en Python la indentación es solo un detalle estético que no afecta el funcionamiento del programa.",
+                    B: "Porque Python utiliza la indentación para definir qué instrucciones pertenecen a un bloque, como el de un if, un for o una función.",
+                    C: "Porque la indentación reemplaza por completo la necesidad de usar paréntesis en las funciones.",
+                    D: "Porque sin indentación, Python convierte automáticamente el programa a otro lenguaje."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "Python es un lenguaje de alto nivel (cercano al lenguaje humano), interpretado (se " +
+                    "ejecuta línea por línea) y conocido por su sintaxis simple y legible. No es un lenguaje " +
+                    "de bajo nivel para manipular hardware (A); no está limitado únicamente al desarrollo web, " +
+                    "también se usa en ciencia de datos, automatización, inteligencia artificial, entre otros " +
+                    "(C); y no requiere generar un archivo ejecutable antes de correr, como sí ocurre con los " +
+                    "lenguajes compilados (D).",
+
+                p2: "Cada línea utiliza el signo = para asignar un valor a una variable: nombre recibe el " +
+                    "texto \"Camila\" y edad recibe el número 20. No se trata de una comparación, ya que para " +
+                    "comparar se usaría == en lugar de = (B); tampoco se está definiendo una función, pues no " +
+                    "se usa la palabra clave def (C); y Python sí permite crear variables de distintos tipos " +
+                    "sin ningún inconveniente (D).",
+
+                p3: "La función input() en Python siempre devuelve el dato ingresado por el usuario como una " +
+                    "cadena de texto (str), sin importar si la persona escribió letras o números. Por eso no " +
+                    "se convierte automáticamente en int (A) ni en float (C); y tampoco tiene relación con el " +
+                    "tipo bool, que representa valores verdadero o falso (D).",
+
+                p4: "En Python, los índices de una lista comienzan en 0, por lo que numeros[0] corresponde a " +
+                    "10 y numeros[1] corresponde a 20. Por eso A es incorrecta, ya que el índice 0 sería el " +
+                    "primer valor; C confunde el índice con la posición \"uno\" contando desde 1; y sí es " +
+                    "posible usar índices numéricos en una lista, por lo que D es falso.",
+
+                p5: "range(3) genera los valores 0, 1 y 2, es decir, tres valores en total, por lo que el " +
+                    "bucle for se ejecuta tres veces y la palabra \"Hola\" se imprime tres veces. No se " +
+                    "ejecuta una sola vez (A) ni dos veces (B); y al tratarse de un bucle for con un rango " +
+                    "definido, no se repite de manera infinita (D).",
+
+                p6: "Si se elimina la línea que incrementa el valor de contador, esta variable seguirá " +
+                    "siendo siempre 0, por lo que la condición contador &lt; 3 se mantendrá verdadera para " +
+                    "siempre y el bucle while nunca se detendrá, generando un bucle infinito. No se trata de " +
+                    "mostrar solo el 0 y terminar (A), ni de mostrar del 0 al 3 y detenerse (C); y eliminar " +
+                    "esa línea no genera ningún error de sintaxis (D), el programa sigue siendo válido, solo " +
+                    "que nunca termina.",
+
+                p7: "La función sumar recibe los valores 3 y 4 a través de los parámetros a y b, realiza la " +
+                    "operación a + b y devuelve el resultado mediante return, por lo que se imprime 7. No se " +
+                    "unen los números como texto porque son valores numéricos, no cadenas (B); las funciones " +
+                    "sí pueden recibir varios parámetros (C); y print(resultado) sí muestra el valor devuelto " +
+                    "por la función, aunque la función en sí no use print() internamente (D).",
+
+                p8: "En Python, a diferencia de otros lenguajes, la indentación no es solo estética: define " +
+                    "qué líneas pertenecen a un mismo bloque de código, como el cuerpo de un if, un for, un " +
+                    "while o una función. Por eso no es un simple detalle visual (A); no reemplaza el uso de " +
+                    "paréntesis en las funciones, que cumplen otro propósito (C); y tampoco convierte el " +
+                    "programa a otro lenguaje (D), solo organiza la estructura del código."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien los fundamentos de la programación en Python. 🐍";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

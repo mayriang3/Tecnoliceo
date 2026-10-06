@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Sintaxis de programación en C</title>
+
+    <link rel="stylesheet" href="/Estilos/sintaxissc.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>SINTAXIS DE PROGRAMACIÓN EN C</h1>
+
+        <p>Cuestionario de conocimientos</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre la sintaxis básica
+                del lenguaje C. Lee cuidadosamente cada pregunta y selecciona
+                una sola respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. Observa el siguiente programa en C:
+                    <br><br>
+
+                    <code>
+                        #include &lt;stdio.h&gt;<br><br>
+
+                        int main() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;printf("Hola mundo");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+                        }
+                    </code>
+
+                    <br><br>
+
+                    ¿Para qué sirve la línea <code>#include &lt;stdio.h&gt;</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Declara la función principal del programa, donde
+                        comienza la ejecución.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Incluye la biblioteca estándar de entrada y salida,
+                        necesaria para poder utilizar funciones como
+                        <code>printf</code> y <code>scanf</code>.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Finaliza la ejecución del programa y libera la
+                        memoria utilizada.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Declara una variable global llamada stdio que
+                        almacena texto.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. En el programa anterior, ¿qué representa la función
+                    <code>main()</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. Es una función opcional que solo se usa quando se
+                        necesita imprimir texto.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. Es el punto de entrada del programa: la ejecución
+                        siempre comienza dentro de esta función.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. Es el nombre que se le debe dar siempre a la
+                        primera variable declarada en el programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. Es una biblioteca externa que debe incluirse por
+                        separado antes de usarse.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. ¿Por qué es obligatorio colocar un punto y coma
+                    (<code>;</code>) al final de instrucciones como
+                    <code>printf("Hola mundo");</code> en C?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. Porque en C el punto y coma indica que la línea
+                        siguiente será un comentario.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. Porque el punto y coma marca el final de una
+                        instrucción, y sin él el compilador genera un error.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. Porque el punto y coma reemplaza a las llaves
+                        {} en cualquier bloque de código.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. Porque el punto y coma es opcional y solo afecta
+                        la velocidad de ejecución del programa.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. Dentro de un programa en C, ¿qué función cumplen las
+                    llaves <code>{ }</code> que aparecen después de
+                    <code>int main()</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A. Delimitan el inicio y el fin del bloque de
+                        instrucciones que pertenecen a esa función.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B. Indican que las instrucciones dentro de ellas se
+                        repetirán de forma indefinida.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C. Sirven únicamente para declarar comentarios dentro
+                        del programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D. Son opcionales y pueden eliminarse sin que el
+                        programa cambie su comportamiento.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. Observa el siguiente fragmento de código:
+                    <br><br>
+
+                    <code>
+                        int edad;<br>
+                        float promedio;<br>
+                        char inicial;
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué están representando estas tres líneas?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. La declaración de tres variables con distintos
+                        tipos de datos: entero, decimal y carácter.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. Tres funciones distintas que el programa ejecutará
+                        automáticamente al iniciar.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. Tres comentarios que el compilador ignora por
+                        completo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. Tres bibliotecas que deben incluirse antes de usar
+                        cualquier variable.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        int numero;<br>
+                        scanf("%d", &amp;numero);
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué hace la función <code>scanf</code> en este fragmento?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. Muestra en pantalla el valor almacenado en la
+                        variable numero.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. Lee un valor ingresado por el usuario y lo almacena
+                        en la variable numero.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. Declara la variable numero como un tipo de dato
+                        decimal.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. Elimina el valor de la variable numero de la
+                        memoria del programa.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        // Este programa calcula el área de un cuadrado<br>
+                        int lado = 4;<br>
+                        /* La siguiente línea<br>
+                        &nbsp;&nbsp;calcula el área */<br>
+                        int area = lado * lado;
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué función cumplen las líneas que comienzan con
+                    <code>//</code> y las que están entre <code>/*</code> y
+                    <code>*/</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. Son instrucciones que el programa ejecuta antes que
+                        cualquier otra línea del código.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. Son comentarios que el compilador ignora; sirven
+                        únicamente para explicar el código a quien lo lee.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. Son variables especiales utilizadas para almacenar
+                        texto largo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. Son obligatorias en cada línea de un programa en C
+                        para que este pueda compilarse.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        int edad = 20;<br><br>
+
+                        if (edad == 18) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;printf("Tiene 18 anios");<br>
+                        }
+                    </code>
+
+                    <br><br>
+
+                    Si en lugar de <code>edad == 18</code> se escribe por
+                    error <code>edad = 18</code>, ¿qué problema de sintaxis se
+                    presenta?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. Ningún problema, ambas expresiones significan
+                        exactamente lo mismo en C.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Se estaría usando el operador de asignación (=) en
+                        lugar del operador de comparación (==), lo cual
+                        cambia el valor de edad en vez de compararlo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. El programa no compilaría bajo ninguna
+                        circunstancia y mostraría un error inmediato.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. Se estaría declarando una nueva variable llamada
+                        18 dentro del if.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "B",
+                p2: "B",
+                p3: "B",
+                p4: "A",
+                p5: "A",
+                p6: "B",
+                p7: "B",
+                p8: "B"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Declara la función principal del programa, donde comienza la ejecución.",
+                    B: "Incluye la biblioteca estándar de entrada y salida, necesaria para poder utilizar funciones como printf y scanf.",
+                    C: "Finaliza la ejecución del programa y libera la memoria utilizada.",
+                    D: "Declara una variable global llamada stdio que almacena texto."
+                },
+
+                p2: {
+                    A: "Es una función opcional que solo se usa cuando se necesita imprimir texto.",
+                    B: "Es el punto de entrada del programa: la ejecución siempre comienza dentro de esta función.",
+                    C: "Es el nombre que se le debe dar siempre a la primera variable declarada en el programa.",
+                    D: "Es una biblioteca externa que debe incluirse por separado antes de usarse."
+                },
+
+                p3: {
+                    A: "Porque en C el punto y coma indica que la línea siguiente será un comentario.",
+                    B: "Porque el punto y coma marca el final de una instrucción, y sin él el compilador genera un error.",
+                    C: "Porque el punto y coma reemplaza a las llaves {} en cualquier bloque de código.",
+                    D: "Porque el punto y coma es opcional y solo afecta la velocidad de ejecución del programa."
+                },
+
+                p4: {
+                    A: "Delimitan el inicio y el fin del bloque de instrucciones que pertenecen a esa función.",
+                    B: "Indican que las instrucciones dentro de ellas se repetirán de forma indefinida.",
+                    C: "Sirven únicamente para declarar comentarios dentro del programa.",
+                    D: "Son opcionales y pueden eliminarse sin que el programa cambie su comportamiento."
+                },
+
+                p5: {
+                    A: "La declaración de tres variables con distintos tipos de datos: entero, decimal y carácter.",
+                    B: "Tres funciones distintas que el programa ejecutará automáticamente al iniciar.",
+                    C: "Tres comentarios que el compilador ignora por completo.",
+                    D: "Tres bibliotecas que deben incluirse antes de usar cualquier variable."
+                },
+
+                p6: {
+                    A: "Muestra en pantalla el valor almacenado en la variable numero.",
+                    B: "Lee un valor ingresado por el usuario y lo almacena en la variable numero.",
+                    C: "Declara la variable numero como un tipo de dato decimal.",
+                    D: "Elimina el valor de la variable numero de la memoria del programa."
+                },
+
+                p7: {
+                    A: "Son instrucciones que el programa ejecuta antes que cualquier otra línea del código.",
+                    B: "Son comentarios que el compilador ignora; sirven únicamente para explicar el código a quien lo lee.",
+                    C: "Son variables especiales utilizadas para almacenar texto largo.",
+                    D: "Son obligatorias en cada línea de un programa en C para que este pueda compilarse."
+                },
+
+                p8: {
+                    A: "Ningún problema, ambas expresiones significan exactamente lo mismo en C.",
+                    B: "Se estaría usando el operador de asignación (=) en lugar del operador de comparación (==), lo cual cambia el valor de edad en vez de compararlo.",
+                    C: "El programa no compilaría bajo ninguna circunstancia y mostraría un error inmediato.",
+                    D: "Se estaría declarando una nueva variable llamada 18 dentro del if."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "La línea #include &lt;stdio.h&gt; incluye la biblioteca estándar de entrada y salida " +
+                    "(standard input/output), que contiene funciones como printf y scanf necesarias para " +
+                    "mostrar o leer información. No declara la función principal (A), eso lo hace int " +
+                    "main(); no finaliza el programa (C), eso corresponde a return; y no declara ninguna " +
+                    "variable (D), ya que stdio.h es una biblioteca, no un identificador de variable.",
+
+                p2: "La función main() es el punto de entrada obligatorio de todo programa en C: la " +
+                    "ejecución siempre comienza dentro de ella, sin importar en qué parte del archivo estén " +
+                    "escritas otras funciones. No es opcional (A); no se refiere a una variable (C); y no es " +
+                    "una biblioteca externa, sino una función que el propio programador define (D).",
+
+                p3: "En C, el punto y coma marca el final de cada instrucción; si se omite, el compilador " +
+                    "interpreta que la instrucción continúa en la siguiente línea y genera un error de " +
+                    "sintaxis. No indica un comentario (A); no reemplaza a las llaves, que cumplen una " +
+                    "función distinta de delimitar bloques (C); y no es opcional, es obligatorio para que el " +
+                    "programa compile correctamente (D).",
+
+                p4: "Las llaves { } delimitan el inicio y el fin de un bloque de código, como el cuerpo de " +
+                    "la función main(), agrupando todas las instrucciones que pertenecen a ese bloque. No " +
+                    "indican repetición indefinida, eso lo haría un bucle (B); no sirven para declarar " +
+                    "comentarios, que en C se escriben con // o /* */ (C); y no son opcionales, sin ellas el " +
+                    "programa no compilaría (D).",
+
+                p5: "Las tres líneas declaran variables indicando su tipo de dato: int para números enteros, " +
+                    "float para números decimales y char para un solo carácter. No son funciones (B); no son " +
+                    "comentarios, ya que el compilador sí las procesa (C); y no son bibliotecas, las " +
+                    "bibliotecas se incluyen con #include, no declarando variables (D).",
+
+                p6: "La función scanf se utiliza para leer un valor ingresado por el usuario desde el " +
+                    "teclado y almacenarlo en la variable indicada, en este caso numero. No muestra valores " +
+                    "en pantalla, esa es la función de printf (A); no declara el tipo de la variable, eso ya " +
+                    "se hizo antes con int numero (C); y no elimina datos de la memoria (D).",
+
+                p7: "Tanto // como /* */ se utilizan para escribir comentarios dentro del código, los cuales " +
+                    "el compilador ignora por completo y sirven únicamente como explicación para quien lee " +
+                    "el programa. No son instrucciones que se ejecuten (A); no son variables (C); y no son " +
+                    "obligatorios para que el programa compile, son completamente opcionales (D).",
+
+                p8: "En C, el signo = es el operador de asignación y el signo == es el operador de " +
+                    "comparación; si se escribe edad = 18 dentro del if, en lugar de comparar se le asignaría " +
+                    "el valor 18 a la variable edad, lo cual cambia el comportamiento esperado del programa. " +
+                    "Por eso no son expresiones equivalentes (A); ese error no impide que el programa " +
+                    "compile en la mayoría de los casos (C); y tampoco se está declarando ninguna variable " +
+                    "llamada 18, ya que los nombres de variables no pueden comenzar con un número (D)."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien la sintaxis básica del lenguaje C.";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

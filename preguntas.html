@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas frecuentes | Tecnoliceo</title>
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Estilos/preguntas_frecuentes.css">
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    
+</head>
+<body>
+    <header>
+        <a href="index.html">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+            <h1>TecnoLiceo</h1>
+        </div>
+        </a>
+
+        <section class="botones_principales">
+            <a href="index.html"><button class="botonn">Inicio</button></a>
+            <a href="info.html"><button class="botonn">Información general</button></a>
+            <a href="material.html"><button class="botonn">Material de Estudio</button></a>
+            <a href="preguntas.html"><button class="botonn">Preguntas Frecuentes</button></a>
+        </section>
+    </header>
+
+    <section class="faq-hero">
+        <h1>Preguntas frecuentes <br>sobre la <em>modalidad</em></h1>
+        <p>Respuestas basadas en encuestas recientes.</p>
+    </section>
+
+<main class="faq">
+
+    <div class="datos">
+        <div class="dato"><b>98</b><span>encuestados</span></div>
+        <div class="dato"><b>3.69</b><span>experiencia / 5</span></div>
+        <div class="dato"><b>79%</b><span>quiere una página guía</span></div>
+        <div class="dato"><b>4</b><span>grados consultados</span></div>
+    </div>
+
+    <!-- Chat de preguntas frecuentes (reemplaza los grupos de preguntas anteriores) -->
+    <section class="fc-chat">
+        <div class="fc-cabecera">
+            <img class="fc-avatar-grande" src="/img/bot.svg" alt="Asistente TecnoLiceo">
+            <div>
+                <strong>Asistente TecnoLiceo</strong>
+                <span><i class="fc-punto"></i> En línea</span>
+            </div>
+        </div>
+        <div id="fc-mensajes">
+            <div class="fc-fila">
+                <img class="fc-avatar" src="/img/bot.svg" alt="">
+                <div class="fc-burbuja fc-bot">¡Hola! Soy el asistente de TecnoLiceo 👋 Toca una pregunta o escribe la tuya.</div>
+            </div>
+        </div>
+        <div class="fc-entrada">
+            <input id="fc-texto" type="text" placeholder="Escribe tu pregunta..." autocomplete="off">
+            <button id="fc-enviar">Enviar</button>
+        </div>
+    </section>
+
+</main>
+
+    <footer>
+        <h2>TecnoLiceo</h2>
+        <p>
+            Plataforma informativa con módulos educativos
+            sobre la Modalidad Técnica en Informática.
+        </p>
+        <p class="footer-copy">
+            © 2026 - Institución Educativa Liceo Tame
+        </p>
+    </footer>
+<script src="/js/chat.js"></script>
+</body>
+</html>

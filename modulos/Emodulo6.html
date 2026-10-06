@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 6. Introducción a Arduino y Arduino IDE | TecnoLiceo</title>
+
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+        <h1>TecnoLiceo</h1>
+    </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 6. Introducción a Arduino y Arduino IDE</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/ELECTRONICA/Arduino.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+
+<main class="mod">
+
+    <!-- ==================== PORTADA ==================== -->
+
+    <section class="portada">
+        <span class="pill">Modulo 6</span>
+
+        <h1>Introducción a Arduino y Arduino IDE</h1>
+
+        <span class="pill">Electrónica</span>
+    </section>
+
+
+    <!-- ==================== ¿QUÉ ES ARDUINO? ==================== -->
+
+    <section class="bloque">
+        <h2>¿Qué es Arduino?</h2>
+
+        <p>
+            Arduino es una plataforma de desarrollo electrónico de código
+            abierto que combina hardware y software. Integra una placa
+            programable con el entorno Arduino IDE para crear proyectos
+            interactivos. Es ideal para educación, robótica y automatización, y
+            es fácil de usar tanto para principiantes como para profesionales.
+        </p>
+    </section>
+
+
+    <!-- ==================== ARDUINO IDE ==================== -->
+
+    <section class="bloque">
+
+        <h2>¿Qué es Arduino IDE?</h2>
+
+        <p>
+            Arduino IDE (Entorno de Desarrollo Integrado) es un software
+            gratuito y de código abierto diseñado específicamente para
+            programar placas Arduino. Permite escribir, editar y organizar el
+            código de manera sencilla, con una interfaz intuitiva accesible
+            tanto para principiantes como para usuarios avanzados.
+        </p>
+
+        <h3 class="sub">Funciones principales</h3>
+
+        <p>
+            El Arduino IDE ofrece cuatro funciones esenciales:
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Escribir</h4>
+                <p>Escribir código en lenguaje C/C++ simplificado.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Compilar</h4>
+                <p>Compilar programas para verificar errores de sintaxis.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Cargar</h4>
+                <p>Cargar el código directamente a la placa Arduino mediante USB.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Depurar</h4>
+                <p>Depurar errores a través del monitor serial integrado.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">Control y aplicaciones</h3>
+
+        <p>
+            Con Arduino IDE puedes controlar una gran variedad de dispositivos
+            electrónicos: encender y apagar luces LED, manejar motores y
+            servos, leer datos de sensores de temperatura, luz, humedad y
+            distancia, y automatizar procesos completos en proyectos de
+            robótica y electrónica.
+        </p>
+
+    </section>
+
+
+    <!-- ==================== COMPONENTES DE LA PLACA ==================== -->
+
+    <section class="bloque">
+
+        <h2>Componentes de la placa Arduino</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Hardware</h4>
+                <ul class="lista">
+                    <li><strong>Microcontrolador:</strong> el cerebro de la placa.</li>
+                    <li><strong>Pines digitales:</strong> ON/OFF.</li>
+                    <li><strong>Pines analógicos:</strong> valores de 0 a 1023.</li>
+                    <li><strong>Puerto USB:</strong> para programar y alimentar la placa.</li>
+                </ul>
+            </article>
+
+            <article class="ej">
+                <h4>Controles</h4>
+                <ul class="lista">
+                    <li><strong>Botón Reset:</strong> reinicia el programa.</li>
+                    <li><strong>Regulador de voltaje:</strong> protege el circuito de sobrecargas eléctricas.</li>
+                </ul>
+            </article>
+
+            <article class="ej">
+                <h4>LED pin 13</h4>
+                <p>
+                    LED integrado en el pin 13 para pruebas rápidas. Ideal para
+                    verificar el funcionamiento del programa sin componentes
+                    externos.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== FUNCIONES DE ARDUINO ==================== -->
+
+    <section class="bloque">
+
+        <h2>Funciones principales de Arduino</h2>
+
+        <ul class="lista">
+            <li>Leer datos de sensores (temperatura, luz, humedad, distancia).</li>
+            <li>Controlar actuadores (LEDs, motores, relés).</li>
+            <li>Procesar información y tomar decisiones lógicas.</li>
+            <li>Comunicarse con otros dispositivos y módulos.</li>
+            <li>Automatizar procesos repetitivos de forma eficiente.</li>
+            <li>Crear prototipos rápidos de proyectos electrónicos.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== ESTRUCTURA BÁSICA ==================== -->
+
+    <section class="bloque">
+
+        <h2>Estructura básica de un programa Arduino</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>01 · setup()</h4>
+
+                <div class="cod">
+                    <code>
+void setup() {
+
+}
+                    </code>
+                </div>
+
+                <p>
+                    Se ejecuta una sola vez al iniciar el programa. Aquí se
+                    configuran los pines, se inician comunicaciones y se definen
+                    los parámetros iniciales del sistema antes de entrar al
+                    bucle principal.
+                </p>
+            </article>
+
+            <article class="ej">
+                <h4>02 · loop()</h4>
+
+                <div class="cod">
+                    <code>
+void loop() {
+
+}
+                    </code>
+                </div>
+
+                <p>
+                    Se ejecuta continuamente en bucle infinito. Contiene la
+                    lógica principal del programa: leer sensores, controlar
+                    actuadores, procesar datos y tomar decisiones de forma
+                    repetida.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLO PRÁCTICO ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo práctico: parpadeo de LED</h2>
+
+        <p>
+            El programa Blink es el ejemplo más básico en Arduino. Configura el
+            pin 13 como salida para controlar el LED integrado.
+        </p>
+
+        <div class="cod">
+            <code>
+void setup() {
+    pinMode(13, OUTPUT);     // Pin 13 como salida
+}
+
+void loop() {
+    digitalWrite(13, HIGH);  // Enciende LED
+    delay(1000);             // Espera 1 segundo
+    digitalWrite(13, LOW);   // Apaga LED
+    delay(1000);             // Espera 1 segundo
+}
+            </code>
+        </div>
+
+        <div class="nota">
+            <p>
+                El programa enciende y apaga el LED repetidamente cada segundo,
+                demostrando el ciclo continuo del loop().
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== PASOS PARA PROGRAMAR ==================== -->
+
+    <section class="bloque">
+
+        <h2>Pasos para programar Arduino</h2>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Instalar Arduino IDE</h4>
+                <p>Descárgalo desde arduino.cc.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Conectar la placa</h4>
+                <p>Conecta la placa Arduino con un cable USB.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Escribir el código</h4>
+                <p>Abre Arduino IDE y escribe el código.</p>
+            </article>
+
+            <article class="paso c4">
+                <span class="num">4</span>
+                <h4>Seleccionar la placa</h4>
+                <p>Elige el modelo de placa en Herramientas → Placa.</p>
+            </article>
+
+            <article class="paso c1">
+                <span class="num">5</span>
+                <h4>Seleccionar el puerto</h4>
+                <p>Elige el puerto COM correcto en Herramientas → Puerto.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">6</span>
+                <h4>Verificar el código</h4>
+                <p>Presiona el botón ✓ para verificar el código.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">7</span>
+                <h4>Cargar el programa</h4>
+                <p>Presiona el botón → para cargar el programa a la placa.</p>
+            </article>
+
+            <article class="paso c4">
+                <span class="num">8</span>
+                <h4>Observar el resultado</h4>
+                <p>Observa el funcionamiento del programa.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== APLICACIONES REALES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Aplicaciones reales de Arduino</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Domótica y robótica</h4>
+                <p>Control de luces, temperatura y seguridad en el hogar. Robots móviles y brazos robóticos programados con Arduino para automatización.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Agricultura y transporte</h4>
+                <p>Sistemas de riego automático inteligente y semáforos programables. Arduino optimiza procesos en campo y vías urbanas con sensores.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Salud, arte y educación</h4>
+                <p>Monitores de signos vitales, instalaciones artísticas interactivas y proyectos STEM educativos.</p>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p>¡Infinitas posibilidades creativas!</p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== ERRORES COMUNES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Errores comunes y soluciones</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej mal">
+                <h4>Puerto incorrecto</h4>
+                <p><b>Solución:</b> verificar el Administrador de dispositivos.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>Placa mal seleccionada</h4>
+                <p><b>Solución:</b> confirmar el modelo exacto de la placa.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>Conexiones incorrectas</h4>
+                <p><b>Solución:</b> revisar el diagrama del circuito.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>Olvidar cargar el código</h4>
+                <p><b>Solución:</b> presionar el botón de carga (→).</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>Errores de sintaxis</h4>
+                <p><b>Solución:</b> revisar los puntos y comas y las llaves.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>Cable USB defectuoso</h4>
+                <p><b>Solución:</b> probar con otro cable.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== CONCLUSIÓN ==================== -->
+
+    <section class="bloque">
+
+        <h2>Conclusión</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej bien">
+                <h4>Beneficios</h4>
+                <p>Fácil de aprender y usar. Comunidad global activa y colaborativa con miles de proyectos documentados.</p>
+            </article>
+
+            <article class="ej bien">
+                <h4>Posibilidades</h4>
+                <p>Infinitas posibilidades creativas para proyectos educativos, robóticos y de automatización.</p>
+            </article>
+
+            <article class="ej bien">
+                <h4>Código abierto</h4>
+                <p>Hardware y software de código abierto, bajo costo y gran accesibilidad para todos.</p>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p><strong>Mensaje final:</strong> ¡el límite es tu imaginación!</p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== VIDEO ==================== -->
+
+    <section class="bloque video">
+
+        <h2>Video</h2>
+
+        <div class="marco">
+            <!-- Pega aquí el enlace del video en src (formato embed de YouTube) -->
+            <iframe src="" title="Video del módulo 14" allowfullscreen></iframe>
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+    <h2>TecnoLiceo</h2>
+
+    <p>
+        Plataforma informativa con módulos educativos sobre la
+        Modalidad Técnica en Informática.
+    </p>
+
+    <p class="footer-copy">
+        © 2026 - Institución Educativa Liceo Tame
+    </p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 4. Programación en Python | TecnoLiceo</title>
+  <link rel="icon" type="image/png" href="/img/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Estilos/styles.css">
+  <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+    <h1>TecnoLiceo</h1>
+  </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 4. Programación en python</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/PROGRAMACION/programapiton.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+
+</header>
+
+<main class="mod">
+
+  <section class="portada">
+
+    <span class="pill">Modulo 4</span>
+
+    <h1>Programación en python</h1>
+
+    <span class="pill">Programación</span>
+
+  </section>
+
+  <section class="bloque">
+    <h2>¿Qué es python y para qué se usa?</h2>
+
+    <p>
+      Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Destaca por su sintaxis clara y legible, similar al inglés, lo que facilita su aprendizaje. Se emplea en inteligencia artificial, ciencia de datos, desarrollo web y automatización de tareas.
+    </p>
+
+  </section>
+
+  <section class="bloque">
+
+    <h2>Cómo funciona</h2>
+
+    <p>
+      Python funciona mediante un proceso de interpretación en dos pasos. Primero, un programa toma tu archivo de texto y lo convierte en instrucciones compactas (bytecode); segundo, una máquina de software (la Máquina Virtual de Python) lee esas instrucciones y le ordena al procesador de tu computadora real que realice las acciones.
+    </p>
+
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span><p><strong>Traducción en tiempo real:</strong> No necesitas transformar tu programa en una aplicación instalable antes de usarlo; Python traduce y ejecuta el código al mismo tiempo mientras el programa está corriendo.</p></div>
+
+      <div class="paso c2"><span class="num">02</span><p><strong>Gestión automática de memoria:</strong> Python incluye un "recolector de basura" interno que limpia y libera la memoria de la computadora automáticamente cuando dejas de usar un dato, evitando que tú tengas que hacerlo a mano.</p></div>
+
+      <div class="paso c3"><span class="num">03</span><p><strong>Lectura secuencial:</strong> El sistema lee tu documento de arriba hacia abajo; si encuentra un error en la mitad del código, todo lo anterior se ejecutará correctamente y el programa se detendrá justo en la línea que tiene la falla.</p></div>
+    </div>
+
+  </section>
+
+  <section class="bloque">
+
+    <h2>Sintaxis básica</h2>
+
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span>
+
+        <p>
+          <strong>Variables sin símbolos raros:</strong> Para guardar un dato no necesitas usar palabras técnicas ni símbolos de dinero; simplemente escribes el nombre que tú quieras, el signo de igual y el valor.
+        </p>
+
+        <pre class="cod">
+          <code>nombre = "Juan" <br> edad = 15</code>
+        </pre>
+
+        <p class="pie">
+          Aquí simplemente se escribe el nombre de la variable, el signo = y el dato que queremos guardar.
+        </p>
+
+      </div>
+
+      <div class="paso c4"><span class="num">02</span>
+        <p>
+          <strong>La indentación es obligatoria:</strong> En lugar de usar llaves {} para agrupar bloques de código (como en los bloques if o bucles), Python te obliga a usar cuatro espacios de separación (sangría) al inicio de la línea para saber qué instrucciones van dentro de otras.
+        </p>
+
+        <pre class="cod">
+          <code>edad = 18 <br> if edad &gt;= 18: <br> print("Eres mayor de edad")</code>
+        </pre>
+
+        <p class="pie">
+          En este ejemplo, los cuatro espacios antes de print() indican que esa instrucción pertenece al bloque del if. Sin la indentación, Python produciría un error.
+        </p>
+
+      </div>
+      
+      <div class="paso c3"><span class="num">03</span>
+        <p><strong>Texto entre comillas y comentarios con '#':</strong> Todo el texto común y corriente que quieras mostrar en pantalla debe ir cerrado entre comillas (" "), y si quieres escribir comentarios para ti mismo que Python ignore, debes empezar la línea con el símbolo numeral (#).</p>
+        <pre class="cod"><code># Este es un comentario
+print("Hola, mundo")
+print("Estoy aprendiendo Python")</code></pre>
+        <p class="pie">Aquí, lo que empieza con # es un comentario y Python lo ignora. El texto dentro de " " se muestra en pantalla.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Ejemplos</h2>
+    <div class="tarjetas">
+      <article class="ej">
+        <h4>Mostrar un mensaje</h4>
+        <p>En Python, mostrar un mensaje consiste en utilizar la función print() para presentar información en la pantalla. Esta información puede ser un texto, un número o incluso el contenido de una variable. Es una de las instrucciones más sencillas y sirve para que el programa pueda comunicar resultados o mensajes al usuario.</p>
+        <pre class="cod"><code>print("Hola, mundo")
+print("Bienvenido a Python")</code></pre>
+      </article>
+      <article class="ej">
+        <h4>Usar variables</h4>
+        <p>Las variables son espacios donde el programa puede guardar información para utilizarla posteriormente. En Python, crear una variable es sencillo: se escribe un nombre, el signo = y el valor que queremos almacenar. Las variables pueden guardar diferentes tipos de datos, como textos, números o valores booleanos.</p>
+        <pre class="cod"><code>nombre = "Carlos"
+edad = 15
+
+print(nombre)
+print(edad)</code></pre>
+      </article>
+      <article class="ej">
+        <!-- En el PDF esta tarjeta no tiene título ni descripción -->
+        <h4>[Título]</h4>
+        <p>[Descripción]</p>
+        <pre class="cod"><code>edad = 18
+
+if edad &gt;= 18:
+    print("Eres mayor de edad")</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Errores comunes</h2>
+    <div class="tarjetas">
+      <article class="ej">
+        <h4>SyntaxError</h4>
+        <p>Ocurre cuando el código no cumple las reglas de escritura de Python, por ejemplo, cuando falta un paréntesis o :.</p>
+        <div class="mal"><b>Código incorrecto:</b><pre class="cod"><code>if edad &gt;= 18
+print("Mayor de edad")</code></pre></div>
+        <div class="bien"><b>Código correcto:</b><pre class="cod"><code>if edad &gt;= 18:
+    print("Mayor de edad")</code></pre></div>
+      </article>
+      <article class="ej">
+        <h4>NameError</h4>
+        <p>Ocurre cuando se utiliza una variable o nombre que Python no reconoce porque no existe o está escrito incorrectamente.</p>
+        <div class="mal"><b>Código incorrecto:</b><pre class="cod"><code>nombre = "Carlos"
+print(nomre)</code></pre></div>
+        <div class="bien"><b>Código correcto:</b><pre class="cod"><code>nombre = "Carlos"
+print(nombre)</code></pre></div>
+      </article>
+      <article class="ej">
+        <h4>TypeError</h4>
+        <p>Ocurre cuando intentamos realizar una operación con datos de tipos incompatibles, como texto y números.</p>
+        <div class="mal"><b>Código incorrecto:</b><pre class="cod"><code>edad = 15
+print("Tengo " + edad + " años")</code></pre></div>
+        <div class="bien"><b>Código correcto:</b><pre class="cod"><code>edad = 15
+print("Tengo " + str(edad) + " años")</code></pre></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="bloque resumen">
+    <h2>Resumen</h2>
+    <!-- En el PDF el resumen todavía es texto de relleno (lorem ipsum) -->
+    <p>[Escribe aquí el resumen del módulo]</p>
+  </section>
+
+</main>
+
+<footer>
+  <h2>TecnoLiceo</h2>
+  <p>Plataforma informativa con módulos educativos sobre la Modalidad Técnica en Informática.</p>
+  <p class="footer-copy">© 2026 - Institución Educativa Liceo Tame</p>
+</footer>
+</body>
+</html>

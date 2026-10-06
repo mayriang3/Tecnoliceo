@@ -1,0 +1,13 @@
+Options -Indexes
+RewriteEngine On
+
+# /api/chat  ->  api.php (así tu JS no cambia)
+RewriteRule ^api/(.*)$ api.php?ruta=$1 [L,QSA]
+
+# /admin  ->  admin.html
+RewriteRule ^admin/?$ admin.html [L]
+
+# Nadie puede abrir config.php desde el navegador
+<Files "config.php">
+  Require all denied
+</Files>

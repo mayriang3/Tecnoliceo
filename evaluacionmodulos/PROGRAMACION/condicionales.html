@@ -1,0 +1,978 @@
+<<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Condicionales</title>
+
+    <link rel="stylesheet" href="/Estilos/condi.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>CONDICIONALES</h1>
+
+        <p>Cuestionario de conocimientos</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre las estructuras
+                condicionales. Lee cuidadosamente cada situación y
+                selecciona una sola respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. ¿Cuál es la función principal de una estructura condicional
+                    dentro de un programa?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Repetir un conjunto de instrucciones un número determinado
+                        de veces.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Almacenar diferentes datos dentro de una misma variable.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Permitir que el programa tome una decisión dependiendo
+                        de si se cumple o no una determinada condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Convertir automáticamente el código fuente en lenguaje
+                        de máquina.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. Observa el siguiente código en Python:
+                    <br><br>
+
+                    <code>
+                        edad = 18<br>
+                        if edad >= 18:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Puede votar")
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué ocurre cuando se ejecuta el programa?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. Se muestra "Puede votar", porque la condición
+                        edad >= 18 es verdadera.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. Se muestra "No puede votar", porque la condición
+                        es falsa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. El programa genera un error porque no se puede utilizar
+                        una variable dentro de una condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. El programa repite la instrucción hasta que la edad cambie.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. ¿Qué diferencia existe principalmente entre <code>if</code>
+                    y <code>else</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. <code>if</code> sirve para repetir instrucciones y
+                        <code>else</code> para detener el programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. <code>if</code> comprueba una condición y
+                        <code>else</code> indica qué hacer cuando esa condición
+                        no se cumple.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. <code>if</code> almacena datos y <code>else</code>
+                        modifica variables.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. No existe ninguna diferencia entre <code>if</code>
+                        y <code>else</code>.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. Un programa debe mostrar "Aprobado" si la nota es mayor
+                    o igual a 3.0 y "Reprobado" en cualquier otro caso.
+                    ¿Cuál estructura representa correctamente esta situación?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A.
+                        <br>
+                        if nota &lt; 3.0:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Aprobado")
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B.
+                        <br>
+                        if nota == 3.0:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Aprobado")
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C.
+                        <br>
+                        if nota &gt; 3.0:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Reprobado")
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D.
+                        <br>
+                        if nota &gt;= 3.0:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Aprobado")
+                        <br>
+                        else:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Reprobado")
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. ¿Para qué se utiliza principalmente <code>elif</code>
+                    en Python?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. Para repetir automáticamente una condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. Para finalizar obligatoriamente el programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. Para comprobar otra condición cuando la condición
+                        anterior no se cumple.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. Para declarar una nueva variable dentro del programa.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        temperatura = 25<br><br>
+
+                        if temperatura &gt; 30:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Hace mucho calor")<br>
+                        else:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("La temperatura es moderada")
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué mensaje aparecerá?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. "La temperatura es moderada".
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. "Hace mucho calor".
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. Aparecen los dos mensajes.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. El programa genera un error porque 25 no puede
+                        compararse con 30.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. ¿Cuál de los siguientes es un error común al utilizar
+                    estructuras condicionales en Python?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. Utilizar variables para almacenar los valores que
+                        serán comparados.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. Olvidar los dos puntos (:) al finalizar la condición
+                        de un <code>if</code>.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. Utilizar operadores como &gt;, &lt; o == para comparar
+                        valores.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. Utilizar <code>else</code> cuando una condición
+                        no se cumple.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. Un estudiante quiere crear un programa que clasifique
+                    una nota de la siguiente manera:
+                    <br><br>
+
+                    4.5 o más: "Excelente"<br>
+                    3.0 a 4.4: "Aprobado"<br>
+                    Menor de 3.0: "Reprobado"
+                    <br><br>
+
+                    ¿Qué estructura sería la más adecuada?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. Utilizar únicamente un <code>if</code>, sin comprobar
+                        ninguna otra condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Utilizar solamente <code>else</code> para determinar
+                        las tres categorías.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. Utilizar únicamente operadores matemáticos sin
+                        estructuras condicionales.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. Utilizar una estructura con <code>if</code>,
+                        <code>elif</code> y <code>else</code> para evaluar
+                        las diferentes posibilidades.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "C",
+                p2: "A",
+                p3: "B",
+                p4: "D",
+                p5: "C",
+                p6: "A",
+                p7: "B",
+                p8: "D"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Repetir un conjunto de instrucciones un número determinado de veces.",
+                    B: "Almacenar diferentes datos dentro de una misma variable.",
+                    C: "Permitir que el programa tome una decisión dependiendo de si se cumple o no una determinada condición.",
+                    D: "Convertir automáticamente el código fuente en lenguaje de máquina."
+                },
+
+                p2: {
+                    A: "Se muestra \"Puede votar\", porque la condición edad >= 18 es verdadera.",
+                    B: "Se muestra \"No puede votar\", porque la condición es falsa.",
+                    C: "El programa genera un error porque no se puede utilizar una variable dentro de una condición.",
+                    D: "El programa repite la instrucción hasta que la edad cambie."
+                },
+
+                p3: {
+                    A: "if sirve para repetir instrucciones y else para detener el programa.",
+                    B: "if comprueba una condición y else indica qué hacer cuando esa condición no se cumple.",
+                    C: "if almacena datos y else modifica variables.",
+                    D: "No existe ninguna diferencia entre if y else."
+                },
+
+                p4: {
+                    A: "if nota &lt; 3.0: print(\"Aprobado\")",
+                    B: "if nota == 3.0: print(\"Aprobado\")",
+                    C: "if nota &gt; 3.0: print(\"Reprobado\")",
+                    D: "if nota &gt;= 3.0: print(\"Aprobado\") — else: print(\"Reprobado\")"
+                },
+
+                p5: {
+                    A: "Para repetir automáticamente una condición.",
+                    B: "Para finalizar obligatoriamente el programa.",
+                    C: "Para comprobar otra condición cuando la condición anterior no se cumple.",
+                    D: "Para declarar una nueva variable dentro del programa."
+                },
+
+                p6: {
+                    A: "\"La temperatura es moderada\".",
+                    B: "\"Hace mucho calor\".",
+                    C: "Aparecen los dos mensajes.",
+                    D: "El programa genera un error porque 25 no puede compararse con 30."
+                },
+
+                p7: {
+                    A: "Utilizar variables para almacenar los valores que serán comparados.",
+                    B: "Olvidar los dos puntos (:) al finalizar la condición de un if.",
+                    C: "Utilizar operadores como &gt;, &lt; o == para comparar valores.",
+                    D: "Utilizar else cuando una condición no se cumple."
+                },
+
+                p8: {
+                    A: "Utilizar únicamente un if, sin comprobar ninguna otra condición.",
+                    B: "Utilizar solamente else para determinar las tres categorías.",
+                    C: "Utilizar únicamente operadores matemáticos sin estructuras condicionales.",
+                    D: "Utilizar una estructura con if, elif y else para evaluar las diferentes posibilidades."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "Una estructura condicional le permite al programa evaluar si se cumple o no una " +
+                    "condición y, según eso, decidir qué bloque de instrucciones ejecutar. No se trata de " +
+                    "repetir instrucciones (A), eso lo hacen los bucles; no almacena datos en variables (B); " +
+                    "y no convierte el código a lenguaje de máquina (D), eso lo hace el compilador o intérprete.",
+
+                p2: "Como edad vale 18, la condición edad >= 18 se evalúa como verdadera (18 es igual a 18), " +
+                    "por lo que el programa ejecuta el bloque del if y muestra \"Puede votar\". No se cumple B " +
+                    "porque la condición sí es verdadera; no hay ningún error de sintaxis por usar una variable " +
+                    "en la condición (C); y un if no repite instrucciones como lo haría un bucle (D).",
+
+                p3: "El if comprueba si una condición es verdadera para ejecutar su bloque; el else define qué " +
+                    "hacer cuando esa misma condición resulta falsa. No sirven para repetir instrucciones (A), " +
+                    "eso corresponde a los bucles; tampoco almacenan ni modifican variables por sí mismos (C); " +
+                    "y sí existe una diferencia clara entre ambos, por lo que D es incorrecto.",
+
+                p4: "Se necesita evaluar los dos posibles casos: si la nota es mayor o igual a 3.0 se muestra " +
+                    "\"Aprobado\", y en cualquier otro caso (else) se muestra \"Reprobado\". La opción A solo " +
+                    "contempla el caso contrario sin mostrar nunca \"Aprobado\"; B solo cubre el caso en que la " +
+                    "nota sea exactamente 3.0, dejando fuera notas mayores; y C usa un operador equivocado y " +
+                    "etiqueta el resultado de forma incorrecta.",
+
+                p5: "elif permite comprobar una condición adicional cuando la condición del if anterior no se " +
+                    "cumplió, antes de llegar al else final. No repite condiciones automáticamente (A), eso lo " +
+                    "hacen los bucles; no obliga a finalizar el programa (B); y tampoco sirve para declarar " +
+                    "variables (D).",
+
+                p6: "Como temperatura vale 25, la condición temperatura > 30 es falsa, por lo que el programa " +
+                    "ejecuta el bloque del else y muestra \"La temperatura es moderada\". No se cumple B porque " +
+                    "la condición del if es falsa; en una estructura if-else solo se ejecuta uno de los dos " +
+                    "bloques, nunca ambos (C); y comparar números enteros no genera ningún error (D).",
+
+                p7: "Olvidar los dos puntos (:) al final de la condición de un if es un error de sintaxis muy " +
+                    "común en Python que impide que el programa se ejecute correctamente. Usar variables para " +
+                    "comparar (A), emplear operadores de comparación (C) o usar else cuando la condición no se " +
+                    "cumple (D) son, en cambio, prácticas correctas y necesarias.",
+
+                p8: "Como existen tres posibles resultados según el valor de la nota, se necesita encadenar " +
+                    "condiciones con if, elif y else para evaluar cada rango de forma ordenada. Usar solo un " +
+                    "if (A) o solo un else (B) no permite distinguir entre las tres categorías, y prescindir " +
+                    "por completo de estructuras condicionales (C) no permite tomar ninguna decisión según el " +
+                    "valor de la nota."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien las estructuras condicionales. 🔥";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

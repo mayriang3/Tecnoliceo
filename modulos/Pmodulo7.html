@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 7. Printf y scanf | TecnoLiceo</title>
+<link rel="icon" type="image/png" href="/img/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Estilos/styles.css">
+<link rel="stylesheet" href="/Estilos/styles_modulos.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+    <h1>TecnoLiceo</h1>
+  </div>
+    <section class="botones_principales">
+        <h2>Módulo 7. Printf y scanf</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/PROGRAMACION/entradasysalidas.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+<main class="mod">
+
+  <section class="portada">
+    <!-- La portada del PDF dice "Modulo 6"; aquí lo puse como 7 según el nombre del archivo -->
+    <span class="pill">Modulo 7</span>
+    <h1>Printf &amp; scanf</h1>
+    <span class="pill">Programación</span>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Qué es printf y scanf?</h2>
+    <p>Son las entradas y salidas de información que sirven para que podamos interactuar con un programa. Por ejemplo, podemos escribir un dato como nuestra edad o nuestro nombre, y el programa puede recibirlo y después mostrarnos un resultado. En C usamos principalmente <strong>scanf() para recibir información y printf() para mostrarla en la pantalla.</strong></p>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Cómo los utilizamos?</h2>
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span>
+        <p>printf() es una función que usamos en C para mostrar información en la pantalla. Con ella podemos mostrar mensajes, números, resultados de operaciones y también información que esté guardada en una variable. Es muy útil porque nos permite comunicarnos con la persona que está usando el programa.</p>
+        <pre class="cod"><code>printf("Hola, bienvenido");</code></pre>
+        <p class="pie">printf() sirve para mostrar en la pantalla lo que queremos que el usuario pueda ver.</p>
+      </div>
+      <div class="paso c4"><span class="num">02</span>
+        <p>scanf() es una función que usamos en C para recibir información que escribe el usuario. Por ejemplo, podemos pedirle su edad, una nota o cualquier otro dato, y guardar esa información en una variable para utilizarla después en el programa.</p>
+        <pre class="cod"><code>int edad;
+
+scanf("%d", &amp;edad);</code></pre>
+        <p class="pie">scanf() sirve para recibir datos del usuario y guardarlos en una variable para poder utilizarlos después.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Cómo funcionan juntos?</h2>
+    <p>printf() y scanf() pueden trabajar juntos para que el programa sea más interactivo. Primero usamos printf() para mostrar un mensaje o pedirle un dato al usuario, y después usamos scanf() para recibir esa información y guardarla en una variable. Luego podemos utilizar ese dato para realizar operaciones o mostrar un resultado.</p>
+    <pre class="cod"><code>int edad;
+
+printf("Escribe tu edad: ");
+scanf("%d", &amp;edad);
+
+printf("Tu edad es %d", edad);</code></pre>
+  </section>
+
+  <section class="bloque">
+    <h2>Ejemplos</h2>
+    <p>Podemos usar printf() y scanf() en diferentes situaciones para que el programa pueda mostrar mensajes y recibir información del usuario. Estos son algunos ejemplos sencillos:</p>
+    <div class="tarjetas">
+      <article class="ej">
+        <h4>Mostrar un mensaje</h4>
+        <pre class="cod"><code>printf("Hola, bienvenido");</code></pre>
+      </article>
+      <article class="ej">
+        <h4>Pedir y guardar datos</h4>
+        <pre class="cod"><code>int edad;
+printf("Escribe tu edad: ");
+scanf("%d", &amp;edad);</code></pre>
+      </article>
+      <article class="ej">
+        <h4>Hacer operaciones</h4>
+        <pre class="cod"><code>int a, b;
+scanf("%d %d", &amp;a, &amp;b);
+printf("Resultado: %d", a + b);</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Errores comunes</h2>
+    <p>Cuando estamos empezando a usar printf() y scanf(), es normal cometer algunos errores al escribir el código. Muchas veces son pequeños detalles, como olvidar un símbolo, escribir mal una función o utilizar un tipo de dato incorrecto. Estos errores pueden hacer que el programa no funcione correctamente o que aparezca un mensaje de error.</p>
+    <div class="tarjetas">
+      <article class="ej">
+        <h4>Olvidar el ;</h4>
+        <pre class="cod"><code>printf("Hola")</code></pre>
+      </article>
+      <article class="ej">
+        <h4>Escribir mal el printf</h4>
+        <pre class="cod"><code>prinf("Hola");</code></pre>
+      </article>
+      <article class="ej">
+        <h4>Usar un formato incorrecto</h4>
+        <pre class="cod"><code>float nota;
+scanf("%d", &amp;nota);</code></pre>
+      </article>
+      <article class="ej">
+        <h4>Olvidar el &amp; en scanf()</h4>
+        <pre class="cod"><code>int edad;
+scanf("%d", edad);</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="bloque resumen">
+    <h2>Resumen</h2>
+    <p>printf() y scanf() nos ayudan a que el programa pueda comunicarse con el usuario. Con printf() podemos mostrar mensajes, números o resultados en la pantalla, mientras que con scanf() podemos recibir datos que escribe el usuario y guardarlos para utilizarlos después. Al usar las dos funciones juntas, podemos hacer programas más interactivos y fáciles de usar.</p>
+  </section>
+
+  <section class="bloque video">
+    <h2>Video</h2>
+    <div class="marco">
+      <!-- Pega aquí el iframe del video -->
+    </div>
+  </section>
+
+  <section class="bloque eval">
+    <h2>¿Estás listo?</h2>
+    <p>Realiza una pequeña evaluación sobre el tema y pon a prueba lo aprendido.</p>
+    <a class="btn" href="#">Hacer evaluación</a>
+  </section>
+
+</main>
+
+<footer>
+  <h2>TecnoLiceo</h2>
+  <p>Plataforma informativa con módulos educativos sobre la Modalidad Técnica en Informática.</p>
+  <p class="footer-copy">© 2026 - Institución Educativa Liceo Tame</p>
+</footer>
+</body>
+</html>

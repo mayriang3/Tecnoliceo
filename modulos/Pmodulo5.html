@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 5. Programación en C | TecnoLiceo</title>
+<link rel="icon" type="image/png" href="/img/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Estilos/styles.css">
+<link rel="stylesheet" href="/Estilos/styles_modulos.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+    <h1>TecnoLiceo</h1>
+  </div>
+    <section class="botones_principales">
+        <h2>Módulo 5. Programación en C</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/PROGRAMACION/sintaxisc.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+<main class="mod">
+
+  <section class="portada">
+    <span class="pill">Modulo 5</span>
+    <h1>Programación en C</h1>
+    <span class="pill">Programación</span>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Qué es la programación en C?</h2>
+    <p>La programación en C es una forma de crear programas usando instrucciones que el computador puede entender. Con C podemos hacer que un programa calcule, muestre información, tome decisiones y repita acciones. Para escribir en C usamos cosas como variables, condiciones, ciclos y funciones. Es un lenguaje muy importante porque ayuda a entender las bases de la programación.</p>
+    <aside class="nota"><p>Se le dice C porque fue creado como una evolución de un lenguaje anterior llamado B. Así nació el nombre C, simple pero muy importante en la programación.</p></aside>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Cómo escribimos en C?</h2>
+    <p>Para programar en C debemos seguir unas reglas llamadas sintaxis. Estas nos indican cómo escribir las instrucciones para que el computador pueda entenderlas y ejecutarlas. Algunas partes importantes son main(), printf(), las variables y el uso de ;.</p>
+    <ul class="lista">
+      <li><strong>int</strong> → Indica que trabajamos con un número entero.</li>
+      <li><strong>main()</strong> → Es donde comienza el programa.</li>
+      <li><strong>printf()</strong> → Sirve para mostrar algo en pantalla.</li>
+      <li><strong>;</strong> → Indica que una instrucción terminó.</li>
+    </ul>
+    <pre class="cod"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hola");
+    return 0;
+}</code></pre>
+    <aside class="nota"><p>Este pequeño programa utiliza algunas de las partes básicas de la sintaxis de C y muestra la palabra “Hola” en la pantalla. De esta forma podemos ver cómo se escriben y organizan las instrucciones dentro de un programa.</p></aside>
+  </section>
+
+  <section class="bloque">
+    <h2>Elementos básicos de C</h2>
+    <h3 class="sub">Operadores</h3>
+    <p>Los operadores son símbolos que utilizamos para realizar operaciones o comparar valores dentro de un programa. Nos permiten hacer cálculos y tomar decisiones.</p>
+    <div class="tarjetas">
+      <article class="ej">
+        <pre class="cod"><code>int suma = 5 + 3;
+int resta = 5 - 3;
+int mayor = 5 &gt; 3;</code></pre>
+      </article>
+      <article class="ej">
+        <ul class="lista">
+          <li><strong>+</strong> → suma.</li>
+          <li><strong>-</strong> → resta.</li>
+          <li><strong>*</strong> → multiplicación.</li>
+          <li><strong>/</strong> → división.</li>
+          <li><strong>&gt;</strong> → mayor que.</li>
+          <li><strong>&lt;</strong> → menor que.</li>
+        </ul>
+      </article>
+    </div>
+    <h3 class="sub">Tipos de datos</h3>
+    <p>Los tipos de datos indican qué clase de información podemos guardar en una variable. Cada tipo se utiliza para almacenar datos diferentes, como números, decimales o caracteres.</p>
+    <div class="tarjetas">
+      <article class="ej">
+        <pre class="cod"><code>int edad = 15;
+float promedio = 4.5;
+char inicial = 'G';</code></pre>
+      </article>
+      <article class="ej">
+        <ul class="lista">
+          <li><strong>int</strong> → números enteros.</li>
+          <li><strong>float</strong> → números decimales.</li>
+          <li><strong>char</strong> → un carácter o letra.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Cómo repetimos una acción</h2>
+    <p>A veces necesitamos que un programa haga la misma acción varias veces. Para esto utilizamos los ciclos o bucles, como for y while.</p>
+    <!-- OJO: los códigos de esta sección y de la siguiente están en Python en el PDF, no en C -->
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span>
+        <p><strong>Ciclo for</strong><br>El for indica que empieza el ciclo. numero es la variable que va tomando diferentes valores. in indica que la variable recorrerá un rango y range(1, 6) establece los números desde 1 hasta 5. Los : indican que las instrucciones de abajo pertenecen al ciclo.</p>
+        <pre class="cod"><code>for numero in range(1, 6):
+    print(numero)</code></pre>
+      </div>
+      <div class="paso c4"><span class="num">02</span>
+        <p><strong>Ciclo while</strong><br>Primero se establece numero = 1 como valor inicial. while indica que el ciclo continuará mientras se cumpla la condición numero &lt;= 5. Después, print(numero) muestra el número y numero += 1 aumenta su valor en cada repetición para que el ciclo pueda terminar.</p>
+        <pre class="cod"><code>numero = 1
+while numero &lt;= 5:
+    print(numero)
+    numero += 1</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Cómo toma decisiones?</h2>
+    <!-- En el PDF el texto de esta tarjeta central repite el de los ciclos: hay que corregirlo -->
+    <p>[Texto introductorio sobre las decisiones]</p>
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span>
+        <p>if se utiliza para que el programa compruebe si una condición se cumple. Cuando la condición es verdadera, el programa realiza las instrucciones que están dentro del if. Es una de las formas más básicas de hacer que un programa tome decisiones.</p>
+        <pre class="cod"><code>if edad &gt;= 18:
+    print("Eres mayor de edad")</code></pre>
+      </div>
+      <div class="paso c4"><span class="num">02</span>
+        <p>elif se utiliza cuando queremos comprobar una nueva condición después de que la condición anterior no se cumplió. Podemos utilizar varios elif para que el programa pueda elegir entre diferentes opciones.</p>
+        <pre class="cod"><code>if nota &gt;= 4:
+    print("Muy bien")
+elif nota &gt;= 3:
+    print("Aprobaste")</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Ejemplo</h2>
+    <p>Ahora vamos a juntar varios elementos que hemos visto para crear un pequeño programa. En este ejemplo usamos una variable, una condición y mostramos un mensaje en pantalla.</p>
+    <pre class="cod"><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int edad = 15;
+
+    if (edad &gt;= 18) {
+        printf("Eres mayor de edad");
+    } else {
+        printf("Eres menor de edad");
+    }
+
+    return 0;
+}</code></pre>
+  </section>
+
+  <section class="bloque">
+    <h2>Errores comunes</h2>
+    <p>Al comenzar a programar es normal cometer algunos errores. Los más comunes ocurren por olvidar símbolos, escribir mal una instrucción o no cerrar correctamente una parte del código.</p>
+    <div class="tarjetas">
+      <article class="ej">
+        <pre class="cod"><code>int edad = 15   // Falta ;
+printf("Hola"   // Falta cerrar )</code></pre>
+      </article>
+      <article class="ej">
+        <ul class="lista">
+          <li>Olvidar el ;</li>
+          <li>No cerrar () o { }</li>
+          <li>Escribir mal el nombre de una función.</li>
+          <li>Usar una variable que no ha sido creada.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="bloque resumen">
+    <h2>Resumen</h2>
+    <p>La programación en C nos permite crear programas mediante instrucciones que el computador puede entender y ejecutar. Para hacerlo, utilizamos diferentes elementos como variables, tipos de datos, operadores, condiciones y ciclos, siguiendo unas reglas llamadas sintaxis. Aunque al principio pueden aparecer algunos errores, con la práctica podemos aprender a escribir programas cada vez más completos y útiles.</p>
+  </section>
+
+  <section class="bloque video">
+    <h2>Video</h2>
+    <div class="marco">
+      <!-- Pega aquí el iframe del video -->
+    </div>
+  </section>
+
+  <section class="bloque eval">
+    <h2>¿Estás listo?</h2>
+    <p>Realiza una pequeña evaluación sobre el tema y pon a prueba lo aprendido.</p>
+    <a class="btn" href="#">Hacer evaluación</a>
+  </section>
+
+</main>
+
+<footer>
+  <h2>TecnoLiceo</h2>
+  <p>Plataforma informativa con módulos educativos sobre la Modalidad Técnica en Informática.</p>
+  <p class="footer-copy">© 2026 - Institución Educativa Liceo Tame</p>
+</footer>
+</body>
+</html>

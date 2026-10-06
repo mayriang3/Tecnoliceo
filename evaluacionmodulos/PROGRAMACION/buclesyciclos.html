@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Bucles y ciclos</title>
+
+    <link rel="stylesheet" href="/Estilos/bucleci.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>BUCLES Y CICLOS</h1>
+
+        <p>Cuestionario de conocimientos</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre bucles y ciclos en
+                programación. Lee cuidadosamente cada pregunta y selecciona
+                una sola respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. ¿Qué es un bucle o ciclo dentro de un programa?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Una estructura que permite ejecutar un conjunto de
+                        instrucciones repetidamente mientras se cumpla una
+                        condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Una instrucción que se ejecuta una sola vez y luego
+                        detiene el programa por completo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Un tipo de variable que almacena únicamente números
+                        enteros.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Un mensaje de error que aparece cuando el programa
+                        no puede ejecutarse.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. Un programa debe mostrar los números del 1 al 5, y se
+                    sabe exactamente cuántas veces se debe repetir la
+                    instrucción. ¿Qué tipo de bucle es más adecuado utilizar?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. Un bucle <code>while</code>, porque siempre es la
+                        mejor opción sin importar el caso.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. Un bucle <code>for</code>, porque es ideal cuando se
+                        conoce de antemano el número de repeticiones.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. Una estructura condicional <code>if</code>, porque
+                        permite repetir instrucciones varias veces.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. No es posible repetir instrucciones un número
+                        específico de veces en programación.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. Observa el siguiente código en Python:
+                    <br><br>
+
+                    <code>
+                        for i in range(5):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué valores se mostrarán en pantalla?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. 1, 2, 3, 4, 5.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. 0, 1, 2, 3, 4.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. 0, 1, 2, 3, 4, 5.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. Solamente el número 5.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. Un programa debe seguir pidiéndole una contraseña al
+                    usuario hasta que la escriba correctamente, pero no se sabe
+                    de antemano cuántos intentos necesitará. ¿Qué tipo de bucle
+                    es más adecuado en este caso?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A. Un bucle <code>for</code>, porque siempre es la
+                        mejor opción cuando hay una condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B. Un bucle <code>while</code>, porque permite repetir
+                        instrucciones mientras se cumpla una condición, sin
+                        necesidad de conocer el número exacto de repeticiones.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C. Una variable de tipo texto, porque almacena la
+                        contraseña ingresada.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D. Ninguna estructura de repetición, porque este caso
+                        no requiere repetir instrucciones.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        contador = 0<br><br>
+
+                        while contador &lt; 5:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Repitiendo")
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué problema tiene este código?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. No tiene ningún problema, se ejecutará exactamente
+                        5 veces y se detendrá.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. Genera un error de sintaxis porque falta la palabra
+                        <code>elif</code>.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. Es un bucle infinito, porque la variable contador
+                        nunca cambia su valor y la condición siempre será
+                        verdadera.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. Es un bucle infinito porque los bucles
+                        <code>while</code> nunca pueden detenerse.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        for numero in range(10):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if numero == 4:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print(numero)
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué valores se mostrarán en pantalla?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. 0, 1, 2, 3, porque <code>break</code> detiene por
+                        completo el bucle apenas numero es igual a 4.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, porque
+                        <code>break</code> no afecta la ejecución del bucle.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. Solo el número 4, porque <code>break</code> muestra
+                        únicamente el valor donde se cumple la condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. El programa genera un error porque
+                        <code>break</code> no puede usarse dentro de un
+                        <code>if</code>.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        for numero in range(5):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if numero == 2:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print(numero)
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué diferencia existe entre <code>break</code> y
+                    <code>continue</code> según este ejemplo?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. Son exactamente lo mismo, ambos detienen el bucle
+                        por completo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. <code>continue</code> detiene el bucle
+                        completamente, mientras que <code>break</code>
+                        omite solo una repetición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. <code>continue</code> omite únicamente la
+                        repetición actual y sigue con la siguiente, mientras
+                        que <code>break</code> termina el bucle por completo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. Ninguno de los dos afecta el funcionamiento normal
+                        del bucle.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        suma = 0<br><br>
+
+                        for numero in [2, 4, 6]:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;suma = suma + numero<br><br>
+
+                        print(suma)
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué patrón representa la variable <code>suma</code> dentro
+                    de este bucle?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. Un contador, porque cuenta cuántas veces se repite
+                        el bucle.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Un acumulador, porque va guardando y sumando los
+                        valores obtenidos en cada repetición del bucle.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. Una condición, porque determina cuándo debe
+                        detenerse el bucle.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. Un índice, porque indica la posición actual dentro
+                        de la lista.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "A",
+                p2: "B",
+                p3: "B",
+                p4: "B",
+                p5: "C",
+                p6: "A",
+                p7: "C",
+                p8: "B"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Una estructura que permite ejecutar un conjunto de instrucciones repetidamente mientras se cumpla una condición.",
+                    B: "Una instrucción que se ejecuta una sola vez y luego detiene el programa por completo.",
+                    C: "Un tipo de variable que almacena únicamente números enteros.",
+                    D: "Un mensaje de error que aparece cuando el programa no puede ejecutarse."
+                },
+
+                p2: {
+                    A: "Un bucle while, porque siempre es la mejor opción sin importar el caso.",
+                    B: "Un bucle for, porque es ideal cuando se conoce de antemano el número de repeticiones.",
+                    C: "Una estructura condicional if, porque permite repetir instrucciones varias veces.",
+                    D: "No es posible repetir instrucciones un número específico de veces en programación."
+                },
+
+                p3: {
+                    A: "1, 2, 3, 4, 5.",
+                    B: "0, 1, 2, 3, 4.",
+                    C: "0, 1, 2, 3, 4, 5.",
+                    D: "Solamente el número 5."
+                },
+
+                p4: {
+                    A: "Un bucle for, porque siempre es la mejor opción cuando hay una condición.",
+                    B: "Un bucle while, porque permite repetir instrucciones mientras se cumpla una condición, sin necesidad de conocer el número exacto de repeticiones.",
+                    C: "Una variable de tipo texto, porque almacena la contraseña ingresada.",
+                    D: "Ninguna estructura de repetición, porque este caso no requiere repetir instrucciones."
+                },
+
+                p5: {
+                    A: "No tiene ningún problema, se ejecutará exactamente 5 veces y se detendrá.",
+                    B: "Genera un error de sintaxis porque falta la palabra elif.",
+                    C: "Es un bucle infinito, porque la variable contador nunca cambia su valor y la condición siempre será verdadera.",
+                    D: "Es un bucle infinito porque los bucles while nunca pueden detenerse."
+                },
+
+                p6: {
+                    A: "0, 1, 2, 3, porque break detiene por completo el bucle apenas numero es igual a 4.",
+                    B: "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, porque break no afecta la ejecución del bucle.",
+                    C: "Solo el número 4, porque break muestra únicamente el valor donde se cumple la condición.",
+                    D: "El programa genera un error porque break no puede usarse dentro de un if."
+                },
+
+                p7: {
+                    A: "Son exactamente lo mismo, ambos detienen el bucle por completo.",
+                    B: "continue detiene el bucle completamente, mientras que break omite solo una repetición.",
+                    C: "continue omite únicamente la repetición actual y sigue con la siguiente, mientras que break termina el bucle por completo.",
+                    D: "Ninguno de los dos afecta el funcionamiento normal del bucle."
+                },
+
+                p8: {
+                    A: "Un contador, porque cuenta cuántas veces se repite el bucle.",
+                    B: "Un acumulador, porque va guardando y sumando los valores obtenidos en cada repetición del bucle.",
+                    C: "Una condición, porque determina cuándo debe detenerse el bucle.",
+                    D: "Un índice, porque indica la posición actual dentro de la lista."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "Un bucle o ciclo es una estructura de control que permite repetir un conjunto de " +
+                    "instrucciones mientras se cumpla una condición, evitando así escribir el mismo código " +
+                    "varias veces. No se trata de una instrucción que se ejecuta una sola vez (B); no es un " +
+                    "tipo de variable (C); y tampoco es un mensaje de error (D).",
+
+                p2: "El bucle for es ideal cuando se conoce de antemano cuántas veces debe repetirse una " +
+                    "instrucción, como mostrar los números del 1 al 5. No es cierto que while sea siempre la " +
+                    "mejor opción, ya que se usa más bien cuando no se conoce el número exacto de " +
+                    "repeticiones (A); un if no repite instrucciones, solo evalúa una condición una sola vez " +
+                    "(C); y sí es totalmente posible repetir instrucciones un número específico de veces (D).",
+
+                p3: "range(5) genera los valores 0, 1, 2, 3 y 4, ya que en Python el conteo comienza en 0 y " +
+                    "no incluye el número indicado como límite. Por eso no se muestran del 1 al 5 (A), ni se " +
+                    "incluye el número 5 (C), y tampoco se muestra solamente el último valor (D), ya que el " +
+                    "bucle imprime cada número en cada repetición.",
+
+                p4: "El bucle while es más adecuado cuando no se sabe de antemano cuántas veces se repetirá " +
+                    "una acción, como pedir una contraseña hasta que sea correcta, ya que evalúa una " +
+                    "condición en cada repetición. El bucle for (A) se usa mejor cuando el número de " +
+                    "repeticiones es conocido; una variable de texto (C) solo almacena datos, no repite " +
+                    "instrucciones; y este caso sí requiere una estructura de repetición (D).",
+
+                p5: "Como la variable contador nunca se modifica dentro del bucle, la condición contador " +
+                    "&lt; 5 siempre será verdadera, provocando un bucle infinito que nunca se detiene. No es " +
+                    "cierto que se ejecute exactamente 5 veces (A); el código no tiene ningún error de " +
+                    "sintaxis relacionado con elif (B); y los bucles while sí pueden detenerse normalmente " +
+                    "cuando su condición se actualiza correctamente (D).",
+
+                p6: "La instrucción break interrumpe por completo la ejecución del bucle en el momento en " +
+                    "que se cumple la condición, por lo que el programa imprime 0, 1, 2 y 3, y se detiene " +
+                    "justo antes de llegar a numero == 4. No es cierto que break no afecte el bucle (B); no " +
+                    "muestra únicamente el valor donde se cumple la condición (C); y sí es válido utilizar " +
+                    "break dentro de un if (D).",
+
+                p7: "continue omite únicamente la repetición actual del bucle y continúa con la siguiente, " +
+                    "mientras que break detiene el bucle por completo y no vuelve a ejecutarse. Por eso no " +
+                    "son lo mismo (A); la relación descrita en B está invertida, ya que es break el que " +
+                    "detiene el bucle completamente y continue el que omite solo una repetición; y ambos sí " +
+                    "modifican el comportamiento normal del bucle (D).",
+
+                p8: "La variable suma va almacenando y sumando en cada repetición los valores de la lista " +
+                    "[2, 4, 6], por lo que cumple el papel de un acumulador. No es un contador, ya que un " +
+                    "contador normalmente aumenta de uno en uno para llevar la cuenta de repeticiones, no " +
+                    "suma valores distintos (A); no funciona como una condición para detener el bucle (C); " +
+                    "y tampoco indica una posición dentro de la lista, como lo haría un índice (D)."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien los bucles y ciclos en programación. 🔁";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

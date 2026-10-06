@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Diagramas y esquemas de circuitos</title>
+
+   <link rel="stylesheet" href="/Estilos/esquecir.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>DIAGRAMAS Y ESQUEMAS DE CIRCUITOS</h1>
+
+        <p>Mallas, nodos, serie, paralelo y mixto</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre diagramas de
+                circuitos, mallas, nodos, y las conexiones en serie,
+                paralelo y mixtas. Lee cuidadosamente cada pregunta y
+                selecciona una sola respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             TABLA DE REFERENCIA RÁPIDA
+        ========================== -->
+
+        <section class="referencia">
+
+            <h2>Referencia rápida: serie y paralelo</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de conexión</th>
+                        <th>Corriente</th>
+                        <th>Voltaje</th>
+                        <th>Resistencia equivalente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Serie</td>
+                        <td>Igual en todos los componentes</td>
+                        <td>Se reparte entre los componentes</td>
+                        <td>R<sub>eq</sub> = R1 + R2 + R3 + ...</td>
+                    </tr>
+                    <tr>
+                        <td>Paralelo</td>
+                        <td>Se reparte entre las ramas</td>
+                        <td>Igual en todas las ramas</td>
+                        <td>1 / R<sub>eq</sub> = 1/R1 + 1/R2 + ...</td>
+                    </tr>
+                    <tr>
+                        <td>Mixto</td>
+                        <td colspan="3">Combina tramos en serie y en paralelo dentro del mismo circuito.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. ¿Qué es un diagrama o esquema de circuito?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Una representación gráfica que utiliza símbolos
+                        estandarizados para mostrar cómo están conectados
+                        los componentes de un circuito eléctrico.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Una fotografía real del circuito tomada después
+                        de armarlo físicamente.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Un documento que solo indica el precio de cada
+                        componente utilizado en el circuito.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Un tipo de multímetro utilizado exclusivamente
+                        para medir resistencia.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. Dentro de un circuito eléctrico, ¿qué es un nodo?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. El componente que genera la energía eléctrica
+                        del circuito, como una batería.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. Un punto del circuito donde se unen tres o más
+                        conductores o ramas.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. El nombre que recibe cualquier resistencia dentro
+                        de un esquema eléctrico.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. La unidad que se utiliza para medir la potencia
+                        de un circuito.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. ¿Qué es una malla dentro de un circuito eléctrico?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. Una trayectoria cerrada dentro del circuito que
+                        puede recorrerse volviendo al punto de partida sin
+                        pasar dos veces por la misma rama.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. El material aislante que recubre los conductores
+                        del circuito.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. Un tipo de resistencia que solo se utiliza en
+                        circuitos en paralelo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. El nombre que recibe la fuente de alimentación
+                        principal de un circuito.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. ¿Cuál de las siguientes afirmaciones describe
+                    correctamente una conexión en serie?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A. Los componentes se conectan uno tras otro
+                        formando un único camino, por lo que la misma
+                        corriente circula por todos ellos, y si uno se
+                        desconecta, el circuito se interrumpe.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B. Los componentes se conectan en distintas ramas
+                        que comparten el mismo voltaje, y si uno falla los
+                        demás siguen funcionando.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C. Los componentes nunca comparten corriente ni
+                        voltaje entre sí.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D. Los componentes se conectan de forma aleatoria,
+                        sin ningún orden ni trayectoria definida.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. ¿Cuál de las siguientes afirmaciones describe
+                    correctamente una conexión en paralelo?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. Todos los componentes forman un único camino, y
+                        la misma corriente pasa obligatoriamente por cada
+                        uno de ellos.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. Los componentes se conectan en distintas ramas
+                        entre los mismos dos nodos, compartiendo el mismo
+                        voltaje, mientras la corriente total se reparte
+                        entre ellas.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. Si uno de los componentes se desconecta, todo el
+                        circuito deja de funcionar por completo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. Los componentes solo pueden conectarse si tienen
+                        exactamente el mismo valor de resistencia.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. Un circuito en serie tiene tres resistencias:
+                    R1 = 2 Ω, R2 = 3 Ω y R3 = 5 Ω. Aplicando la fórmula
+                    <code>R<sub>eq</sub> = R1 + R2 + R3</code>, ¿cuál es la
+                    resistencia equivalente del circuito?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. 0.97 Ω.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. 30 Ω.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. 10 Ω.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. 15 Ω.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. Dos resistencias de 10 Ω cada una están conectadas en
+                    paralelo. Aplicando la fórmula
+                    <code>1 / R<sub>eq</sub> = 1/R1 + 1/R2</code>, ¿cuál es
+                    la resistencia equivalente del circuito?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. 20 Ω.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. 10 Ω.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. 5 Ω.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. 0.2 Ω.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. Un circuito tiene dos resistencias en paralelo, y
+                    ese conjunto está conectado en serie con una tercera
+                    resistencia. ¿Cómo se le llama a este tipo de circuito?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. Circuito en serie puro, porque solo existe un
+                        camino posible para la corriente.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Circuito en paralelo puro, porque todas las
+                        resistencias comparten exactamente el mismo voltaje.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. Circuito mixto, porque combina tramos conectados
+                        en serie con tramos conectados en paralelo dentro
+                        del mismo circuito.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. Circuito abierto, porque la corriente no puede
+                        completar ningún camino cerrado.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "A",
+                p2: "B",
+                p3: "A",
+                p4: "A",
+                p5: "B",
+                p6: "C",
+                p7: "C",
+                p8: "C"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Una representación gráfica que utiliza símbolos estandarizados para mostrar cómo están conectados los componentes de un circuito eléctrico.",
+                    B: "Una fotografía real del circuito tomada después de armarlo físicamente.",
+                    C: "Un documento que solo indica el precio de cada componente utilizado en el circuito.",
+                    D: "Un tipo de multímetro utilizado exclusivamente para medir resistencia."
+                },
+
+                p2: {
+                    A: "El componente que genera la energía eléctrica del circuito, como una batería.",
+                    B: "Un punto del circuito donde se unen tres o más conductores o ramas.",
+                    C: "El nombre que recibe cualquier resistencia dentro de un esquema eléctrico.",
+                    D: "La unidad que se utiliza para medir la potencia de un circuito."
+                },
+
+                p3: {
+                    A: "Una trayectoria cerrada dentro del circuito que puede recorrerse volviendo al punto de partida sin pasar dos veces por la misma rama.",
+                    B: "El material aislante que recubre los conductores del circuito.",
+                    C: "Un tipo de resistencia que solo se utiliza en circuitos en paralelo.",
+                    D: "El nombre que recibe la fuente de alimentación principal de un circuito."
+                },
+
+                p4: {
+                    A: "Los componentes se conectan uno tras otro formando un único camino, por lo que la misma corriente circula por todos ellos, y si uno se desconecta, el circuito se interrumpe.",
+                    B: "Los componentes se conectan en distintas ramas que comparten el mismo voltaje, y si uno falla los demás siguen funcionando.",
+                    C: "Los componentes nunca comparten corriente ni voltaje entre sí.",
+                    D: "Los componentes se conectan de forma aleatoria, sin ningún orden ni trayectoria definida."
+                },
+
+                p5: {
+                    A: "Todos los componentes forman un único camino, y la misma corriente pasa obligatoriamente por cada uno de ellos.",
+                    B: "Los componentes se conectan en distintas ramas entre los mismos dos nodos, compartiendo el mismo voltaje, mientras la corriente total se reparte entre ellas.",
+                    C: "Si uno de los componentes se desconecta, todo el circuito deja de funcionar por completo.",
+                    D: "Los componentes solo pueden conectarse si tienen exactamente el mismo valor de resistencia."
+                },
+
+                p6: {
+                    A: "0.97 Ω.",
+                    B: "30 Ω.",
+                    C: "10 Ω.",
+                    D: "15 Ω."
+                },
+
+                p7: {
+                    A: "20 Ω.",
+                    B: "10 Ω.",
+                    C: "5 Ω.",
+                    D: "0.2 Ω."
+                },
+
+                p8: {
+                    A: "Circuito en serie puro, porque solo existe un camino posible para la corriente.",
+                    B: "Circuito en paralelo puro, porque todas las resistencias comparten exactamente el mismo voltaje.",
+                    C: "Circuito mixto, porque combina tramos conectados en serie con tramos conectados en paralelo dentro del mismo circuito.",
+                    D: "Circuito abierto, porque la corriente no puede completar ningún camino cerrado."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "Un diagrama o esquema de circuito es una representación gráfica que utiliza símbolos " +
+                    "estandarizados (para resistencias, fuentes, interruptores, etc.) con el fin de mostrar " +
+                    "cómo están conectados los componentes de un circuito, sin necesidad de dibujar los " +
+                    "elementos tal como se ven físicamente. No es una fotografía del circuito real (B); no " +
+                    "es un documento de precios (C); y no es un instrumento de medición como el multímetro " +
+                    "(D).",
+
+                p2: "Un nodo es un punto del circuito donde se unen tres o más conductores o ramas, y es " +
+                    "clave para analizar cómo se distribuye la corriente en ese punto. No es el componente " +
+                    "que genera la energía, eso es la fuente o batería (A); no es el nombre genérico de una " +
+                    "resistencia (C); y no es una unidad de medida de potencia (D).",
+
+                p3: "Una malla es una trayectoria cerrada dentro de un circuito que puede recorrerse volviendo " +
+                    "al punto de partida sin repetir ninguna rama, y se utiliza para aplicar leyes de análisis " +
+                    "de circuitos como la Ley de Voltajes de Kirchhoff. No es un material aislante (B); no es " +
+                    "un tipo exclusivo de resistencia para paralelo (C); y no es el nombre de la fuente de " +
+                    "alimentación (D).",
+
+                p4: "En una conexión en serie, los componentes se enlazan uno después de otro formando un " +
+                    "único camino posible para la corriente, por lo que la misma corriente circula por todos " +
+                    "ellos, y si uno se desconecta, se interrumpe todo el circuito. No es cierto que compartan " +
+                    "el mismo voltaje en cada componente ni que los demás sigan funcionando si uno falla, esa " +
+                    "es una característica del paralelo (B); sí existe intercambio de corriente y voltaje " +
+                    "entre los componentes (C); y la conexión en serie sigue un orden y una trayectoria " +
+                    "definida, no es aleatoria (D).",
+
+                p5: "En una conexión en paralelo, los componentes se conectan en distintas ramas entre los " +
+                    "mismos dos nodos, por lo que todos comparten el mismo voltaje, mientras que la corriente " +
+                    "total del circuito se reparte entre esas ramas según la resistencia de cada una. No es " +
+                    "cierto que exista un único camino con la misma corriente para todos, esa es la " +
+                    "característica de la conexión en serie (A); si un componente se desconecta, los demás " +
+                    "pueden seguir funcionando, no se detiene todo el circuito (C); y los componentes no " +
+                    "necesitan tener el mismo valor de resistencia para conectarse en paralelo (D).",
+
+                p6: "En una conexión en serie, la resistencia equivalente se calcula sumando los valores de " +
+                    "cada resistencia: R_eq = 2 Ω + 3 Ω + 5 Ω = 10 Ω. El valor 0.97 Ω corresponde al cálculo " +
+                    "si estas mismas resistencias estuvieran en paralelo, no en serie (A); 30 Ω resultaría de " +
+                    "multiplicar en lugar de sumar los valores (B); y 15 Ω no corresponde a ninguna operación " +
+                    "válida con estos datos (D).",
+
+                p7: "En una conexión en paralelo con dos resistencias iguales de 10 Ω, la resistencia " +
+                    "equivalente siempre es menor que el valor individual: 1/R_eq = 1/10 + 1/10 = 2/10, por " +
+                    "lo que R_eq = 10/2 = 5 Ω. 20 Ω resultaría de sumar directamente ambas resistencias, como " +
+                    "si estuvieran en serie (A); 10 Ω sería el valor de una sola resistencia, no del conjunto " +
+                    "en paralelo (B); y 0.2 Ω corresponde al resultado de 1/R_eq, no al valor final de R_eq " +
+                    "(D).",
+
+                p8: "Cuando un circuito combina tramos conectados en serie con tramos conectados en paralelo, " +
+                    "como en este caso (dos resistencias en paralelo conectadas en serie con una tercera), se " +
+                    "le llama circuito mixto. No es un circuito en serie puro, ya que existe una parte en " +
+                    "paralelo (A); no es un circuito en paralelo puro, ya que existe una parte en serie (B); " +
+                    "y no es un circuito abierto, ya que sí existe al menos un camino cerrado por el que puede " +
+                    "circular la corriente (D)."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien los diagramas de circuitos, mallas y nodos.";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

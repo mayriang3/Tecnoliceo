@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 6. Bucles o ciclos | TecnoLiceo</title>
+<link rel="icon" type="image/png" href="/img/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Estilos/styles.css">
+<link rel="stylesheet" href="/Estilos/styles_modulos.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+    <h1>TecnoLiceo</h1>
+  </div>
+    <section class="botones_principales">
+        <h2>Módulo 6. Bucles o ciclos</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/PROGRAMACION/buclesyciclos.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+<main class="mod">
+
+  <section class="portada">
+    <span class="pill">Modulo 6</span>
+    <h1>Bucles o ciclos</h1>
+    <span class="pill">Programación</span>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Qué son los bucles o ciclos?</h2>
+    <p>Los ciclos o bucles son estructuras que permiten que un programa repita una o varias acciones varias veces, sin tener que escribir el mismo código una y otra vez. En Python, los más utilizados son <strong>for</strong> y <strong>while</strong>, y cada uno funciona de una manera diferente según lo que necesitemos. Gracias a los ciclos, podemos hacer que nuestros programas sean más <strong>rápidos, prácticos y dinámicos</strong>, especialmente cuando necesitamos repetir una tarea muchas veces.</p>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Cómo diferenciamos los ciclos?</h2>
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span>
+        <p>El ciclo <strong>for</strong> se usa para repetir una acción una cantidad determinada de veces o recorrer elementos de una lista. Es útil cuando ya sabemos cuántas repeticiones necesitamos.</p>
+        <pre class="cod"><code>for i in range(5):
+    print("Hola")</code></pre>
+        <p class="pie"><strong>¿Qué hace?</strong> Imprime “Hola” 5 veces, porque range(5) indica que el ciclo debe repetirse cinco veces.</p>
+      </div>
+      <div class="paso c4"><span class="num">02</span>
+        <p>El ciclo <strong>while</strong> se usa para repetir una acción mientras se cumpla una condición. Continúa hasta que la condición deje de cumplirse.</p>
+        <pre class="cod"><code>numero = 1
+
+while numero &lt;= 5:
+    print(numero)
+    numero += 1</code></pre>
+        <p class="pie"><strong>¿Qué hace?</strong> Muestra los números del 1 al 5, aumentando numero en 1 hasta que la condición ya no se cumpla.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Cómo funciona el FOR?</h2>
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span>
+        <p>Primero, el programa establece qué acción quiere repetir y cómo funcionará el ciclo. Dependiendo del tipo de ciclo, podemos indicar una cantidad de repeticiones o una condición que debe cumplirse.</p>
+        <div class="nota"><pre class="cod"><code>for i in range(3):</code></pre><p>En este caso, indicamos que el ciclo se repetirá 3 veces.</p></div>
+      </div>
+      <div class="paso c4"><span class="num">02</span>
+        <p>Una vez iniciado el ciclo, el programa ejecuta la instrucción indicada cada vez que corresponde. Esta acción se repite automáticamente sin tener que escribirla varias veces.</p>
+        <div class="nota"><pre class="cod"><code>print("Hola")</code></pre><p>La instrucción hace que “Hola” aparezca en cada repetición.</p></div>
+      </div>
+      <div class="paso c2"><span class="num">03</span>
+        <p>Finalmente, cuando se cumple el número de repeticiones indicado o deja de cumplirse la condición, <strong>el ciclo se detiene</strong>. Después de esto, el programa continúa con las siguientes instrucciones.</p>
+        <div class="nota"><pre class="cod"><code>Hola
+Hola
+Hola</code></pre><p>Como el ciclo se repitió 3 veces, “Hola” aparece tres veces y luego termina.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>¿Cómo funciona el WHILE?</h2>
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span>
+        <p>Primero, el programa establece una condición que debe cumplirse para que el ciclo pueda comenzar y continuar funcionando.</p>
+        <div class="nota"><pre class="cod"><code>numero = 1
+
+while numero &lt;= 3:</code></pre><p>Aquí indicamos que el ciclo continuará mientras número sea menor o igual a 3.</p></div>
+      </div>
+      <div class="paso c4"><span class="num">02</span>
+        <p>Mientras la condición sea verdadera, Python ejecuta las instrucciones que están dentro del ciclo. En cada vuelta, el valor puede cambiar para que el ciclo avance.</p>
+        <div class="nota"><pre class="cod"><code>print(numero)
+numero += 1</code></pre><p>El programa muestra el número y luego aumenta su valor en 1.</p></div>
+      </div>
+      <div class="paso c2"><span class="num">03</span>
+        <p>Cuando la condición deja de cumplirse, el <strong>while</strong> se detiene automáticamente y el programa continúa con las siguientes instrucciones.</p>
+        <div class="nota"><pre class="cod"><code>1
+2
+3</code></pre><p>Después de mostrar el 3, número pasa a ser 4 y la condición ya no se cumple.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Sintaxis de ciclos</h2>
+    <div class="pasos">
+      <div class="paso c1"><span class="num">01</span>
+        <p><strong>Ciclo for</strong><br>El for indica que empieza el ciclo. numero es la variable que va tomando diferentes valores. in indica que la variable recorrerá un rango y range(1, 6) establece los números desde 1 hasta 5. Los : indican que las instrucciones de abajo pertenecen al ciclo.</p>
+        <pre class="cod"><code>for numero in range(1, 6):
+    print(numero)</code></pre>
+      </div>
+      <div class="paso c4"><span class="num">02</span>
+        <p><strong>Ciclo while</strong><br>Primero se establece numero = 1 como valor inicial. while indica que el ciclo continuará mientras se cumpla la condición numero &lt;= 5. Después, print(numero) muestra el número y numero += 1 aumenta su valor en cada repetición para que el ciclo pueda terminar.</p>
+        <pre class="cod"><code>numero = 1
+while numero &lt;= 5:
+    print(numero)
+    numero += 1</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Ejemplos</h2>
+    <div class="tarjetas">
+      <article class="ej">
+        <h4>Contador del 1 al 5</h4>
+        <p>El programa utiliza el ciclo <strong>for</strong> para mostrar los números del 1 al 5 automáticamente.</p>
+        <pre class="cod"><code>for i in range(1, 6):
+    print(i)
+
+1
+2
+3
+4
+5</code></pre>
+      </article>
+      <article class="ej">
+        <h4>Repetir un mensaje</h4>
+        <p>El ciclo for permite repetir un mensaje varias veces sin escribirlo manualmente.</p>
+        <pre class="cod"><code>for i in range(3):
+    print("Hola")
+
+Hola
+Hola
+Hola</code></pre>
+      </article>
+      <article class="ej">
+        <h4>Contar mientras se cumple una condición</h4>
+        <p>El ciclo while muestra los números y aumenta su valor hasta que llega a 5.</p>
+        <pre class="cod"><code>numero = 1
+
+while numero &lt;= 5:
+    print(numero)
+    numero += 1
+
+1
+2
+3
+4
+5</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <h2>Errores comunes</h2>
+    <div class="tarjetas">
+      <article class="ej">
+        <p>En un ciclo while, la variable debe cambiar en algún momento. Si no lo actualizamos, el ciclo puede repetirse infinitamente.</p>
+        <div class="mal"><b>Incorrecto</b><pre class="cod"><code>i = 5
+while i &lt; 5:
+    print(i)</code></pre></div>
+        <div class="bien"><b>Correcto</b><pre class="cod"><code>i = 0
+while i &lt; 5:
+    print(i)
+    i += 1</code></pre></div>
+      </article>
+      <article class="ej">
+        <p>Una condición mal escrita puede hacer que el ciclo no se ejecute o que se repita más veces de lo esperado.</p>
+        <div class="mal"><b>Incorrecto</b><pre class="cod"><code>i = 5
+while i &lt; 5:
+    print(i)</code></pre></div>
+        <div class="bien"><b>Correcto</b><pre class="cod"><code>i = 5
+while i &lt;= 5:
+    print(i)
+    i += 1</code></pre></div>
+      </article>
+      <article class="ej">
+        <p>En Python, el último número de range() no se incluye, por lo que debemos tenerlo en cuenta al establecer el límite.</p>
+        <div class="mal"><b>Incorrecto</b><pre class="cod"><code>for i in range(1, 5):
+    print(i)</code></pre></div>
+        <div class="bien"><b>Correcto</b><pre class="cod"><code>for i in range(1, 6):
+    print(i)</code></pre></div>
+      </article>
+      <article class="ej">
+        <p>Si la condición de un while siempre es verdadera y la variable no cambia, el ciclo continuará indefinidamente.</p>
+        <div class="mal"><b>Incorrecto</b><pre class="cod"><code>x = 1
+while x &gt; 0:
+    print(x)</code></pre></div>
+        <div class="bien"><b>Correcto</b><pre class="cod"><code>for i in range(1, 6):
+    print(i)</code></pre></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="bloque resumen">
+    <h2>Resumen</h2>
+    <p>Los ciclos o bucles son una herramienta de programación que sirve para repetir una o varias instrucciones varias veces sin tener que escribirlas de nuevo. Son muy útiles para hacer que un programa realice tareas de forma más rápida y organizada. En Python existen principalmente dos tipos: el ciclo for, que se utiliza cuando sabemos cuántas veces queremos repetir una acción, y el ciclo while, que repite las instrucciones mientras se cumpla una condición. En conclusión, los ciclos ayudan a ahorrar código y permiten que los programas sean más eficientes y fáciles de manejar.</p>
+  </section>
+
+  <section class="bloque video">
+    <h2>Video</h2>
+    <div class="marco">
+      <!-- Pega aquí el iframe del video -->
+    </div>
+  </section>
+
+  <section class="bloque eval">
+    <h2>¿Estás listo?</h2>
+    <p>Realiza una pequeña evaluación sobre el tema y pon a prueba lo aprendido.</p>
+    <a class="btn" href="#">Hacer evaluación</a>
+  </section>
+
+</main>
+
+<footer>
+  <h2>TecnoLiceo</h2>
+  <p>Plataforma informativa con módulos educativos sobre la Modalidad Técnica en Informática.</p>
+  <p class="footer-copy">© 2026 - Institución Educativa Liceo Tame</p>
+</footer>
+</body>
+</html>

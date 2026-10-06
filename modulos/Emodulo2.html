@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 2. Fundamentos de circuitos | TecnoLiceo</title>
+
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+        <h1>TecnoLiceo</h1>
+    </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 2. Fundamentos de circuitos</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/ELECTRONICA/">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+
+<main class="mod">
+
+    <!-- ==================== PORTADA ==================== -->
+
+    <section class="portada">
+        <span class="pill">Modulo 2</span>
+
+        <h1>Fundamentos de circuitos: Ley de Ohm, magnitudes, resistencias, potencia y voltaje</h1>
+
+        <span class="pill">Electrónica</span>
+    </section>
+
+
+    <!-- ==================== INTRODUCCIÓN ==================== -->
+
+    <section class="bloque">
+
+        <h2>Circuitos eléctricos</h2>
+
+        <p>
+            Comprende las magnitudes eléctricas clave y su relación en los
+            circuitos para resolver problemas reales.
+
+            Un circuito eléctrico es un conjunto de componentes conectados que
+            permiten el flujo de corriente y la transferencia de energía para
+            realizar trabajo útil. Están presentes en todo lo que usamos a
+            diario, desde una lámpara hasta los dispositivos y sistemas
+            tecnológicos más avanzados.
+        </p>
+
+        <h3 class="sub">Elementos de un circuito</h3>
+
+        <ul class="lista">
+            <li><strong>Fuente de energía</strong></li>
+            <li><strong>Carga</strong></li>
+            <li><strong>Resistencia</strong></li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== OBJETIVOS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Objetivos del módulo</h2>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <p>Comprender las magnitudes eléctricas fundamentales.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <p>Aplicar la Ley de Ohm para analizar circuitos simples.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <p>Identificar y calcular resistencias en diferentes configuraciones.</p>
+            </article>
+
+            <article class="paso c4">
+                <span class="num">4</span>
+                <p>Determinar voltajes y potencias en los componentes del circuito.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== MAGNITUDES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Magnitudes eléctricas básicas</h2>
+
+        <p>
+            Cinco magnitudes fundamentales que describen y gobiernan todo
+            circuito.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Corriente (I)</h4>
+                <p>Es el flujo de carga eléctrica. Se mide en amperios (A).</p>
+            </article>
+
+            <article class="ej">
+                <h4>Voltaje (V)</h4>
+                <p>Es la diferencia de potencial que impulsa la corriente. Se mide en voltios (V).</p>
+            </article>
+
+            <article class="ej">
+                <h4>Resistencia (R)</h4>
+                <p>Es la oposición al paso de la corriente. Se mide en ohmios (Ω).</p>
+            </article>
+
+            <article class="ej">
+                <h4>Potencia (P)</h4>
+                <p>Es la rapidez con la que se transfiere energía. Se mide en vatios (W).</p>
+            </article>
+
+            <article class="ej">
+                <h4>Energía (E)</h4>
+                <p>Es la energía transferida a lo largo del tiempo. Se mide en joules (J).</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">¿Cómo se relacionan?</h3>
+
+        <ul class="lista">
+            <li><strong>Voltaje (V):</strong> crea la diferencia de potencial que impulsa la corriente.</li>
+            <li><strong>Corriente (I):</strong> fluye por el circuito desde el mayor potencial al menor.</li>
+            <li><strong>Resistencia (R):</strong> se opone al paso de la corriente y limita su valor.</li>
+            <li><strong>Carga:</strong> la corriente transporta carga eléctrica.</li>
+            <li><strong>Potencia (P) y energía (E):</strong> la potencia es la rapidez con la que se usa la energía. La energía es la cantidad total transferida a lo largo del tiempo.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== LEY DE OHM ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ley de Ohm</h2>
+
+        <p>
+            La relación fundamental entre voltaje, corriente y resistencia.
+        </p>
+
+        <div class="cod">
+            <code>
+V = I × R
+I = V / R
+P = V · I
+            </code>
+        </div>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Voltaje (V)</h4>
+                <p>Diferencia de potencial que impulsa la corriente.</p>
+                <p><strong>Ejemplo:</strong> batería de 9 V.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Corriente (I)</h4>
+                <p>Flujo de carga eléctrica en el circuito. Fluye del positivo al negativo.</p>
+                <p><strong>Ejemplo:</strong> 0,25 A (250 mA).</p>
+            </article>
+
+            <article class="ej">
+                <h4>Resistencia (R)</h4>
+                <p>Oposición al paso de la corriente. Limita el paso de corriente.</p>
+                <p><strong>Ejemplo:</strong> resistencia de 36 Ω.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">Claves importantes</h3>
+
+        <ul class="lista">
+            <li>La Ley de Ohm es lineal: si una magnitud cambia, las otras cambian proporcionalmente.</li>
+            <li>Es válida para elementos óhmicos (resistencia constante).</li>
+            <li>Aplica en condiciones normales de temperatura y operación.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== RESISTENCIAS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Resistencias: tipos y comportamiento</h2>
+
+        <p>
+            Son componentes que se oponen al paso de la corriente y permiten
+            controlar y limitar el flujo de energía en un circuito.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Resistencias fijas y variables</h4>
+                <p>Tipos de resistencias según si su valor se mantiene o se puede ajustar.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Código de colores</h4>
+                <p>Sistema de bandas de color para identificar el valor de las resistencias.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Materiales y temperatura</h4>
+                <p>El comportamiento de la resistencia cambia según el material y la temperatura.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">Conexiones en serie y paralelo</h3>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Conexión en serie</h4>
+                <p>Las resistencias (R1, R2, R3) se conectan una a continuación de la otra.</p>
+
+                <div class="cod">
+                    <code>
+Rtotal = R1 + R2 + R3
+                    </code>
+                </div>
+            </article>
+
+            <article class="ej">
+                <h4>Conexión en paralelo</h4>
+                <p>Las resistencias (R1, R2, R3) se conectan a los mismos dos puntos.</p>
+
+                <div class="cod">
+                    <code>
+1/Rtotal = 1/R1 + 1/R2 + 1/R3
+                    </code>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== POTENCIA Y VOLTAJE ==================== -->
+
+    <section class="bloque">
+
+        <h2>Potencia y voltaje en circuitos</h2>
+
+        <p>
+            La potencia mide la energía eléctrica que transforma o entrega un
+            circuito. Depende del voltaje, la corriente y la resistencia. Es
+            clave para elegir y dimensionar componentes de forma segura.
+        </p>
+
+        <div class="nota">
+            <p>
+                <strong>La potencia importa:</strong> conocer y calcular la
+                potencia evita sobrecargas, fallas y daños en los componentes
+                del circuito.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLO 1 ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo práctico 1: cálculo básico con Ley de Ohm</h2>
+
+        <p>
+            Aplicación práctica con un circuito sencillo.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Datos del circuito</h4>
+
+                <div class="cod">
+                    <code>
+V = 12 V
+R = 240 Ω
+I = ?
+                    </code>
+                </div>
+
+                <p><strong>Ley de Ohm:</strong> I = V / R</p>
+            </article>
+
+            <article class="ej">
+                <h4>Cálculo paso a paso</h4>
+
+                <div class="cod">
+                    <code>
+1. Sustituimos los valores:
+   I = 12 V / 240 Ω
+
+2. Realizamos la operación:
+   I = 0.05 A
+                    </code>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p>
+                <strong>Resultado: I = 0.05 A (50 mA).</strong> Con un voltaje
+                de 12 V y una resistencia de 240 Ω, la corriente que circula en
+                el circuito es 0.05 A.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLO 2 ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo práctico 2: potencia y voltaje en un circuito</h2>
+
+        <p>
+            Circuito con una fuente de V = 12 V y una resistencia R = 4 Ω.
+        </p>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Corriente (Ley de Ohm)</h4>
+                <p>I = V / R = 12 V / 4 Ω = 3 A</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Voltaje en la resistencia</h4>
+                <p>V = I × R = 3 A × 4 Ω = 12 V</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Potencia en la resistencia</h4>
+                <p>P = V × I = 12 V × 3 A = 36 W</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">Resultados del circuito</h3>
+
+        <ul class="lista">
+            <li><strong>12 V:</strong> voltaje en la resistencia.</li>
+            <li><strong>3 A:</strong> corriente.</li>
+            <li><strong>36 W:</strong> potencia.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== ERRORES COMUNES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Errores comunes en circuitos eléctricos</h2>
+
+        <p>
+            Evítalos para diseñar y medir con precisión.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej mal">
+                <h4>01. Confundir voltaje con corriente</h4>
+                <p>Provoca mediciones y conexiones incorrectas.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>02. No aplicar correctamente la Ley de Ohm</h4>
+                <p>Lleva a cálculos erróneos en el circuito.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>03. Malinterpretar códigos de colores</h4>
+                <p>Puede resultar en resistencias equivocadas.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>04. Olvidar la potencia máxima</h4>
+                <p>Riesgo de sobrecalentamiento y daño de componentes.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>05. No verificar conexiones y polaridades</h4>
+                <p>Genera fallos y comportamiento inesperado.</p>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p>La práctica constante y la atención al detalle te llevan a circuitos confiables.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== RESUMEN ==================== -->
+
+    <section class="bloque resumen">
+
+        <h2>Resumen</h2>
+
+        <p>
+            Lo esencial que necesitas dominar: las magnitudes eléctricas y sus
+            unidades; la Ley de Ohm y su aplicación; los tipos y características
+            de las resistencias; y el cálculo de la potencia y su importancia.
+            <br>Todo está conectado: magnitudes eléctricas, Ley de Ohm,
+            resistencias y potencia forman los fundamentos de los circuitos.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+    <h2>TecnoLiceo</h2>
+
+    <p>
+        Plataforma informativa con módulos educativos sobre la
+        Modalidad Técnica en Informática.
+    </p>
+
+    <p class="footer-copy">
+        © 2026 - Institución Educativa Liceo Tame
+    </p>
+
+</footer>
+
+</body>
+</html>

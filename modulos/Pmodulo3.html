@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Módulo 3. Diagramas de flujo y árboles de decisión | TecnoLiceo</title>
+
+  <link rel="icon" type="image/png" href="/img/logo.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/Estilos/styles.css">
+  <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+</head>
+
+<body>
+<header>
+
+  <div class="logo">
+    <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+    <h1>TecnoLiceo</h1>
+  </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 3. Diagramas de flujo y arboles de decision</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/PROGRAMACION/diagrama.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+
+</header>
+
+<main class="mod">
+
+  <section class="portada">
+
+    <span class="pill">Modulo 3</span>
+
+    <h1>Diagramas de flujo y árboles de decisión</h1>
+    
+    <span class="pill">Programación</span>
+
+  </section>
+
+  <section class="bloque">
+
+    <h2>¿Qué son?</h2>
+
+    <p>
+      Un diagrama de flujo y un árbol de decisión son herramientas que se utilizan en programación para organizar y entender la lógica de un programa antes de escribir el código. El diagrama de flujo muestra paso a paso lo que debe hacer el programa, utilizando símbolos, procesos, decisiones y flechas para indicar el orden. Por otro lado, el árbol de decisión se enfoca en las diferentes opciones que puede tomar el programa dependiendo de una condición, mostrando caminos distintos según la respuesta. En pocas palabras, ambos ayudan a visualizar cómo funciona un programa y qué decisiones debe tomar en cada situación.
+    </p>
+
+  </section>
+
+  <section class="bloque">
+
+    <h2>Diagrama de flujo</h2>
+
+    <p>
+      Un diagrama de flujo es una representación gráfica que nos ayuda a organizar los pasos que debe seguir un programa. Utiliza figuras, símbolos y flechas para mostrar qué sucede primero, qué decisiones se toman y cuál es el resultado final. Es muy útil para entender la lógica de un programa antes de empezar a escribir el código.
+    </p>
+
+    <h3 class="sub">Elementos</h3>
+
+      <div class="figuras">
+
+        <div class="fig ovalo"><p>Indica el inicio o el final del programa.</p></div>
+
+        <div class="fig rect"><p>Representa una acción o proceso.</p></div>
+
+        <div class="fig rombo"><p>Representa una condición o decisión.</p></div>
+
+        <div class="fig flecha"><p>Muestran el orden en que se ejecutan los pasos.</p></div>
+
+    </div>
+
+  </section>
+
+  <section class="bloque">
+
+    <h2>Árbol de decisión</h2>
+
+    <p>
+      Un árbol de decisión es una herramienta que podemos usar en programación para organizar las diferentes opciones que puede tomar un programa. Comienza con una condición o pregunta y, dependiendo de si se cumple o no, el programa sigue un camino diferente hasta llegar a un resultado.
+    </p>
+    <!-- Ojo: en el PDF esta lista repite los elementos del diagrama de flujo -->
+    <ul class="lista">
+
+      <li><strong>Inicio / Fin:</strong> indica dónde comienza y termina el programa.</li>
+
+      <li><strong>Proceso:</strong> representa una acción o instrucción que realiza el programa.</li>
+
+      <li><strong>Decisión:</strong> muestra una condición que puede tener diferentes respuestas, como Sí / No.</li>
+
+      <li><strong>Flechas:</strong> indican el orden y la dirección que sigue el programa.</li>
+
+      <li><strong>Entrada / Salida:</strong> representa cuando el programa recibe o muestra información.</li>
+
+    </ul>
+
+    <aside class="nota"><p>
+      A diferencia del diagrama de flujo, el árbol de decisión tiene elementos un poco diferentes. Se basa principalmente en preguntas o condiciones, ramas que muestran las opciones y resultados que indican qué pasa según la decisión que tomemos.
+    </p></aside>
+
+  </section>
+
+  <section class="bloque">
+
+    <h2>Ejemplos de diagrama de flujo</h2>
+
+    <div class="tarjetas">
+
+      <article class="ej">
+        <h4>Saber si una persona es mayor de edad</h4>
+        <ol class="flujo">
+          <li>INICIO</li>
+          <li>Pedir edad</li>
+          <li>¿Edad &gt;= 18?</li>
+          <li class="ramas"><span><b>SÍ</b> "Mayor"</span><span><b>NO</b> "Menor"</span></li>
+          <li>FIN</li>
+        </ol>
+      </article>
+
+      <article class="ej">
+        <h4>Sumar dos números</h4>
+        <ol class="flujo">
+          <li>INICIO</li>
+          <li>Pedir número 1</li>
+          <li>Pedir número 2</li>
+          <li>Sumar</li>
+          <li>Mostrar resultado</li>
+          <li>FIN</li>
+        </ol>
+      </article>
+
+      <article class="ej">
+        <h4>Saber si una nota es aprobatoria</h4>
+        <ol class="flujo">
+          <li>INICIO</li>
+          <li>Pedir nota</li>
+          <li>¿Nota &gt;= 3.0?</li>
+          <li class="ramas"><span><b>SÍ</b> "Aprobó"</span><span><b>NO</b> "No aprobó"</span></li>
+          <li>FIN</li>
+        </ol>
+      </article>
+
+    </div>
+
+  </section>
+
+  <section class="bloque">
+
+    <h2>Ejemplos de árbol de decisión</h2>
+
+    <div class="tarjetas">
+
+      <article class="ej">
+        <h4>Mayor o menor de edad</h4>
+        <div class="arbol">
+          <p class="q">¿Edad &gt;= 18?</p>
+          <div class="ramas"><span><b>SÍ</b> Mayor</span><span><b>NO</b> Menor</span></div>
+        </div>
+      </article>
+
+      <article class="ej">
+        <h4>¿Aprobó o no?</h4>
+        <div class="arbol">
+          <p class="q">¿Nota &gt;= 3.0?</p>
+          <div class="ramas"><span><b>SÍ</b> Aprobó</span><span><b>NO</b> No aprobó</span></div>
+        </div>
+      </article>
+
+      <article class="ej">
+        <h4>¿Llevar paraguas?</h4>
+        <div class="arbol">
+          <p class="q">¿Está lloviendo?</p>
+          <div class="ramas"><span><b>SÍ</b> Llevar paraguas</span><span><b>NO</b> No llevar</span></div>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+  <section class="bloque resumen">
+
+    <h2>Resumen</h2>
+
+    <p>
+      El diagrama de flujo y el árbol de decisión son herramientas que nos ayudan a organizar la lógica de un programa antes de escribir el código. El diagrama de flujo muestra los pasos que debe seguir el programa, utilizando símbolos y flechas para representar procesos, decisiones y resultados. Por otro lado, el árbol de decisión se enfoca en las diferentes opciones que puede tomar el programa dependiendo de una condición, mostrando sus posibles caminos y resultados. En pocas palabras: el diagrama de flujo muestra el proceso paso a paso y el árbol de decisión muestra las diferentes decisiones que puede tomar el programa.
+    </p>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <h2>TecnoLiceo</h2>
+
+  <p>Plataforma informativa con módulos educativos sobre la Modalidad Técnica en Informática.</p>
+
+  <p class="footer-copy">© 2026 - Institución Educativa Liceo Tame</p>
+
+</footer>
+
+</body>
+
+
+</html>

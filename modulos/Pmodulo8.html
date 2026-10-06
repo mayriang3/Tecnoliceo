@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 8. Condicionales | TecnoLiceo</title>
+
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+        <h1>TecnoLiceo</h1>
+    </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 8. Condicionales</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/PROGRAMACION/condicionales.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+
+</header>
+
+
+<main class="mod">
+
+
+    <!-- ==================== PORTADA ==================== -->
+
+    <section class="portada">
+
+        <span class="pill">Modulo 8</span>
+
+        <h1>Condicionales</h1>
+
+        <span class="pill">Programación</span>
+
+    </section>
+
+
+    <!-- ==================== INTRODUCCIÓN ==================== -->
+
+    <section class="bloque">
+
+        <h2>Introducción</h2>
+
+        <p>
+            En programación, los programas no siempre necesitan realizar
+            las mismas acciones. Dependiendo de los datos que reciban,
+            pueden necesitar tomar decisiones diferentes.
+
+            Los condicionales permiten que un programa analice una situación
+            y decida qué acción realizar dependiendo de si una condición
+            se cumple o no.
+        </p>
+
+    </section>
+
+
+    <!-- ==================== ¿QUÉ SON? ==================== -->
+
+    <section class="bloque">
+
+        <h2>¿Qué son los condicionales?</h2>
+
+        <p>
+            Las condicionales en Python son instrucciones que permiten que
+            un programa tome decisiones dependiendo de una situación.
+            Estas funcionan evaluando si una condición se cumple o no y,
+            según el resultado, ejecutan una acción determinada.
+
+            Para esto se utilizan principalmente
+            <strong>if</strong>, <strong>elif</strong> y <strong>else</strong>.
+
+            Gracias a las condicionales, los programas pueden responder
+            de diferentes maneras según los datos que reciban, por ejemplo,
+            para saber si una persona es mayor de edad, si una nota es
+            suficiente para aprobar o si hace frío o calor.
+        </p>
+
+    </section>
+
+
+    <!-- ==================== ¿CÓMO DECIDE? ==================== -->
+
+    <section class="bloque">
+
+        <h2>¿Cómo decide nuestro programa?</h2>
+
+        <p>
+            Cuando hacemos un programa, no siempre queremos que realice
+            la misma acción. Dependiendo de la situación o de los datos
+            que reciba, puede necesitar tomar una decisión diferente. <br>
+            Para que esto sea posible, utilizamos los condicionales,
+            que permiten comprobar si una determinada condición se cumple
+            o no. <br>
+            Por ejemplo, podemos hacer que un programa revise la nota de
+            un estudiante. Si las notas van de 1 a 10 y se necesita una
+            nota de 6 o más para aprobar, el programa puede comprobar la
+            nota y mostrar un resultado diferente dependiendo de ella. <br>
+            En este ejemplo, Python analiza la condición
+            <strong>nota &gt;= 6</strong>. Como la nota es 8, la condición
+            se cumple y el programa muestra “Aprobaste”. Si la nota fuera
+            5, la condición no se cumpliría y aparecería
+            “No aprobaste” por eso se utiliza <strong>else</strong>.
+            De esta manera, los condicionales hacen que los programas sean
+            más útiles, porque permiten que reaccionen de diferentes formas
+            según los datos que reciben.
+        </p>
+
+        <pre class="cod"><code>nota = 8
+
+if nota &gt;= 6:
+    print("Aprobaste")
+else:
+    print("No aprobaste")</code></pre>
+
+    </section>
+
+
+    <!-- ==================== ¿CÓMO FUNCIONA? ==================== -->
+
+    <section class="bloque">
+
+        <h2>¿Cómo funciona?</h2>
+
+        <p>
+            Los condicionales permiten que un programa tome decisiones
+            según su condición. Primero, Python analiza si una situación
+            es verdadera o falsa y, dependiendo del resultado, decide
+            qué acción realizar.
+        </p>
+
+
+        <div class="pasos">
+
+
+            <!-- PASO 1 -->
+
+            <div class="paso c1">
+
+                <span class="num">01</span>
+
+                <p>
+                    El programa analiza una condición para saber si se
+                    cumple o no. Por ejemplo:
+                    ¿la nota es mayor o igual a seis?
+                </p>
+
+                <div class="nota">
+
+                    <pre class="cod"><code>if nota &gt;= 6:</code></pre>
+
+                    <p>
+                        Python comprueba si la condición es verdadera.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PASO 2 -->
+
+            <div class="paso c4">
+
+                <span class="num">02</span>
+
+                <p>
+                    Si la condición es verdadera, Python realiza la
+                    instrucción que se encuentra dentro del
+                    <strong>if</strong>.
+                </p>
+
+                <div class="nota">
+
+                    <pre class="cod"><code>print("Aprobaste")</code></pre>
+
+                    <p>
+                        El programa muestra el mensaje “Aprobaste”.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PASO 3 -->
+
+            <div class="paso c2">
+
+                <span class="num">03</span>
+
+                <p>
+                    Si la condición es falsa, el programa puede realizar
+                    otra acción utilizando <strong>else</strong>.
+                </p>
+
+                <div class="nota">
+
+                    <pre class="cod"><code>else:
+    print("No aprobaste")</code></pre>
+
+                    <p>
+                        El programa muestra “No aprobaste”.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== SINTAXIS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Sintaxis</h2>
+
+        <div class="pasos">
+
+
+            <!-- IF -->
+
+            <div class="paso c1">
+
+                <span class="num">01</span>
+
+                <p>
+                    <strong>if</strong> significa “si”. Se utiliza para
+                    probar una condición. Si la condición es verdadera,
+                    Python ejecuta las instrucciones que están dentro
+                    del <strong>if</strong>.
+                </p>
+
+                <pre class="cod"><code>if condicion:
+    acción
+
+if nota &gt;= 8:
+    print("Excelente")</code></pre>
+
+            </div>
+
+
+            <!-- ELIF -->
+
+            <div class="paso c4">
+
+                <span class="num">02</span>
+
+                <p>
+                    <strong>elif</strong> significa “si no, si”. Se utiliza
+                    después de un <strong>if</strong> cuando queremos
+                    comprobar una condición diferente. Esto permite tener
+                    varias posibilidades dentro del programa.
+                </p>
+
+                <pre class="cod"><code>elif otra_condicion:
+    otra_accion
+
+elif nota &gt;= 6:
+    print("Aprobaste")</code></pre>
+
+            </div>
+
+
+            <!-- ELSE -->
+
+            <div class="paso c2">
+
+                <span class="num">03</span>
+
+                <p>
+                    <strong>else</strong> significa “si no”. Se utiliza
+                    cuando ninguna de las condiciones anteriores se cumple.
+                    En este caso, Python realiza la acción dentro del
+                    <strong>else</strong>.
+                </p>
+
+                <pre class="cod"><code>else:
+    acción
+
+else:
+    print("No aprobaste")</code></pre>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLOS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplos</h2>
+
+        <div class="tarjetas">
+
+
+            <!-- EJEMPLO 1 -->
+
+            <article class="ej">
+
+                <h4>Saber si una persona es mayor de edad</h4>
+
+                <p>
+                    El programa compara la edad de la persona con 18.
+                    Si tiene 18 años o más, muestra que es mayor de edad;
+                    de lo contrario, indica que es menor.
+                </p>
+
+                <pre class="cod"><code>edad = 18
+
+if edad &gt;= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")</code></pre>
+
+            </article>
+
+
+            <!-- EJEMPLO 2 -->
+
+            <article class="ej">
+
+                <h4>Revisar una nota</h4>
+
+                <p>
+                    El programa revisa si la nota obtenida es igual o
+                    superior a 3.0. Si cumple esta condición, el estudiante
+                    aprueba; si no, reprueba.
+                </p>
+
+                <pre class="cod"><code>nota = 4.2
+
+if nota &gt;= 3.0:
+    print("Aprobaste")
+else:
+    print("No aprobaste")</code></pre>
+
+            </article>
+
+
+            <!-- EJEMPLO 3 -->
+
+            <article class="ej">
+
+                <h4>Comprobar la temperatura</h4>
+
+                <p>
+                    El programa comprueba si hace mucho calor, si el clima
+                    está agradable o si hace frío utilizando
+                    <strong>if</strong>, <strong>elif</strong> y
+                    <strong>else</strong>.
+                </p>
+
+                <pre class="cod"><code>temperatura = 30
+
+if temperatura &gt; 30:
+    print("Hace mucho calor")
+elif temperatura &gt;= 20:
+    print("El clima está agradable")
+else:
+    print("Hace frío")</code></pre>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== ERRORES COMUNES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Errores comunes</h2>
+
+        <div class="tarjetas">
+
+
+            <!-- ERROR 1 -->
+
+            <article class="ej">
+
+                <p>
+                    Después de <strong>if</strong>, <strong>elif</strong>
+                    o <strong>else</strong> siempre deben ir dos puntos.
+                    Si los olvidamos, Python no puede interpretar
+                    correctamente la condición.
+                </p>
+
+                <div class="mal">
+
+                    <b>Incorrecto</b>
+
+                    <pre class="cod"><code>if edad &gt;= 18
+    print("Eres mayor de edad")</code></pre>
+
+                </div>
+
+                <div class="bien">
+
+                    <b>Correcto</b>
+
+                    <pre class="cod"><code>if edad &gt;= 18:
+    print("Eres mayor de edad")</code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ERROR 2 -->
+
+            <article class="ej">
+
+                <p>
+                    <strong>=</strong> se utiliza para asignar un valor,
+                    mientras que <strong>==</strong> se utiliza para
+                    comparar. Usarlos incorrectamente puede hacer que
+                    la condición no funcione.
+                </p>
+
+                <div class="mal">
+
+                    <b>Incorrecto</b>
+
+                    <pre class="cod"><code>if edad = 18:
+    print("Tienes 18 años")</code></pre>
+
+                </div>
+
+                <div class="bien">
+
+                    <b>Correcto</b>
+
+                    <pre class="cod"><code>if edad == 18:
+    print("Tienes 18 años")</code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ERROR 3 -->
+
+            <article class="ej">
+
+                <p>
+                    El código que pertenece a una condición debe tener
+                    una sangría. Sin ella, Python no sabe qué instrucciones
+                    debe ejecutar cuando la condición se cumple.
+                </p>
+
+                <div class="mal">
+
+                    <b>Incorrecto</b>
+
+                    <pre class="cod"><code>if nota &gt;= 3:
+print("Aprobaste")</code></pre>
+
+                </div>
+
+                <div class="bien">
+
+                    <b>Correcto</b>
+
+                    <pre class="cod"><code>if nota &gt;= 3:
+    print("Aprobaste")</code></pre>
+
+                </div>
+
+            </article>
+
+
+            <!-- ERROR 4 -->
+
+            <article class="ej">
+
+                <p>
+                    <strong>if</strong> inicia una condición,
+                    <strong>elif</strong> permite comprobar otra
+                    posibilidad y <strong>else</strong> se utiliza cuando
+                    ninguna de las condiciones anteriores se cumple.
+                </p>
+
+                <div class="mal">
+
+                    <b>Incorrecto</b>
+
+                    <pre class="cod"><code>if temperatura &gt; 30:
+    print("Hace mucho calor")
+
+if temperatura &gt;= 20:
+    print("Está agradable")
+else:
+    print("Hace frío")</code></pre>
+
+                </div>
+
+                <div class="bien">
+
+                    <b>Correcto</b>
+
+                    <pre class="cod"><code>if temperatura &gt; 30:
+    print("Hace mucho calor")
+elif temperatura &gt;= 20:
+    print("Está agradable")
+else:
+    print("Hace frío")</code></pre>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== RESUMEN ==================== -->
+
+    <section class="bloque resumen">
+
+        <h2>Resumen</h2>
+
+        <p>
+            Los condicionales en Python permiten que el programa tome
+            decisiones según una situación o dato. Se utilizan
+            <strong>if</strong>, <strong>elif</strong> y
+            <strong>else</strong> para comprobar diferentes condiciones. <br>
+            Por ejemplo, pueden servir para saber si una persona es mayor
+            de edad, si una nota es suficiente para aprobar o qué tipo de
+            clima hay según la temperatura. <br>
+            Al escribirlos, hay que tener cuidado con errores como olvidar
+            los <strong>:</strong>, confundir <strong>=</strong> con
+            <strong>==</strong>, no usar correctamente la indentación o
+            escribir mal los operadores.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+    <h2>TecnoLiceo</h2>
+
+    <p>
+        Plataforma informativa con módulos educativos sobre la
+        Modalidad Técnica en Informática.
+    </p>
+
+    <p class="footer-copy">
+        © 2026 - Institución Educativa Liceo Tame
+    </p>
+
+</footer>
+
+
+</body>
+</html>

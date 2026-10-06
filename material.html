@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material de estudio | TecnoLiceo</title>
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+            <h1>TecnoLiceo</h1>
+        </div>
+        </a>
+
+        <section class="botones_principales">
+            <a href="index.html"><button class="botonn">Inicio</button></a>
+            <a href="info.html"><button class="botonn">Información general</button></a>
+            <a href="material.html"><button class="botonn">Material de Estudio</button></a>
+            <a href="preguntas.html"><button class="botonn">Preguntas Frecuentes</button></a>
+        </section>
+    </header>
+
+    <!-- Encabezado Material de Estudio -->
+    <section class="mat-hero">
+        <div class="mat-hero__contenido">
+            <h1>Material de <br>Estudio</h1>
+
+            <ul class="mat-filtros">
+                <li>
+                    <a href="#electronica" class="filtro">
+                        <span class="filtro-ico"><img src="/img/icono-electronica.png" alt=""></span>
+                        <span class="filtro-texto">
+                            <strong>Electronica</strong>
+                            <span class="filtro-detalle">
+                                <span>7 módulos</span>
+                                <span>7 evaluaciones</span>
+                                <span>7 videos</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#programacion" class="filtro">
+                        <span class="filtro-ico"><img src="/img/icono-programacion.png" alt=""></span>
+                        <span class="filtro-texto">
+                            <strong>Programación</strong>
+                            <span class="filtro-detalle">
+                                <span>7 módulos</span>
+                                <span>7 evaluaciones</span>
+                                <span>7 videos</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#todos" class="filtro">
+                        <span class="filtro-ico"><img src="/img/icono-todo.png" alt=""></span>
+                        <span class="filtro-texto">
+                            <strong>Todo</strong>
+                            <span class="filtro-detalle">
+                                <span>14 módulos</span>
+                                <span>14 evaluaciones</span>
+                                <span>3 recomendaciones</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ELECTRÓNICA -->
+        <section id="electronica" class="materia materia--electronica">
+            <div class="materia-grid">
+                
+                <div class="kit-panel">
+                   <h2>Electronica</h2>
+                   <h3>Kit</h3> 
+                    <a href="/modulos/Ekit.html" class="kit-foto">
+                        <img src="/img/kitcom1.png" alt="Kit de electrónica">
+                    </a>
+                    <p class="kit-caption">Haz click en la foto para conocer mas</p>
+                </div>
+
+                <div class="modulos-grid">
+                    <a href="#" class="modulo-card">
+                        <img src="/img/resistencia-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 1</h4>
+                            <p>Codigo de colores de la resistencia</p>
+                        </div>
+                    </a>
+                    <a href="/modulos/Emodulo2.html" class="modulo-card">
+                        <img src="/img/circuitos-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 2</h4>
+                            <p>Fundamentos de circuitos</p>
+                        </div>
+                    </a>
+                    <a href="/modulos/Emodulo3.html" class="modulo-card">
+                        <img src="/img/multimetro-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 3</h4>
+                            <p>Multimetros y mediciones</p>
+                        </div>
+                    </a>
+                    <a href="/modulos/Emodulo4.html" class="modulo-card">
+                        <img src="/img/diagrama-modulos.png" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 4</h4>
+                            <p>Diagramas y esquemas de circuitos</p>
+                        </div>
+                    </a>
+                    <a href="/modulos/Emodulo5.html" class="modulo-card">
+                        <img src="/img/montaje-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 5</h4>
+                            <p>Montaje y circuitos</p>
+                        </div>
+                    </a>
+                    <a href="/modulos/Emodulo6.html" class="modulo-card">
+                        <img src="/img/arduino-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 6</h4>
+                            <p>introduccion a Arduino y Arduino IDE</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/salidayentrada-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 7</h4>
+                            <p>Entradas y salidas digitales/analogas con Arduino</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAMACIÓN -->
+        <section id="programacion" class="materia materia--programacion">
+            <h2 class="materia-titulo programacion">Programación</h2>
+
+            <div class="modulos-grid modulos-grid--full">
+                <a href="/modulos/Pmodulo1.html" class="modulo-card">
+                    <img src="/img/Plenguajes-modulo.jpg" alt="">
+                    <div class="modulo-card__info">
+                        <h4>Modulo 1</h4>
+                        <p>Que son los lenguajes de programación</p>
+                    </div>
+                </a>
+                <a href="/modulos/Pmodulo2.html" class="modulo-card">
+                    <img src="/img/Pcomputacional-modulos.png" alt="">
+                    <div class="modulo-card__info">
+                        <h4>Modulo 2</h4>
+                        <p>Preguntas de pensamiento computacional</p>
+                    </div>
+                </a>
+                <a href="/modulos/Pmodulo3.html" class="modulo-card">
+                    <img src="/img/Pdiagrama-modulos.jpg" alt="">
+                    <div class="modulo-card__info">
+                        <h4>Modulo 3</h4>
+                        <p>Diagramas de flujo y Arboles de decisión</p>
+                    </div>
+                </a>
+                <a href="/modulos/Pmodulo4.html" class="modulo-card">
+                    <img src="/img/Ppython-modulos.jpg" alt="">
+                    <div class="modulo-card__info">
+                        <h4>Modulo 4</h4>
+                        <p>Progrmación en pyhton</p>
+                    </div>
+                </a>
+                <a href="/modulos/Pmodulo5.html" class="modulo-card">
+                    <img src="/img/PlenguajeC-modulos.jpg" alt="">
+                    <div class="modulo-card__info">
+                        <h4>Modulo 5</h4>
+                        <p>Programación en lenguaje C</p>
+                    </div>
+                </a>
+                    <a href="/modulos/Pmodulo6.html" class="modulo-card">
+                    <img src="/img/Pbucles-modulos.jpg" alt="">
+                    <div class="modulo-card__info">
+                        <h4>Modulo 6</h4>
+                        <p>Bucles o ciclos</p>
+                    </div>
+                </a>
+                <a href="/modulos/Pmodulo7.html" class="modulo-card">
+                    <img src="/img/Pprintf.scanf-modulos.png" alt="">
+                    <div class="modulo-card__info">
+                        <h4>Modulo 7</h4>
+                        <p>Entradas y salidas de información (printf, scanf)</p>
+                    </div>
+                </a>
+                <a href="/modulos/Pmodulo8.html" class="modulo-card">
+                    <img src="/img/Pcondicionales-modulos.png" alt="">
+                    <div class="modulo-card__info">
+                        <h4>Modulo 8</h4>
+                        <p>Condicionales if, else-if</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!--TODOS LOS MÓDULOS -->
+        <section id="todos" class="materia">
+            <h2 class="materia-titulo todos">Todos los módulos</h2>
+            <div class="modulos-grid modulos-grid--full">
+                    <a href="#" class="modulo-card">
+                        <img src="/img/resistencia-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 1</h4>
+                            <p>Codigo de colores de la resistencia</p>
+                            <p>Electronica</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/circuitos-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 2</h4>
+                            <p>Fundamentos de circuitos</p>
+                            <p>Electronica</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/multimetro-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 3</h4>
+                            <p>Multimetros y mediciones</p>
+                            <p>Electronica</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/diagrama-modulos.png" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 4</h4>
+                            <p>Diagramas y esquemas de circuitos</p>
+                            <p>Electronica</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/montaje-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 5</h4>
+                            <p>Montaje y circuitos</p>
+                            <p>Electronica</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/arduino-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 6</h4>
+                            <p>introduccion a Arduino y Arduino IDE</p>
+                            <p>Electronica</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/salidayentrada-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 7</h4>
+                            <p>Entradas y salidas digitales/analogas con Arduino</p>
+                            <p>Electronica</p>
+                        </div>
+                    </a>
+                   <a href="#" class="modulo-card">
+                        <img src="/img/Plenguajes-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 1</h4>
+                            <p>Que son los lenguajes de programación</p>
+                            <p>Programacion</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/Pcomputacional-modulos.png" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 2</h4>
+                            <p>Preguntas de pensamiento computacional</p>
+                            <p>Programacion</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/Psintaxis-modulo.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 3</h4>
+                            <p>Sintaxis en la programación</p>
+                            <p>Programacion</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/Pdiagrama-modulos.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 4</h4>
+                            <p>Diagramas de flujo y Arboles de decisión</p>
+                            <p>Programacion</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/PlenguajeC-modulos.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 5</h4>
+                            <p>Programación en lenguaje C</p>
+                            <p>Programacion</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/Pprintf.scanf-modulos.png" alt="">
+                        <div class="modulo-card__info">
+                           <h4>Modulo 6</h4>
+                           <p>Entradas y salidas de información (printf, scanf)</p>
+                           <p>Programacion</p>
+                        </div>
+                    </a>
+                    <a href="#" class="modulo-card">
+                        <img src="/img/Pcondicionales-modulos.png" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 7</h4>
+                            <p>Condicionales if, else-if</p>
+                            <p>Programacion</p>
+                        </div>
+                    </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>TecnoLiceo</h2>
+        <p>
+            Plataforma informativa con módulos educativos
+            sobre la Modalidad Técnica en Informática.
+        </p>
+        <p class="footer-copy">
+            © 2026 - Institución Educativa Liceo Tame
+        </p>
+    </footer>
+</body>
+
+</html>

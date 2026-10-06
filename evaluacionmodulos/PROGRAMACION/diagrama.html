@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Diagramas de flujo y árboles de decisión</title>
+
+    <link rel="stylesheet" href="/Estilos/diagramaf.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>DIAGRAMAS DE FLUJO Y ÁRBOLES DE DECISIÓN</h1>
+
+        <p>Cuestionario de conocimientos</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre diagramas de flujo y
+                árboles de decisión. Lee cuidadosamente cada pregunta y
+                selecciona una sola respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. ¿Qué es un diagrama de flujo?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Un listado de variables utilizadas dentro de un programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Una representación gráfica de los pasos de un algoritmo,
+                        conectados mediante símbolos y flechas que indican el orden
+                        de ejecución.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Un tipo de lenguaje de programación utilizado para crear
+                        páginas web.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Un documento que solo describe los errores encontrados
+                        en un programa.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. Dentro de un diagrama de flujo, ¿qué símbolo se utiliza
+                    para representar el inicio y el fin del proceso?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. Un óvalo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. Un rombo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. Un rectángulo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. Una flecha.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. En un diagrama de flujo aparece la pregunta "¿La nota es
+                    mayor o igual a 3.0?", de la cual salen dos caminos distintos
+                    según la respuesta sea "sí" o "no". ¿Qué símbolo representa
+                    esta parte del diagrama?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. Rectángulo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. Óvalo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. Rombo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. Paralelogramo.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. Dentro de un diagrama de flujo aparece un cuadro que dice
+                    "Calcular el promedio de las notas". ¿Qué símbolo se utiliza
+                    para representar este paso?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A. Rombo, porque siempre representa una acción.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B. Rectángulo, porque representa un proceso o una acción
+                        que se realiza dentro del algoritmo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C. Óvalo, porque cualquier instrucción marca el inicio
+                        del programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D. Flecha, porque conecta dos procesos entre sí.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. Un diagrama de flujo incluye un paso donde se le pide al
+                    usuario que escriba su edad, y otro donde se muestra en
+                    pantalla el resultado final. ¿Qué símbolo se utiliza para
+                    representar la entrada y salida de datos?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. Rombo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. Rectángulo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. Paralelogramo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. Óvalo.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. ¿Qué es un árbol de decisión?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. Una estructura jerárquica formada por nodos que
+                        representan decisiones o condiciones, y ramas que
+                        muestran los posibles resultados de cada una.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. Un diagrama que únicamente muestra el orden en el que
+                        se deben declarar las variables de un programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. Una lista de instrucciones que se ejecutan siempre
+                        de forma secuencial, sin ninguna condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. Un tipo de lenguaje de programación orientado a
+                        objetos.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. ¿Cuál es la principal diferencia entre un diagrama de
+                    flujo y un árbol de decisión?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. El diagrama de flujo solo puede usarse en matemáticas,
+                        mientras que el árbol de decisión solo se usa en
+                        programación.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. El diagrama de flujo representa la secuencia completa
+                        de un proceso mediante distintos símbolos, mientras que
+                        el árbol de decisión se enfoca en mostrar de forma
+                        jerárquica las alternativas que surgen a partir de cada
+                        decisión.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. No existe ninguna diferencia real entre ambos, ya que
+                        representan exactamente lo mismo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. El árbol de decisión únicamente puede tener un
+                        resultado posible, mientras que el diagrama de flujo
+                        puede tener varios.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. Una tienda quiere decidir si aplica un descuento a un
+                    cliente: primero evalúa si es cliente frecuente y, según la
+                    respuesta, evalúa después si la compra supera cierto monto,
+                    hasta llegar a un resultado final (aplicar o no el
+                    descuento). ¿Qué herramienta es más adecuada para representar
+                    visualmente este proceso de decisiones encadenadas?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. Una tabla de precios sin ninguna condición.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Un árbol de decisión, ya que permite representar de
+                        forma jerárquica las distintas condiciones y sus
+                        posibles resultados.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. Un lenguaje de bajo nivel, porque es el único que
+                        permite tomar decisiones.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. Una lista simple de precios sin relación entre las
+                        condiciones.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "B",
+                p2: "A",
+                p3: "C",
+                p4: "B",
+                p5: "C",
+                p6: "A",
+                p7: "B",
+                p8: "B"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Un listado de variables utilizadas dentro de un programa.",
+                    B: "Una representación gráfica de los pasos de un algoritmo, conectados mediante símbolos y flechas que indican el orden de ejecución.",
+                    C: "Un tipo de lenguaje de programación utilizado para crear páginas web.",
+                    D: "Un documento que solo describe los errores encontrados en un programa."
+                },
+
+                p2: {
+                    A: "Un óvalo.",
+                    B: "Un rombo.",
+                    C: "Un rectángulo.",
+                    D: "Una flecha."
+                },
+
+                p3: {
+                    A: "Rectángulo.",
+                    B: "Óvalo.",
+                    C: "Rombo.",
+                    D: "Paralelogramo."
+                },
+
+                p4: {
+                    A: "Rombo, porque siempre representa una acción.",
+                    B: "Rectángulo, porque representa un proceso o una acción que se realiza dentro del algoritmo.",
+                    C: "Óvalo, porque cualquier instrucción marca el inicio del programa.",
+                    D: "Flecha, porque conecta dos procesos entre sí."
+                },
+
+                p5: {
+                    A: "Rombo.",
+                    B: "Rectángulo.",
+                    C: "Paralelogramo.",
+                    D: "Óvalo."
+                },
+
+                p6: {
+                    A: "Una estructura jerárquica formada por nodos que representan decisiones o condiciones, y ramas que muestran los posibles resultados de cada una.",
+                    B: "Un diagrama que únicamente muestra el orden en el que se deben declarar las variables de un programa.",
+                    C: "Una lista de instrucciones que se ejecutan siempre de forma secuencial, sin ninguna condición.",
+                    D: "Un tipo de lenguaje de programación orientado a objetos."
+                },
+
+                p7: {
+                    A: "El diagrama de flujo solo puede usarse en matemáticas, mientras que el árbol de decisión solo se usa en programación.",
+                    B: "El diagrama de flujo representa la secuencia completa de un proceso mediante distintos símbolos, mientras que el árbol de decisión se enfoca en mostrar de forma jerárquica las alternativas que surgen a partir de cada decisión.",
+                    C: "No existe ninguna diferencia real entre ambos, ya que representan exactamente lo mismo.",
+                    D: "El árbol de decisión únicamente puede tener un resultado posible, mientras que el diagrama de flujo puede tener varios."
+                },
+
+                p8: {
+                    A: "Una tabla de precios sin ninguna condición.",
+                    B: "Un árbol de decisión, ya que permite representar de forma jerárquica las distintas condiciones y sus posibles resultados.",
+                    C: "Un lenguaje de bajo nivel, porque es el único que permite tomar decisiones.",
+                    D: "Una lista simple de precios sin relación entre las condiciones."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "Un diagrama de flujo es una representación gráfica que muestra, mediante símbolos " +
+                    "conectados por flechas, el orden en que deben ejecutarse los pasos de un algoritmo. No " +
+                    "es simplemente un listado de variables (A); no es un lenguaje de programación (C); y no " +
+                    "se limita a describir errores, sino todo el proceso completo (D).",
+
+                p2: "El óvalo es el símbolo estándar utilizado para marcar el inicio y el fin de un " +
+                    "diagrama de flujo. El rombo (B) se usa para representar decisiones; el rectángulo (C) " +
+                    "representa procesos o acciones; y la flecha (D) solo indica la dirección del flujo, no " +
+                    "un punto de inicio o fin.",
+
+                p3: "Cuando un diagrama de flujo plantea una pregunta de la cual se derivan dos caminos " +
+                    "distintos (sí / no), se está representando una decisión, y el símbolo utilizado para " +
+                    "ello es el rombo. El rectángulo (A) representa procesos, no preguntas; el óvalo (B) " +
+                    "marca inicio o fin; y el paralelogramo (D) se usa para entrada o salida de datos, no " +
+                    "para decisiones.",
+
+                p4: "Una acción como \"Calcular el promedio de las notas\" es un proceso dentro del " +
+                    "algoritmo, y en un diagrama de flujo los procesos se representan con un rectángulo. El " +
+                    "rombo (A) es exclusivo de las decisiones, no de cualquier acción; el óvalo (C) no " +
+                    "aparece en cada instrucción, solo al inicio y al final; y la flecha (D) únicamente " +
+                    "conecta símbolos, no representa una acción en sí misma.",
+
+                p5: "Pedir un dato al usuario o mostrar un resultado en pantalla corresponde a una entrada " +
+                    "o salida de datos, y el símbolo que se utiliza para representarlo es el paralelogramo. " +
+                    "El rombo (A) es para decisiones; el rectángulo (B) es para procesos; y el óvalo (D) " +
+                    "marca el inicio o el fin del diagrama, no la entrada o salida de información.",
+
+                p6: "Un árbol de decisión es una estructura jerárquica compuesta por nodos que representan " +
+                    "condiciones o decisiones, y ramas que muestran los distintos caminos o resultados " +
+                    "posibles según cada respuesta. No se trata solo del orden de las variables (B); no es " +
+                    "una secuencia sin condiciones, ya que su propósito es justamente mostrar decisiones " +
+                    "(C); y tampoco es un lenguaje de programación (D).",
+
+                p7: "El diagrama de flujo muestra la secuencia completa de un proceso usando distintos " +
+                    "símbolos (inicio, procesos, decisiones, entrada/salida, fin), mientras que el árbol de " +
+                    "decisión se centra específicamente en representar, de forma jerárquica, las " +
+                    "alternativas que se generan a partir de cada decisión tomada. No es cierto que uno solo " +
+                    "se use en matemáticas y el otro en programación (A); sí existen diferencias claras " +
+                    "entre ambos (C); y un árbol de decisión puede tener varios resultados posibles, no uno " +
+                    "solo (D).",
+
+                p8: "Cuando un proceso está formado por varias decisiones encadenadas que llevan a distintos " +
+                    "resultados finales, como aplicar o no un descuento, un árbol de decisión es la " +
+                    "herramienta más adecuada porque organiza de forma jerárquica cada condición y sus " +
+                    "posibles caminos. Una tabla de precios sin condiciones (A) o una lista simple sin " +
+                    "relación entre los datos (D) no reflejan la lógica de decisiones encadenadas, y un " +
+                    "lenguaje de bajo nivel (C) no es una herramienta de representación gráfica de " +
+                    "decisiones."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien los diagramas de flujo y los árboles de decisión.";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

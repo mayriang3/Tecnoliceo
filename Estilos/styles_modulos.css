@@ -1,0 +1,604 @@
+/* ====================================================
+   styles_modulos.css
+   Paleta basada en la imagen de referencia
+   ==================================================== */
+
+.mod {
+    --m-fondo: #122B1D;       
+    --m-panel: #537E72;       
+    --m-pistacho: #9CC97F;    
+    --m-gris: #CDDECB;        
+    --m-peltre: #90B7BF;      
+
+    
+    --m-menta: #7FB8A4;
+    --m-lima: #B5D69A;
+    --m-papel: #E8F0E4;
+    --m-texto: #EEF5EA;
+    --m-tinta: #122B1D;
+
+
+    --m-verde-oscuro: #1F4A38;
+    --m-verde-suave: #6F9587;
+    --m-azul-oscuro: #477983;
+    --m-azul-suave: #B7D0D3;
+
+    --m-cinta: rgba(144, 183, 191, 0.9);
+
+    background-color: var(--m-fondo);
+    color: var(--m-texto);
+    font-family: 'DM Sans', sans-serif;
+    padding-bottom: 50px;
+}
+
+/* Anula las reglas genéricas h3 y h3 + p de styles.css */
+.botones_principales h2 {
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: 'Fraunces', serif;
+    color: #7FB8A4;
+}
+
+.mod h3,
+.mod h3 + p {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+}
+
+.mod h1,
+.mod h2,
+.mod h3,
+.mod h4 {
+    font-family: 'Fraunces', serif;
+}
+
+.mod p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* ---------- Portada ---------- */
+
+.mod .portada {
+    text-align: center;
+    padding: 90px 20px;
+    background:var(--m-fondo);
+}
+
+.mod .pill {
+    display: inline-block;
+    border: 2px solid var(--m-texto);
+    border-radius: 40px;
+    padding: 8px 42px;
+    font-weight: 500;
+}
+
+.mod .portada h1 {
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    line-height: 1.15;
+    max-width: 900px;
+    margin: 26px auto;
+    color: var(--m-texto);
+}
+
+
+/* ---------- Bloques ---------- */
+
+.mod .bloque {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 46px 24px 10px;
+}
+
+.mod .bloque h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--m-texto);
+    margin-bottom: 20px;
+}
+
+.mod .bloque > p {
+    background-color: var(--m-gris);
+    color: var(--m-tinta);
+    font-weight: 500;
+    padding: 24px 28px;
+    border-radius: 16px;
+}
+
+.mod .sub {
+    font-size: 1.4rem;
+    color: var(--m-lima);
+    margin: 34px 0 14px;
+}
+
+.mod .nota {
+    background-color: rgba(83, 126, 114, 0.4);
+    border-left: 4px solid var(--m-peltre);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 18px;
+}
+
+
+/* ---------- Tarjetas numeradas ---------- */
+
+.mod .pasos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 34px 20px;
+    padding-top: 28px;
+    margin-top: 6px;
+}
+
+.mod .paso {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 46px 22px 22px;
+    border-radius: 16px;
+    color: var(--m-tinta);
+    font-weight: 500;
+}
+
+.mod .c1 {
+    background-color: var(--m-pistacho);
+}
+
+.mod .c2 {
+    background-color: var(--m-peltre);
+}
+
+.mod .c3 {
+    background-color: var(--m-menta);
+}
+
+.mod .c4 {
+    background-color: var(--m-gris);
+}
+
+.mod .num {
+    position: absolute;
+    top: -26px;
+    left: 22px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: inherit;
+    color: var(--m-tinta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.mod .c2 .num,
+.mod .c4 .num {
+    color: var(--m-fondo);
+}
+
+.mod .pie {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--m-verde-oscuro);
+}
+
+.mod .paso .nota {
+    background-color: rgba(232, 240, 228, 0.55);
+    border-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+}
+
+
+/* ---------- Código ---------- */
+
+.mod .cod {
+    position: relative;
+    margin: 0;
+    padding: 28px 18px 16px;
+    background-color: var(--m-papel);
+    color: var(--m-tinta);
+    border-radius: 10px;
+    overflow-x: auto;
+    font: 500 0.9rem/1.6 ui-monospace, Consolas, 'Courier New', monospace;
+}
+
+.mod .cod::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 46px;
+    height: 12px;
+    background-color: var(--m-cinta);
+    border-radius: 0 0 3px 3px;
+}
+
+.mod .cod code {
+    font: inherit;
+    white-space: pre;
+}
+
+
+/* ---------- Ejemplos y errores ---------- */
+
+.mod .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px 20px;
+    padding-top: 10px;
+    margin-top: 6px;
+}
+
+.mod .ej {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 26px 22px 22px;
+    background-color: var(--m-papel);
+    color: var(--m-tinta);
+    border-radius: 16px;
+}
+
+.mod .ej::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 22px;
+    width: 58px;
+    height: 18px;
+    background-color: var(--m-cinta);
+    border-radius: 2px;
+    transform: rotate(-4deg);
+}
+
+.mod .ej h4 {
+    font-size: 1.15rem;
+    color: var(--m-fondo);
+}
+
+.mod .ej p {
+    font-size: 0.95rem;
+}
+
+.mod .ej .cod {
+    background-color: #F4F7F2;
+}
+
+.mod .ej .cod::before {
+    display: none;
+}
+
+
+/* ---------- Estados ---------- */
+
+/* Antes era rojo: ahora usa un tono azul verdoso oscuro */
+.mod .mal b {
+    color: var(--m-azul-oscuro);
+}
+
+/* Antes era verde: ahora usa un verde de la paleta */
+.mod .bien b {
+    color: var(--m-verde-oscuro);
+}
+
+.mod .mal .cod {
+    border-left: 4px solid var(--m-azul-oscuro);
+}
+
+.mod .bien .cod {
+    border-left: 4px solid var(--m-verde-oscuro);
+}
+
+
+/* ---------- Listas ---------- */
+
+.mod .lista {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+}
+
+.mod .ej .lista {
+    margin: 0;
+}
+
+.mod .lista li {
+    position: relative;
+    padding: 7px 0 7px 22px;
+    line-height: 1.5;
+}
+
+.mod .lista li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.05em;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background-color: var(--m-panel);
+}
+
+
+/* ---------- Módulo 3: figuras y diagramas ---------- */
+
+.mod .figuras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 14px;
+}
+
+.mod .fig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    padding: 22px;
+    text-align: center;
+}
+
+.mod .fig p {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--m-tinta);
+}
+
+.mod .ovalo {
+    background-color: var(--m-gris);
+    border-radius: 999px;
+}
+
+.mod .rect {
+    background-color: var(--m-pistacho);
+    border-radius: 6px;
+}
+
+.mod .rombo {
+    background-color: var(--m-panel);
+    padding: 50px 42px;
+    clip-path: polygon(
+        50% 0,
+        100% 50%,
+        50% 100%,
+        0 50%
+    );
+}
+
+.mod .rombo p {
+    color: var(--m-texto);
+}
+
+
+/* Ojo: .flecha también existe en styles.css */
+
+.mod .fig.flecha {
+    background-color: var(--m-peltre);
+    display: flex;
+    padding: 30px 60px 30px 26px;
+    clip-path: polygon(
+        0 18%,
+        68% 18%,
+        68% 0,
+        100% 50%,
+        68% 100%,
+        68% 82%,
+        0 82%
+    );
+}
+
+.mod .flujo {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.mod .flujo li:not(:last-child)::after {
+    content: "↓";
+    display: block;
+    font-weight: 400;
+    color: var(--m-fondo);
+}
+
+.mod .flujo li.ramas::after {
+    content: none;
+}
+
+
+/* ---------- Árbol ---------- */
+
+.mod .arbol {
+    text-align: center;
+}
+
+.mod .arbol .q {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.mod .ramas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.mod .ramas span {
+    background-color: rgba(18, 43, 29, 0.08);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: 500;
+}
+
+.mod .ramas b {
+    color: var(--m-panel);
+    margin-right: 6px;
+}
+
+
+/* ---------- Resumen, video y evaluación ---------- */
+
+.mod .resumen > p {
+    background-color: var(--m-papel);
+}
+
+.mod .video .marco {
+    aspect-ratio: 16 / 9;
+    background-color: rgba(18, 43, 29, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.mod .video .marco iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.mod .eval {
+    width: min(1000px, calc(100% - 32px));
+    margin: 40px auto 0;
+    padding: 36px 24px;
+    background-color: var(--m-pistacho);
+    color: var(--m-tinta);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.mod .eval h2 {
+    color: var(--m-tinta);
+    margin-bottom: 10px;
+}
+
+.mod .eval > p {
+    background: none;
+    padding: 0;
+    color: inherit;
+    margin-bottom: 22px;
+}
+
+.mod .btn {
+    background-color: var(--m-fondo);
+    color: var(--m-texto);
+    font-weight: 500;
+}
+
+.mod .btn:hover {
+    opacity: 0.9;
+}
+/* ---------- Kit de electrónica ---------- */
+
+/* Sección más ancha que el resto de bloques */
+.mod .bloque-kit {
+    max-width: 1300px;
+}
+
+.mod .kit {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    margin-top: 10px;
+}
+
+.mod .kit-item {
+    display: grid;
+    grid-template-columns: minmax(320px, 6fr) 7fr;
+    gap: 28px;
+}
+
+/* Panel izquierdo: las dos fotos */
+.mod .kit-fotos {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 44px;
+    background-color: var(--m-pistacho);
+    border-radius: 48px;
+}
+
+.mod .kit-fotos figure {
+    margin: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    background: none;          /* sin franjas de color */
+}
+
+.mod .kit-fotos img {
+    width: 100%;               /* ocupa todo el ancho del panel */
+    height: auto;              /* la altura se ajusta, sin recortar */
+    display: block;
+}
+/* Panel derecho: nombre y descripción */
+.mod .kit-info {
+    padding: 64px 56px;
+    background-color: var(--m-pistacho);
+    border-radius: 48px;
+    color: var(--m-tinta);
+}
+
+.mod .kit-info h4 {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    line-height: 1.15;
+    color: var(--m-tinta);
+    margin-bottom: 28px;
+}
+
+.mod .kit-info p {
+    font-size: 1.35rem;
+    line-height: 1.7;
+    color: var(--m-tinta);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .mod .kit-item {
+        grid-template-columns: 1fr;
+    }
+
+    .mod .kit-fotos,
+    .mod .kit-info {
+        padding: 28px 24px;
+        border-radius: 32px;
+    }
+
+    .mod .kit-info p {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .mod .portada {
+        padding: 60px 16px;
+    }
+
+    .mod .bloque {
+        padding: 36px 16px 6px;
+    }
+
+    .mod .bloque h2 {
+        font-size: 1.6rem;
+    }
+
+    .mod .bloque > p {
+        padding: 20px;
+    }
+}

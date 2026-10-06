@@ -1,0 +1,129 @@
+/* ====================================================
+   PREGUNTAS FRECUENTES
+   ==================================================== */
+
+
+.faq-hero {
+    background-image: linear-gradient(rgba(18, 43, 29, 0.82), rgba(18, 43, 29, 0.82)), url('/img/fondoliceo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 90px 70px 110px;
+    text-align: center;
+}
+
+.faq-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    line-height: 1.2;
+    color: var(--blanco);
+    margin-bottom: 14px;
+}
+
+.faq-hero em {
+    color: var(--azul-claro);
+    font-style: italic;
+}
+
+.faq-hero p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.faq {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px 70px;
+}
+
+/* Datos de la encuesta (se montan un poco sobre el hero) */
+.faq .datos {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: -50px;
+    margin-bottom: 45px;
+}
+
+.faq .dato {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--blanco);
+    border-radius: 16px;
+    padding: 22px 16px;
+    text-align: center;
+}
+
+.faq .dato b {
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    line-height: 1.1;
+    color: var(--color-oscuro);
+}
+
+.faq .dato span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: #5f6b64;
+}
+
+/* Chat de preguntas frecuentes — TecnoLiceo
+   Los colores están al inicio: cámbialos aquí si quieres ajustarlos a tu styles.css */
+.fc-chat {
+  --fc-oscuro: #12291c;
+  --fc-verde: #2f6b3f;
+  --fc-claro: #9dc983;
+  --fc-crema: #fdfcfa;
+  --fc-suave: #eef3e6;
+  --fc-texto: #1f2a22;
+  max-width: 700px; margin: 28px auto;
+  background: var(--fc-crema, #fdfcfa); color: var(--fc-texto, #1f2a22);
+  border-radius: 24px; overflow: hidden;
+  box-shadow: 0 12px 32px rgba(18, 41, 28, .22);
+  display: flex; flex-direction: column;
+  height: 72vh; min-height: 480px;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+.fc-chat * { box-sizing: border-box; }
+
+/* Cabecera con el bot */
+.fc-cabecera { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: var(--fc-oscuro, #12291c); color: #fff; }
+.fc-avatar-grande { width: 48px; height: 48px; border-radius: 50%; background: var(--fc-claro, #9dc983); padding: 4px; flex-shrink: 0; }
+.fc-cabecera strong { display: block; font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; }
+.fc-cabecera span { display: flex; align-items: center; gap: 6px; font-size: .8rem; opacity: .85; }
+.fc-punto { width: 8px; height: 8px; border-radius: 50%; background: #7ddc7a; }
+
+/* Mensajes */
+#fc-mensajes { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px; scrollbar-width: thin; scrollbar-color: var(--fc-claro, #9dc983) transparent; }
+.fc-fila { display: flex; align-items: flex-end; gap: 8px; align-self: flex-start; max-width: 90%; }
+.fc-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--fc-suave, #eef3e6); padding: 2px; flex-shrink: 0; }
+.fc-burbuja { padding: 10px 15px; border-radius: 18px; line-height: 1.5; font-size: .95rem; }
+.fc-bot { background: var(--fc-suave, #eef3e6); border-bottom-left-radius: 6px; }
+.fc-yo { background: var(--fc-verde, #2f6b3f); color: #fff; align-self: flex-end; max-width: 80%; border-bottom-right-radius: 6px; }
+
+/* "Escribiendo..." */
+.fc-escribiendo { display: flex; gap: 4px; padding: 14px 16px; }
+.fc-escribiendo i { width: 7px; height: 7px; border-radius: 50%; background: var(--fc-verde, #2f6b3f); opacity: .35; animation: fc-salto 1s infinite; }
+.fc-escribiendo i:nth-child(2) { animation-delay: .15s; }
+.fc-escribiendo i:nth-child(3) { animation-delay: .3s; }
+@keyframes fc-salto { 0%, 60%, 100% { transform: translateY(0); opacity: .35; } 30% { transform: translateY(-5px); opacity: 1; } }
+
+/* Botones de preguntas */
+.fc-panel { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin-left: 42px; }
+.fc-cat { margin-top: 10px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--fc-verde, #2f6b3f); }
+.fc-chip { background: #fff; color: var(--fc-oscuro, #12291c); border: 1.5px solid var(--fc-verde, #2f6b3f); padding: 8px 14px; border-radius: 16px; font: inherit; font-size: .9rem; text-align: left; cursor: pointer; transition: background .15s, color .15s, transform .15s; }
+.fc-chip:hover { background: var(--fc-verde, #2f6b3f); color: #fff; transform: translateX(3px); }
+
+/* Entrada */
+.fc-entrada { display: flex; gap: 10px; padding: 14px 16px; border-top: 1px solid #e3ead9; background: var(--fc-crema, #fdfcfa); }
+.fc-entrada input { flex: 1; padding: 11px 16px; border: 1.5px solid #d4dfca; border-radius: 999px; background: #fff; font: inherit; color: inherit; outline: none; }
+.fc-entrada input:focus { border-color: var(--fc-verde, #2f6b3f); box-shadow: 0 0 0 3px rgba(47, 107, 63, .15); }
+.fc-entrada button { padding: 11px 22px; border: 0; border-radius: 999px; background: var(--fc-oscuro, #12291c); color: #fff; font: inherit; font-weight: 500; cursor: pointer; transition: background .15s; }
+.fc-entrada button:hover { background: var(--fc-verde, #2f6b3f); }
+
+@media (max-width: 520px) {
+  .fc-chat { margin: 16px 10px; height: 78vh; border-radius: 20px; }
+  .fc-fila { max-width: 96%; }
+}

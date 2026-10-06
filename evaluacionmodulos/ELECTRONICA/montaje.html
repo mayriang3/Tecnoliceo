@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Montaje de circuitos en protoboard</title>
+
+    <link rel="stylesheet" href="/Estilos/montajee.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>MONTAJE DE CIRCUITOS EN PROTOBOARD</h1>
+
+        <p>Cuestionario de conocimientos</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre el montaje de
+                circuitos en protoboard (o breadboard). Lee cuidadosamente
+                cada pregunta y selecciona una sola respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             ESQUEMA VISUAL DE REFERENCIA
+        ========================== -->
+
+        <section class="esquema">
+
+            <h2>Zonas de un protoboard</h2>
+
+            <div class="placa">
+
+                <div class="fila-riel riel-mas">
+                    <span class="etiqueta">Riel + (rojo)</span>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div>
+                </div>
+
+                <div class="fila-riel riel-menos">
+                    <span class="etiqueta">Riel − (azul)</span>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div>
+                </div>
+
+                <div style="height:10px;"></div>
+
+                <div class="fila-riel">
+                    <span class="etiqueta">Fila a-e</span>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div>
+                </div>
+
+                <div class="zanja"></div>
+
+                <div class="fila-riel">
+                    <span class="etiqueta">Fila f-j</span>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div><div class="punto"></div><div class="punto"></div>
+                    <div class="punto"></div>
+                </div>
+
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Zona</th>
+                        <th>Conexión interna</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rieles de alimentación (+ y −)</td>
+                        <td>Conectados horizontalmente en toda su longitud</td>
+                    </tr>
+                    <tr>
+                        <td>Filas centrales (grupos de 5 orificios)</td>
+                        <td>Conectadas verticalmente entre sí, formando un solo nodo</td>
+                    </tr>
+                    <tr>
+                        <td>Zanja central</td>
+                        <td>Separa eléctricamente ambas mitades de la placa</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. ¿Qué es un protoboard (también llamado breadboard)?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Una placa de pruebas que permite armar y probar
+                        circuitos electrónicos de forma temporal, sin
+                        necesidad de soldar los componentes.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Un tipo especial de resistencia utilizada
+                        únicamente en circuitos de corriente alterna.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Un instrumento de medición que reemplaza al
+                        multímetro en la mayoría de los circuitos.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Un software utilizado para simular circuitos
+                        eléctricos sin componentes físicos.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. En la zona central del protoboard, los orificios se
+                    agrupan en pequeñas filas (por ejemplo, de 5 orificios
+                    cada una). ¿Cómo están conectados internamente los
+                    orificios de una misma fila?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. No están conectados entre sí; cada orificio es
+                        completamente independiente.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. Están conectados eléctricamente entre sí,
+                        formando un solo nodo, por lo que cualquier
+                        componente insertado en esos orificios queda unido
+                        eléctricamente.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. Están conectados únicamente si se coloca un
+                        cable jumper adicional entre ellos.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. Están conectados solo cuando el circuito recibe
+                        corriente alterna.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. ¿Para qué se utilizan principalmente los rieles de
+                    alimentación (las filas largas marcadas con + y − en
+                    los bordes del protoboard)?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. Para distribuir la alimentación (voltaje positivo
+                        y tierra) a lo largo de todo el circuito, de forma
+                        ordenada.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. Para colocar únicamente resistencias, nunca
+                        cables ni otros componentes.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. Para medir directamente el voltaje del circuito
+                        sin necesidad de un multímetro.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. Para aumentar automáticamente la resistencia
+                        total del circuito.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. ¿Para qué sirve la zanja o canal central que divide
+                    al protoboard en dos mitades?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A. Para separar eléctricamente ambas mitades de la
+                        placa, permitiendo colocar componentes como
+                        circuitos integrados sin que sus patas se conecten
+                        entre sí por error.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B. Para aumentar la corriente que puede soportar el
+                        protoboard.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C. Para conectar automáticamente los rieles + y −
+                        entre sí.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D. Para servir únicamente como soporte decorativo,
+                        sin ninguna función eléctrica.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. Un estudiante conecta ambos extremos de una
+                    resistencia en dos orificios que pertenecen a la misma
+                    fila corta del protoboard (el mismo nodo interno).
+                    ¿Qué ocurre en este caso?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. La resistencia queda cortocircuitada, ya que
+                        ambos extremos quedan conectados directamente al
+                        mismo punto eléctrico, sin cumplir su función en el
+                        circuito.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. La resistencia funcionará exactamente igual que
+                        si estuviera conectada entre dos filas distintas.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. El protoboard convierte automáticamente esa
+                        conexión en un circuito en paralelo correcto.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. La resistencia aumentará su valor de forma
+                        automática para compensar el error.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. ¿Para qué se utilizan los cables jumper al armar un
+                    circuito en protoboard?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. Para medir la resistencia de los componentes sin
+                        necesidad de un multímetro.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. Para conectar puntos del protoboard que no están
+                        unidos internamente, como llevar la alimentación
+                        desde el riel de energía hasta una fila de
+                        componentes.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. Para reemplazar por completo a las resistencias
+                        dentro de cualquier circuito.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. Para aumentar la potencia máxima que soporta el
+                        protoboard.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. Al montar un LED en el protoboard, ¿por qué es
+                    necesario colocar una resistencia en serie con él?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. Para limitar la corriente que circula por el
+                        LED y evitar que reciba más de la que puede
+                        soportar, lo cual podría dañarlo o quemarlo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. Para cambiar el color de la luz que emite el
+                        LED según el valor de la resistencia.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. Porque el LED no puede encenderse bajo ninguna
+                        circunstancia sin una resistencia conectada.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. Porque la resistencia es la encargada de indicar
+                        la polaridad correcta del LED.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. Si por error se conecta un cable directamente entre
+                    el riel positivo (+) y el riel negativo (−) de
+                    alimentación del protoboard, sin ningún componente de
+                    por medio, ¿qué puede ocurrir?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. No ocurre nada, ya que los rieles están
+                        diseñados para conectarse libremente entre sí.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Se genera un cortocircuito, ya que la corriente
+                        encontraría un camino de muy baja resistencia entre
+                        los dos polos de la fuente, lo cual puede dañar la
+                        fuente de alimentación o los componentes.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. El protoboard convierte automáticamente esa
+                        conexión en una resistencia de protección.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. El voltaje del circuito se duplica de forma
+                        segura y controlada.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "A",
+                p2: "B",
+                p3: "A",
+                p4: "A",
+                p5: "A",
+                p6: "B",
+                p7: "A",
+                p8: "B"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Una placa de pruebas que permite armar y probar circuitos electrónicos de forma temporal, sin necesidad de soldar los componentes.",
+                    B: "Un tipo especial de resistencia utilizada únicamente en circuitos de corriente alterna.",
+                    C: "Un instrumento de medición que reemplaza al multímetro en la mayoría de los circuitos.",
+                    D: "Un software utilizado para simular circuitos eléctricos sin componentes físicos."
+                },
+
+                p2: {
+                    A: "No están conectados entre sí; cada orificio es completamente independiente.",
+                    B: "Están conectados eléctricamente entre sí, formando un solo nodo, por lo que cualquier componente insertado en esos orificios queda unido eléctricamente.",
+                    C: "Están conectados únicamente si se coloca un cable jumper adicional entre ellos.",
+                    D: "Están conectados solo cuando el circuito recibe corriente alterna."
+                },
+
+                p3: {
+                    A: "Para distribuir la alimentación (voltaje positivo y tierra) a lo largo de todo el circuito, de forma ordenada.",
+                    B: "Para colocar únicamente resistencias, nunca cables ni otros componentes.",
+                    C: "Para medir directamente el voltaje del circuito sin necesidad de un multímetro.",
+                    D: "Para aumentar automáticamente la resistencia total del circuito."
+                },
+
+                p4: {
+                    A: "Para separar eléctricamente ambas mitades de la placa, permitiendo colocar componentes como circuitos integrados sin que sus patas se conecten entre sí por error.",
+                    B: "Para aumentar la corriente que puede soportar el protoboard.",
+                    C: "Para conectar automáticamente los rieles + y − entre sí.",
+                    D: "Para servir únicamente como soporte decorativo, sin ninguna función eléctrica."
+                },
+
+                p5: {
+                    A: "La resistencia queda cortocircuitada, ya que ambos extremos quedan conectados directamente al mismo punto eléctrico, sin cumplir su función en el circuito.",
+                    B: "La resistencia funcionará exactamente igual que si estuviera conectada entre dos filas distintas.",
+                    C: "El protoboard convierte automáticamente esa conexión en un circuito en paralelo correcto.",
+                    D: "La resistencia aumentará su valor de forma automática para compensar el error."
+                },
+
+                p6: {
+                    A: "Para medir la resistencia de los componentes sin necesidad de un multímetro.",
+                    B: "Para conectar puntos del protoboard que no están unidos internamente, como llevar la alimentación desde el riel de energía hasta una fila de componentes.",
+                    C: "Para reemplazar por completo a las resistencias dentro de cualquier circuito.",
+                    D: "Para aumentar la potencia máxima que soporta el protoboard."
+                },
+
+                p7: {
+                    A: "Para limitar la corriente que circula por el LED y evitar que reciba más de la que puede soportar, lo cual podría dañarlo o quemarlo.",
+                    B: "Para cambiar el color de la luz que emite el LED según el valor de la resistencia.",
+                    C: "Porque el LED no puede encenderse bajo ninguna circunstancia sin una resistencia conectada.",
+                    D: "Porque la resistencia es la encargada de indicar la polaridad correcta del LED."
+                },
+
+                p8: {
+                    A: "No ocurre nada, ya que los rieles están diseñados para conectarse libremente entre sí.",
+                    B: "Se genera un cortocircuito, ya que la corriente encontraría un camino de muy baja resistencia entre los dos polos de la fuente, lo cual puede dañar la fuente de alimentación o los componentes.",
+                    C: "El protoboard convierte automáticamente esa conexión en una resistencia de protección.",
+                    D: "El voltaje del circuito se duplica de forma segura y controlada."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "Un protoboard (o breadboard) es una placa de pruebas reutilizable que permite insertar " +
+                    "componentes electrónicos y cables para armar y probar circuitos de forma temporal, sin " +
+                    "necesidad de soldadura, lo que facilita hacer cambios rápidamente. No es un tipo de " +
+                    "resistencia (B); no reemplaza al multímetro como instrumento de medición (C); y no es " +
+                    "un software de simulación, es un componente físico (D).",
+
+                p2: "Los orificios de una misma fila corta en la zona central del protoboard están " +
+                    "conectados eléctricamente entre sí por debajo de la superficie, formando un solo nodo; " +
+                    "por eso cualquier componente insertado en esos orificios queda unido eléctricamente sin " +
+                    "necesidad de cables adicionales. No es cierto que cada orificio sea independiente (A); " +
+                    "no requieren un jumper adicional para estar conectados entre sí dentro de la misma fila " +
+                    "(C); y esta conexión existe siempre, no depende del tipo de corriente utilizada (D).",
+
+                p3: "Los rieles de alimentación (+ y −) recorren horizontalmente los bordes del protoboard y " +
+                    "se usan para distribuir el voltaje positivo y la tierra (GND) a distintas partes del " +
+                    "circuito de forma ordenada, evitando tener que llevar la alimentación por separado a " +
+                    "cada componente. No están reservados solo para resistencias (B); no permiten medir " +
+                    "directamente el voltaje sin un multímetro (C); y no aumentan la resistencia del circuito, " +
+                    "esa no es su función (D).",
+
+                p4: "La zanja o canal central separa eléctricamente ambas mitades del protoboard, lo cual " +
+                    "resulta especialmente útil para colocar componentes como circuitos integrados, ya que " +
+                    "sus patas quedan en filas distintas a cada lado sin conectarse entre sí por error. No " +
+                    "aumenta la corriente que soporta la placa (B); no conecta automáticamente los rieles + y " +
+                    "− (C); y sí cumple una función eléctrica importante, no es solo decorativa (D).",
+
+                p5: "Como todos los orificios de una misma fila corta están conectados internamente entre sí, " +
+                    "colocar ambos extremos de una resistencia en esa misma fila equivale a unir sus dos " +
+                    "terminales directamente, cortocircuitándola y anulando su función dentro del circuito. " +
+                    "No es cierto que funcione igual que si estuviera en filas distintas (B); el protoboard " +
+                    "no reinterpreta la conexión como un circuito en paralelo correcto (C); y el valor de la " +
+                    "resistencia no cambia automáticamente para compensar el error (D).",
+
+                p6: "Los cables jumper se utilizan para conectar puntos del protoboard que no están unidos " +
+                    "internamente, como llevar la alimentación desde el riel de energía hasta la fila donde " +
+                    "se encuentran los componentes, o para unir dos zonas distintas del circuito. No sirven " +
+                    "para medir resistencia, esa es función del multímetro (A); no reemplazan a las " +
+                    "resistencias, ya que cumplen funciones distintas dentro del circuito (C); y no aumentan " +
+                    "la potencia máxima que soporta la placa (D).",
+
+                p7: "La resistencia en serie con un LED limita la cantidad de corriente que circula por él, " +
+                    "protegiéndolo de recibir una corriente excesiva que podría dañarlo o quemarlo, ya que los " +
+                    "LEDs son sensibles a corrientes altas. No cambia el color de la luz emitida, eso depende " +
+                    "del material del LED (B); un LED sí podría encenderse brevemente sin resistencia, aunque " +
+                    "con riesgo de dañarse, por lo que no es correcto decir que nunca enciende sin ella (C); y " +
+                    "la polaridad del LED se identifica por la longitud de sus patas o por marcas en su " +
+                    "cuerpo, no por la resistencia (D).",
+
+                p8: "Conectar directamente con un cable el riel positivo y el riel negativo, sin ningún " +
+                    "componente que limite la corriente, crea un camino de muy baja resistencia entre los dos " +
+                    "polos de la fuente, lo que provoca un cortocircuito capaz de dañar la fuente de " +
+                    "alimentación o los componentes conectados. No es cierto que esa conexión sea segura o " +
+                    "esté diseñada para hacerse libremente (A); el protoboard no convierte esa unión en una " +
+                    "resistencia de protección (C); y el voltaje no se duplica de forma segura, lo que ocurre " +
+                    "es justamente lo contrario: un riesgo de daño (D)."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien el montaje de circuitos en protoboard.";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 4. Diagramas y esquemas de circuitos | TecnoLiceo</title>
+
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+        <h1>TecnoLiceo</h1>
+    </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 4. Diagramas y esquemas de circuitos</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/ELECTRONICA/DiagramasCircuitos.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+
+<main class="mod">
+
+    <!-- ==================== PORTADA ==================== -->
+
+    <section class="portada">
+        <span class="pill">Modulo 4</span>
+
+        <h1>Diagramas y esquemas de circuitos</h1>
+
+        <span class="pill">Electrónica</span>
+    </section>
+
+
+    <!-- ==================== ¿QUÉ ES UN DIAGRAMA? ==================== -->
+
+    <section class="bloque">
+
+        <h2>¿Qué es un diagrama de circuito?</h2>
+
+        <p>
+            Un diagrama de circuito es una representación gráfica de un
+            circuito eléctrico usando símbolos estandarizados.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Propósito</h4>
+                <p>Facilitar la lectura y comprensión de circuitos eléctricos de forma clara y universal.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Símbolos universales</h4>
+                <p>Los símbolos son entendidos globalmente por estudiantes, técnicos e ingenieros de todo el mundo.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Ejemplo</h4>
+                <p>En lugar de dibujar una batería real o un bombillo real, se usan símbolos simples que todos reconocen.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Ventaja</h4>
+                <p>Permiten diseñar, analizar y comunicar circuitos sin importar el idioma o país.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== SÍMBOLOS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Símbolos básicos que debes conocer</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Batería</h4>
+                <p>Suministra energía eléctrica al circuito. Es la fuente de voltaje.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Bombillo</h4>
+                <p>Convierte energía eléctrica en luz. Indica paso de corriente.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Resistencia</h4>
+                <p>Limita o reduce la corriente eléctrica en el circuito.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Motor</h4>
+                <p>Convierte energía eléctrica en movimiento mecánico.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Interruptor</h4>
+                <p>Abre o cierra el paso de la corriente eléctrica.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Cable</h4>
+                <p>Conecta los componentes del circuito. Conduce la corriente.</p>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p>
+                <strong>Nota:</strong> los símbolos eléctricos son el
+                "abecedario" de los diagramas. Aprenderlos te permitirá leer y
+                diseñar cualquier circuito eléctrico o electrónico con
+                facilidad.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== NODO Y MALLA ==================== -->
+
+    <section class="bloque">
+
+        <h2>Nodos y mallas</h2>
+
+        <h3 class="sub">¿Qué es un nodo?</h3>
+
+        <p>
+            Un nodo es un punto donde se unen dos o más conductores eléctricos.
+            Desde un nodo, la corriente puede distribuirse hacia varias rutas
+            al mismo tiempo.
+        </p>
+
+        <div class="tarjetas">
+            <article class="ej">
+                <h4>Analogía</h4>
+                <p>Es como una intersección de carreteras, donde varios caminos se encuentran en un mismo punto.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Ejemplo</h4>
+                <p>Tres cables conectados en un mismo punto forman un nodo.</p>
+            </article>
+        </div>
+
+        <div class="nota">
+            <p><strong>Recuerda:</strong> nodo = punto de unión de conductores.</p>
+        </div>
+
+
+        <h3 class="sub">¿Qué es una malla?</h3>
+
+        <p>
+            Una malla es un camino cerrado por donde circula la corriente
+            eléctrica en un circuito.
+        </p>
+
+        <div class="tarjetas">
+            <article class="ej">
+                <h4>Analogía</h4>
+                <p>Es como una pista de atletismo, donde el corredor da una vuelta completa y regresa al punto de partida.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Características</h4>
+                <ul class="lista">
+                    <li>La corriente sigue un recorrido cerrado.</li>
+                    <li>El camino tiene inicio y fin en el mismo punto.</li>
+                    <li>Un circuito puede tener una o varias mallas.</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="nota">
+            <p>
+                <strong>Recordatorio:</strong> malla = camino cerrado.
+                Identificar las mallas en un diagrama es clave para analizar
+                cómo circula la corriente en el circuito.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== CIRCUITOS EN SERIE ==================== -->
+
+    <section class="bloque">
+
+        <h2>Circuitos en serie</h2>
+
+        <p>
+            Los componentes se conectan uno tras otro. La corriente eléctrica
+            tiene un único camino para circular por todo el circuito.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Un solo camino</h4>
+                <p>La corriente es igual en todos los componentes. Sale de la batería, pasa por cada elemento y regresa. Ejemplo: linterna sencilla.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Una sola malla</h4>
+                <p>El circuito tiene un único camino cerrado.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Falla total</h4>
+                <p>Si un componente falla, todo el circuito se detiene. No hay rutas alternativas para que la corriente continúe fluyendo.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">Cómo circula la corriente en serie</h3>
+
+        <ul class="lista">
+            <li>La corriente sale de la batería y atraviesa cada componente uno por uno, en orden.</li>
+            <li>Después de pasar por todos los componentes, regresa al punto de inicio.</li>
+            <li>No hay otro camino posible: si hay una falla, el circuito se interrumpe por completo.</li>
+        </ul>
+
+        <div class="nota">
+            <p>Las flechas en el diagrama muestran el recorrido único y continuo de la corriente eléctrica.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== CIRCUITOS EN PARALELO ==================== -->
+
+    <section class="bloque">
+
+        <h2>Circuitos en paralelo</h2>
+
+        <p>
+            Los componentes se conectan en ramas independientes. La corriente
+            tiene varios caminos para circular por el circuito.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Varias ramas</h4>
+                <p>Si una rama falla, las demás siguen funcionando.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Nodos y mallas</h4>
+                <p>Existen varios nodos donde la corriente se divide y varias mallas.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Ejemplo real</h4>
+                <p>La instalación eléctrica de una vivienda es un circuito en paralelo. Cada aparato funciona de forma independiente.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">Cómo circula la corriente en paralelo</h3>
+
+        <ul class="lista">
+            <li>La corriente llega a un nodo y se divide entre varias ramas simultáneamente.</li>
+            <li>Cada rama conduce una parte de la corriente de forma independiente.</li>
+            <li>Las corrientes de cada rama se unen nuevamente en otro nodo para regresar a la fuente.</li>
+        </ul>
+
+        <div class="nota">
+            <p>Las flechas muestran cómo la corriente se divide al entrar y se une al salir del circuito paralelo.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== CIRCUITOS MIXTOS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Circuitos mixtos</h2>
+
+        <p>
+            Combinan conexiones en serie y en paralelo en un mismo circuito.
+            Tienen varias mallas y varios nodos.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Definición</h4>
+                <p>Circuito que combina conexiones en serie y en paralelo.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Características</h4>
+                <ul class="lista">
+                    <li>Varias mallas.</li>
+                    <li>Varios nodos.</li>
+                    <li>Combinación de conexiones serie y paralelo en el mismo circuito.</li>
+                </ul>
+            </article>
+
+            <article class="ej">
+                <h4>Ejemplos reales</h4>
+                <p>Computadores, televisores, celulares y equipos electrónicos usan circuitos mixtos en su funcionamiento.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== CÓMO IDENTIFICAR ==================== -->
+
+    <section class="bloque">
+
+        <h2>Cómo identificar un circuito</h2>
+
+        <p>
+            Sigue estos 4 pasos para clasificar cualquier circuito.
+        </p>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Observar</h4>
+                <p>Observa la cantidad de caminos por donde puede circular la corriente eléctrica en el circuito.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Buscar nodos</h4>
+                <p>Identifica los nodos: puntos donde se unen dos o más conductores en el circuito.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Contar mallas</h4>
+                <p>Cuenta las mallas, es decir, los caminos cerrados por donde circula la corriente eléctrica.</p>
+            </article>
+
+            <article class="paso c4">
+                <span class="num">4</span>
+                <h4>Clasificar</h4>
+                <p>Un camino → serie. Varios caminos → paralelo. Combinación de ambos → mixto.</p>
+            </article>
+
+        </div>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Serie</h4>
+                <p>Un solo camino, una sola malla. Si un componente falla, todo el circuito se detiene.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Paralelo / Mixto</h4>
+                <p>Varios caminos y nodos. En paralelo cada rama es independiente; en mixto se combinan ambos tipos.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLOS GUIADOS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo guiado: circuito en serie</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Análisis del circuito</h4>
+                <p><strong>Componentes:</strong> una batería y dos bombillos conectados uno detrás del otro.</p>
+                <p>La corriente sale de la batería, pasa por el primer bombillo, luego por el segundo y regresa a la batería. No existe ningún punto donde la corriente se divida en ramas separadas.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Preguntas y conclusión</h4>
+                <ul class="lista">
+                    <li><strong>¿Tiene varios caminos para la corriente?</strong> No, solo hay uno.</li>
+                    <li><strong>¿Tiene una sola malla?</strong> Sí, hay un único camino cerrado.</li>
+                    <li><strong>¿Qué pasa si un bombillo falla?</strong> Todo el circuito se detiene.</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p><strong>Conclusión:</strong> es un circuito en SERIE.</p>
+        </div>
+
+
+        <h2 style="margin-top: 40px;">Ejemplo guiado: circuito en paralelo</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Análisis del circuito</h4>
+                <p><strong>Componentes:</strong> batería y dos bombillos en ramas diferentes.</p>
+                <ul class="lista">
+                    <li><strong>¿Tiene varios caminos?</strong> Sí, la corriente se divide en dos ramas.</li>
+                    <li><strong>¿Tiene varios nodos?</strong> Sí, hay puntos de unión y separación de corriente.</li>
+                </ul>
+            </article>
+
+            <article class="ej">
+                <h4>Conclusión</h4>
+                <p>Este es un circuito en paralelo. Cada bombillo recibe la misma tensión de la batería. Si uno de los bombillos falla, el otro sigue funcionando. La corriente total se divide entre las ramas disponibles.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== ERRORES COMUNES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Errores comunes</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej mal">
+                <h4>Confundir un nodo con una malla</h4>
+            </article>
+
+            <article class="ej mal">
+                <h4>Pensar que un circuito paralelo tiene una sola ruta</h4>
+            </article>
+
+            <article class="ej mal">
+                <h4>No identificar correctamente los puntos de unión</h4>
+            </article>
+
+            <article class="ej mal">
+                <h4>Confundir símbolos eléctricos entre sí</h4>
+            </article>
+
+            <article class="ej mal">
+                <h4>Analizar un circuito sin seguir el recorrido de la corriente</h4>
+            </article>
+
+            <article class="ej mal">
+                <h4>Creer que todos los circuitos son en serie</h4>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== ACTIVIDAD PRÁCTICA ==================== -->
+
+    <section class="bloque">
+
+        <h2>Actividad práctica</h2>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Definición</h4>
+                <p>Define con tus propias palabras qué es un nodo y qué es una malla en un circuito eléctrico.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Comparación</h4>
+                <p>Explica con un ejemplo la diferencia entre un circuito en serie y uno en paralelo.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Circuito serie</h4>
+                <p>Dibuja un circuito en serie con una batería y dos bombillos. Indica el recorrido de la corriente.</p>
+            </article>
+
+            <article class="paso c4">
+                <span class="num">4</span>
+                <h4>Paralelo</h4>
+                <p>Dibuja un circuito en paralelo con una batería y dos bombillos en ramas diferentes.</p>
+            </article>
+
+            <article class="paso c1">
+                <span class="num">5</span>
+                <h4>Circuito mixto</h4>
+                <p>Dibuja un circuito mixto que combine conexiones en serie y en paralelo con al menos tres componentes.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">6</span>
+                <h4>Nodos y mallas</h4>
+                <p>En cada uno de tus dibujos, marca con un círculo los nodos y resalta con color las mallas.</p>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p>
+                Usa esta sección para anotar tus respuestas y dibujos. Recuerda
+                utilizar los símbolos eléctricos correctos: batería, bombillo,
+                resistencia e interruptor. ¡Muestra tu comprensión del módulo!
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== RESUMEN ==================== -->
+
+    <section class="bloque resumen">
+
+        <h2>Resumen del módulo</h2>
+
+        <p>
+            Los diagramas de circuitos eléctricos son representaciones gráficas
+            que usan símbolos estandarizados, comprendidos globalmente por
+            técnicos e ingenieros, para describir conexiones eléctricas.
+            Conocer sus elementos clave (símbolos, nodos y mallas) es
+            fundamental para leer, diseñar y analizar circuitos en electrónica
+            y electricidad. <br>Los símbolos son el abecedario del circuito.
+            Los nodos son puntos de unión y las mallas son caminos cerrados de
+            corriente. <br>Según su conexión, los circuitos pueden ser en
+            serie (un solo camino), en paralelo (varias ramas) o mixtos
+            (combinación de serie y paralelo en un mismo circuito).
+            <br>Comprender estos conceptos permite diseñar, analizar y resolver
+            circuitos eléctricos y electrónicos en la vida real.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+    <h2>TecnoLiceo</h2>
+
+    <p>
+        Plataforma informativa con módulos educativos sobre la
+        Modalidad Técnica en Informática.
+    </p>
+
+    <p class="footer-copy">
+        © 2026 - Institución Educativa Liceo Tame
+    </p>
+
+</footer>
+
+</body>
+</html>

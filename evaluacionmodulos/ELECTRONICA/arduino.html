@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Introducción a Arduino y Arduino IDE</title>
+
+    <link rel="stylesheet" href="/Estilos/arduino.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>INTRODUCCIÓN A ARDUINO Y ARDUINO IDE</h1>
+
+        <p>Cuestionario de conocimientos</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre Arduino y el
+                Arduino IDE. Lee cuidadosamente cada pregunta y selecciona
+                una sola respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             SKETCH DE REFERENCIA
+        ========================== -->
+
+        <section class="referencia">
+
+            <h2>Sketch de referencia: parpadeo de un LED</h2>
+
+            <div class="sketch">
+void setup() {<br>
+&nbsp;&nbsp;pinMode(13, OUTPUT);<br>
+}<br><br>
+
+void loop() {<br>
+&nbsp;&nbsp;digitalWrite(13, HIGH);<br>
+&nbsp;&nbsp;delay(1000);<br>
+&nbsp;&nbsp;digitalWrite(13, LOW);<br>
+&nbsp;&nbsp;delay(1000);<br>
+}
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. ¿Qué es Arduino?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Una plataforma de hardware libre, formada por una
+                        placa con un microcontrolador, que permite crear
+                        proyectos electrónicos interactivos.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Un lenguaje de programación exclusivo para
+                        desarrollar páginas web.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Un tipo de multímetro digital especializado en
+                        medir voltajes muy pequeños.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Un componente que se coloca únicamente dentro de
+                        un protoboard para aumentar su resistencia.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. ¿Qué es el Arduino IDE?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. Un componente físico que se conecta a la placa
+                        Arduino para medir su temperatura.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. El software oficial que permite escribir,
+                        verificar y cargar programas (llamados sketches) a
+                        una placa Arduino.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. Un tipo de cable especial necesario únicamente
+                        para alimentar la placa con baterías.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. Una tienda en línea donde se compran
+                        exclusivamente placas Arduino originales.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. Observando el sketch de referencia, ¿qué función
+                    cumple el bloque <code>void setup()</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. Se ejecuta una sola vez al inicio del programa,
+                        y normalmente se utiliza para configuraciones
+                        iniciales, como definir el modo de un pin.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. Se repite de manera indefinida mientras la placa
+                        esté encendida.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. Se ejecuta únicamente cuando se presiona el botón
+                        de reinicio (reset) de la placa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. Detiene por completo la ejecución del programa
+                        hasta que se cargue un nuevo sketch.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. Observando el mismo sketch, ¿qué función cumple el
+                    bloque <code>void loop()</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A. Se ejecuta una única vez, justo después de
+                        <code>void setup()</code>, y luego se detiene.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B. Contiene las instrucciones que se repiten de
+                        forma continua mientras la placa esté encendida,
+                        una y otra vez.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C. Se utiliza únicamente para declarar variables,
+                        sin ejecutar ninguna acción.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D. Es un bloque opcional que puede eliminarse sin
+                        que el programa deje de funcionar correctamente.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. En el sketch de referencia, ¿qué hace la instrucción
+                    <code>pinMode(13, OUTPUT);</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. Mide el voltaje presente en el pin 13 de la
+                        placa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. Configura el pin 13 como salida, es decir, como
+                        un pin que enviará señales hacia un componente
+                        externo, como un LED.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. Elimina el pin 13 de la configuración de la
+                        placa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. Convierte el pin 13 en un pin exclusivamente
+                        analógico.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. Si al pin 13 está conectado un LED, ¿qué ocurre
+                    cuando el programa ejecuta
+                    <code>digitalWrite(13, HIGH);</code> y, más adelante,
+                    <code>digitalWrite(13, LOW);</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. Con HIGH se envía una señal alta (encendido) al
+                        pin, encendiendo el LED, y con LOW se envía una
+                        señal baja (apagado), apagándolo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. Ambas instrucciones apagan el LED, sin ninguna
+                        diferencia entre ellas.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. HIGH configura el pin como entrada y LOW lo
+                        configura como salida.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. Ambas instrucciones miden la resistencia
+                        conectada al pin 13.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. En el sketch de referencia, ¿qué efecto tiene la
+                    instrucción <code>delay(1000);</code> sobre el
+                    parpadeo del LED?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. Detiene el programa de forma permanente, sin
+                        continuar con las siguientes instrucciones.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. Pausa la ejecución del programa durante 1000
+                        milisegundos (1 segundo) antes de continuar con la
+                        siguiente instrucción, lo cual hace que el LED
+                        permanezca encendido o apagado durante ese tiempo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. Aumenta la velocidad del parpadeo del LED a
+                        1000 veces por segundo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. Cambia automáticamente el pin 13 por el pin
+                        1000, el cual no existe en la placa.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. Un programa incluye las siguientes líneas dentro de
+                    <code>void setup()</code>:
+                    <br><br>
+
+                    <code>
+                        Serial.begin(9600);<br>
+                        Serial.println("Hola Arduino");
+                    </code>
+
+                    <br><br>
+
+                    ¿Para qué sirven estas instrucciones?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. Para iniciar la comunicación serial entre la
+                        placa y el computador, y enviar el mensaje "Hola
+                        Arduino" para que pueda verse en el Monitor Serial
+                        del IDE.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Para encender físicamente un LED conectado al
+                        pin 9600 de la placa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. Para borrar por completo el programa cargado
+                        anteriormente en la placa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. Para configurar el pin 13 como entrada en lugar
+                        de salida.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "A",
+                p2: "B",
+                p3: "A",
+                p4: "B",
+                p5: "B",
+                p6: "A",
+                p7: "B",
+                p8: "A"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Una plataforma de hardware libre, formada por una placa con un microcontrolador, que permite crear proyectos electrónicos interactivos.",
+                    B: "Un lenguaje de programación exclusivo para desarrollar páginas web.",
+                    C: "Un tipo de multímetro digital especializado en medir voltajes muy pequeños.",
+                    D: "Un componente que se coloca únicamente dentro de un protoboard para aumentar su resistencia."
+                },
+
+                p2: {
+                    A: "Un componente físico que se conecta a la placa Arduino para medir su temperatura.",
+                    B: "El software oficial que permite escribir, verificar y cargar programas (llamados sketches) a una placa Arduino.",
+                    C: "Un tipo de cable especial necesario únicamente para alimentar la placa con baterías.",
+                    D: "Una tienda en línea donde se compran exclusivamente placas Arduino originales."
+                },
+
+                p3: {
+                    A: "Se ejecuta una sola vez al inicio del programa, y normalmente se utiliza para configuraciones iniciales, como definir el modo de un pin.",
+                    B: "Se repite de manera indefinida mientras la placa esté encendida.",
+                    C: "Se ejecuta únicamente cuando se presiona el botón de reinicio (reset) de la placa.",
+                    D: "Detiene por completo la ejecución del programa hasta que se cargue un nuevo sketch."
+                },
+
+                p4: {
+                    A: "Se ejecuta una única vez, justo después de void setup(), y luego se detiene.",
+                    B: "Contiene las instrucciones que se repiten de forma continua mientras la placa esté encendida, una y otra vez.",
+                    C: "Se utiliza únicamente para declarar variables, sin ejecutar ninguna acción.",
+                    D: "Es un bloque opcional que puede eliminarse sin que el programa deje de funcionar correctamente."
+                },
+
+                p5: {
+                    A: "Mide el voltaje presente en el pin 13 de la placa.",
+                    B: "Configura el pin 13 como salida, es decir, como un pin que enviará señales hacia un componente externo, como un LED.",
+                    C: "Elimina el pin 13 de la configuración de la placa.",
+                    D: "Convierte el pin 13 en un pin exclusivamente analógico."
+                },
+
+                p6: {
+                    A: "Con HIGH se envía una señal alta (encendido) al pin, encendiendo el LED, y con LOW se envía una señal baja (apagado), apagándolo.",
+                    B: "Ambas instrucciones apagan el LED, sin ninguna diferencia entre ellas.",
+                    C: "HIGH configura el pin como entrada y LOW lo configura como salida.",
+                    D: "Ambas instrucciones miden la resistencia conectada al pin 13."
+                },
+
+                p7: {
+                    A: "Detiene el programa de forma permanente, sin continuar con las siguientes instrucciones.",
+                    B: "Pausa la ejecución del programa durante 1000 milisegundos (1 segundo) antes de continuar con la siguiente instrucción, lo cual hace que el LED permanezca encendido o apagado durante ese tiempo.",
+                    C: "Aumenta la velocidad del parpadeo del LED a 1000 veces por segundo.",
+                    D: "Cambia automáticamente el pin 13 por el pin 1000, el cual no existe en la placa."
+                },
+
+                p8: {
+                    A: "Para iniciar la comunicación serial entre la placa y el computador, y enviar el mensaje \"Hola Arduino\" para que pueda verse en el Monitor Serial del IDE.",
+                    B: "Para encender físicamente un LED conectado al pin 9600 de la placa.",
+                    C: "Para borrar por completo el programa cargado anteriormente en la placa.",
+                    D: "Para configurar el pin 13 como entrada en lugar de salida."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "Arduino es una plataforma de hardware libre compuesta por una placa con un " +
+                    "microcontrolador, pensada para que estudiantes, diseñadores y aficionados puedan crear " +
+                    "proyectos electrónicos interactivos de forma accesible. No es un lenguaje exclusivo para " +
+                    "desarrollo web (B); no es un tipo de multímetro (C); y no es un componente que se agrega " +
+                    "a un protoboard para modificar su resistencia (D).",
+
+                p2: "El Arduino IDE (Integrated Development Environment) es el software oficial que permite " +
+                    "escribir el código de un programa (llamado sketch), verificarlo en busca de errores y " +
+                    "cargarlo a la placa Arduino a través de un cable, generalmente USB. No es un componente " +
+                    "físico para medir temperatura (A); no es un tipo de cable de alimentación (C); y no es " +
+                    "una tienda en línea (D).",
+
+                p3: "void setup() es un bloque que se ejecuta una única vez, justo al iniciar el programa " +
+                    "(o al reiniciar la placa), y se usa típicamente para configurar aspectos iniciales, como " +
+                    "definir si un pin será de entrada o salida con pinMode(). No se repite indefinidamente, " +
+                    "esa es la función de void loop() (B); no depende exclusivamente de presionar el botón de " +
+                    "reset para ejecutarse, sino de que el programa inicie (C); y no detiene el programa, al " +
+                    "contrario, es el punto de partida de su ejecución (D).",
+
+                p4: "void loop() contiene las instrucciones que se ejecutan de manera continua y repetitiva " +
+                    "mientras la placa esté encendida, justo después de que void setup() se haya ejecutado " +
+                    "una sola vez. No se ejecuta una única vez y se detiene, esa es la función de void setup() " +
+                    "(A); no se limita a declarar variables sin ejecutar acciones (C); y no es un bloque " +
+                    "opcional, es parte obligatoria de la estructura de todo sketch en Arduino (D).",
+
+                p5: "pinMode(13, OUTPUT); configura el pin número 13 de la placa como salida, es decir, como " +
+                    "un pin capaz de enviar señales eléctricas hacia un componente externo, como un LED " +
+                    "conectado a él. No mide el voltaje presente en el pin, esa sería una función de lectura, " +
+                    "no de configuración (A); no elimina el pin de la configuración de la placa (C); y no lo " +
+                    "convierte en un pin exclusivamente analógico, ya que el pin 13 es un pin digital (D).",
+
+                p6: "digitalWrite(13, HIGH); envía una señal alta (equivalente a encendido) al pin 13, lo que " +
+                    "enciende el LED conectado a él, mientras que digitalWrite(13, LOW); envía una señal baja " +
+                    "(apagado), apagando el LED. No es cierto que ambas instrucciones apaguen el LED sin " +
+                    "diferencia entre ellas (B); HIGH y LOW no configuran el modo del pin, esa es la función " +
+                    "de pinMode() (C); y digitalWrite() no mide resistencias, solo envía señales de salida " +
+                    "(D).",
+
+                p7: "delay(1000); pausa la ejecución del programa durante 1000 milisegundos, es decir, un " +
+                    "segundo, antes de continuar con la siguiente instrucción; en el sketch de referencia, " +
+                    "esto hace que el LED permanezca encendido o apagado durante ese tiempo antes de cambiar " +
+                    "de estado. No detiene el programa de forma permanente, solo lo pausa temporalmente (A); " +
+                    "no aumenta la velocidad del parpadeo, al contrario, marca cuánto tiempo debe esperar " +
+                    "(C); y no cambia el número de pin utilizado en el programa (D).",
+
+                p8: "Serial.begin(9600); inicia la comunicación serial entre la placa Arduino y el " +
+                    "computador a una velocidad de 9600 baudios, y Serial.println(\"Hola Arduino\"); envía " +
+                    "ese mensaje de texto, el cual puede visualizarse abriendo el Monitor Serial dentro del " +
+                    "Arduino IDE. No se refiere a encender un LED en un supuesto \"pin 9600\", ya que ese " +
+                    "número corresponde a la velocidad de comunicación, no a un pin físico (B); no borra " +
+                    "programas cargados anteriormente (C); y no configura ningún pin como entrada (D)."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien los fundamentos de Arduino y el Arduino IDE. 🤖";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

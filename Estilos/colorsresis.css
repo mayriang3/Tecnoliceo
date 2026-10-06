@@ -1,0 +1,420 @@
+
+
+        /* =========================
+           PALETA DE COLORES
+        ========================= */
+
+        :root {
+            --verde-oscuro: #122B1D;
+            --verde: #537E72;
+            --pistacho: #9CC97F;
+            --gris-claro: #CDDECB;
+            --azul: #90B7BF;
+            --blanco: #ffffff;
+
+            --correcto: #4CAF50;
+            --incorrecto: #E57373;
+            --correcto-claro: #E8F5E9;
+            --incorrecto-claro: #FFEBEE;
+        }
+
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--gris-claro);
+            color: var(--verde-oscuro);
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            background-color: var(--verde-oscuro);
+            color: var(--gris-claro);
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: var(--azul);
+        }
+
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        .contenedor {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+
+        /* =========================
+           TARJETA DE INTRODUCCIÓN
+        ========================= */
+
+        .introduccion {
+            background-color: var(--blanco);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 7px solid var(--pistacho);
+            box-shadow: 0 5px 15px rgba(18, 43, 29, 0.12);
+        }
+
+        .introduccion h2 {
+            color: var(--verde);
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           PREGUNTAS
+        ========================= */
+
+        .pregunta {
+            background-color: var(--blanco);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(18, 43, 29, 0.12);
+            border-top: 5px solid var(--verde);
+        }
+
+        .pregunta h3 {
+            color: var(--verde-oscuro);
+            margin-bottom: 18px;
+            font-size: 19px;
+        }
+
+        .pregunta code {
+            background-color: var(--gris-claro);
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-family: "Courier New", monospace;
+        }
+
+
+        /* =========================
+           BANDAS DE COLOR (ilustración)
+        ========================= */
+
+        .resistencia {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            margin: 15px 0 20px;
+            padding: 14px 10px;
+            background-color: #F2E9D8;
+            border-radius: 30px;
+            width: fit-content;
+        }
+
+        .banda {
+            width: 14px;
+            height: 34px;
+            border-radius: 3px;
+        }
+
+        .b-negro { background-color: #1a1a1a; }
+        .b-marron { background-color: #7B3F00; }
+        .b-rojo { background-color: #E53935; }
+        .b-naranja { background-color: #FB8C00; }
+        .b-amarillo { background-color: #FDD835; }
+        .b-verde { background-color: #43A047; }
+        .b-azul { background-color: #1E88E5; }
+        .b-violeta { background-color: #8E24AA; }
+        .b-gris { background-color: #9E9E9E; }
+        .b-blanco { background-color: #FFFFFF; border: 1px solid #ccc; }
+        .b-dorado { background-color: #C9A227; }
+        .b-plateado { background-color: #C0C0C0; }
+
+
+        /* =========================
+           OPCIONES
+        ========================= */
+
+        .opcion {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--gris-claro);
+            margin: 10px 0;
+            padding: 13px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.25s;
+            border: 2px solid transparent;
+        }
+
+        .opcion:hover {
+            background-color: var(--azul);
+            transform: translateX(4px);
+        }
+
+        .opcion input {
+            accent-color: var(--verde-oscuro);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .opcion:has(input:checked) {
+            background-color: var(--pistacho);
+            border-color: var(--verde);
+        }
+
+
+        /* =========================
+           BOTÓN
+        ========================= */
+
+        .boton-container {
+            text-align: center;
+            margin: 35px 0;
+        }
+
+        button {
+            background-color: var(--verde-oscuro);
+            color: var(--blanco);
+            border: none;
+            padding: 16px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--verde);
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           RESULTADO
+        ========================= */
+
+        #resultado {
+            display: none;
+            background-color: var(--blanco);
+            border-radius: 18px;
+            padding: 35px;
+            margin: 30px 0 50px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(18, 43, 29, 0.18);
+            border: 4px solid var(--pistacho);
+        }
+
+        #resultado h2 {
+            color: var(--verde-oscuro);
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           PUNTAJE
+        ========================= */
+
+        .puntaje {
+            background-color: var(--azul);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .puntaje strong {
+            font-size: 40px;
+            color: var(--verde-oscuro);
+        }
+
+
+        /* =========================
+           ESTADÍSTICAS
+        ========================= */
+
+        .estadisticas {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .estadistica {
+            background-color: var(--gris-claro);
+            padding: 15px 25px;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+
+        .estadistica span {
+            display: block;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--verde);
+        }
+
+
+        /* =========================
+           MENSAJE FINAL
+        ========================= */
+
+        #mensaje {
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: var(--verde-oscuro);
+        }
+
+
+        /* =========================
+           REVISIÓN DE RESPUESTAS
+        ========================= */
+
+        .revision {
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        .revision h3 {
+            text-align: center;
+            color: var(--verde-oscuro);
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .respuesta-revision {
+            padding: 20px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            border-left: 6px solid;
+        }
+
+        .respuesta-revision.correcta {
+            background-color: var(--correcto-claro);
+            border-left-color: var(--correcto);
+        }
+
+        .respuesta-revision.incorrecta {
+            background-color: var(--incorrecto-claro);
+            border-left-color: var(--incorrecto);
+        }
+
+        .respuesta-revision h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .respuesta-revision p {
+            margin: 6px 0;
+        }
+
+        .respuesta-correcta {
+            color: var(--correcto);
+            font-weight: bold;
+        }
+
+        .respuesta-incorrecta {
+            color: #C62828;
+            font-weight: bold;
+        }
+
+        .justificacion {
+            margin-top: 10px;
+            padding: 12px 14px;
+            background-color: rgba(18, 43, 29, 0.05);
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .justificacion strong {
+            color: var(--verde);
+        }
+
+
+        /* =========================
+           BOTÓN INTENTAR DE NUEVO
+        ========================= */
+
+        .reiniciar-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .reiniciar {
+            background-color: var(--verde);
+        }
+
+        .reiniciar:hover {
+            background-color: var(--verde-oscuro);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: var(--verde-oscuro);
+            color: var(--gris-claro);
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .contenedor {
+                width: 94%;
+            }
+
+            .pregunta {
+                padding: 20px;
+            }
+
+            .estadisticas {
+                flex-direction: column;
+            }
+
+            #resultado {
+                padding: 22px;
+            }
+
+        }

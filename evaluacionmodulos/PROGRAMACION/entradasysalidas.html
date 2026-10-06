@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario - Entradas y salidas de información (printf, scanf)</title>
+
+  <link rel="stylesheet" href="/Estilos/entrasale.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <h1>ENTRADAS Y SALIDAS DE INFORMACIÓN</h1>
+
+        <p>Cuestionario de conocimientos: printf y scanf</p>
+
+    </header>
+
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             INTRODUCCIÓN
+        ========================== -->
+
+        <section class="introduccion">
+
+            <h2>Pon a prueba tus conocimientos</h2>
+
+            <p>
+                Responde las siguientes 8 preguntas sobre las funciones
+                <code>printf</code> y <code>scanf</code> en el lenguaje C.
+                Lee cuidadosamente cada pregunta y selecciona una sola
+                respuesta.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUESTIONARIO
+        ========================== -->
+
+        <form id="cuestionario">
+
+
+            <!-- PREGUNTA 1 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    1. ¿Para qué se utiliza principalmente la función
+                    <code>printf</code> en C?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="A">
+                    <span>
+                        A. Para leer un valor que el usuario escribe por
+                        teclado y guardarlo en una variable.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="B">
+                    <span>
+                        B. Para mostrar texto o valores en la pantalla como
+                        salida del programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="C">
+                    <span>
+                        C. Para declarar nuevas variables dentro del programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p1" value="D">
+                    <span>
+                        D. Para detener por completo la ejecución del
+                        programa.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 2 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    2. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        int edad = 15;<br>
+                        printf("Tienes %d anios", edad);
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué función cumple <code>%d</code> dentro de esta
+                    instrucción?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="A">
+                    <span>
+                        A. Es un comentario que el compilador ignora por
+                        completo.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="B">
+                    <span>
+                        B. Es un especificador de formato que indica que en
+                        ese lugar se mostrará un número entero, en este caso
+                        el valor de edad.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="C">
+                    <span>
+                        C. Es el nombre de una variable declarada
+                        automáticamente por el compilador.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p2" value="D">
+                    <span>
+                        D. Es una instrucción que borra el valor de la
+                        variable edad después de mostrarla.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 3 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    3. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        printf("Hola");<br>
+                        printf("Mundo");
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué se mostrará en pantalla?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="A">
+                    <span>
+                        A. HolaMundo, en una sola línea, porque no se incluyó
+                        ningún salto de línea entre ambas instrucciones.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="B">
+                    <span>
+                        B. Hola y Mundo aparecerán siempre en líneas
+                        separadas, sin importar si se usa o no <code>\n</code>.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="C">
+                    <span>
+                        C. El programa genera un error porque no se puede usar
+                        <code>printf</code> dos veces seguidas.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p3" value="D">
+                    <span>
+                        D. Solo se mostrará "Mundo", ya que el segundo
+                        <code>printf</code> reemplaza al primero.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 4 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    4. ¿Para qué se utiliza principalmente la función
+                    <code>scanf</code> en C?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="A">
+                    <span>
+                        A. Para mostrar mensajes de texto en pantalla, igual
+                        que <code>printf</code>.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="B">
+                    <span>
+                        B. Para leer un valor ingresado por el usuario desde
+                        el teclado y almacenarlo en una variable.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="C">
+                    <span>
+                        C. Para incluir bibliotecas adicionales dentro del
+                        programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p4" value="D">
+                    <span>
+                        D. Para convertir automáticamente cualquier variable
+                        en un número decimal.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 5 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    5. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        int numero;<br>
+                        scanf("%d", &amp;numero);
+                    </code>
+
+                    <br><br>
+
+                    ¿Por qué es necesario escribir el símbolo
+                    <code>&amp;</code> antes de <code>numero</code> dentro de
+                    <code>scanf</code>?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="A">
+                    <span>
+                        A. Porque <code>&amp;</code> indica la dirección de
+                        memoria de la variable, y <code>scanf</code> necesita
+                        saber dónde guardar el valor ingresado.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="B">
+                    <span>
+                        B. Porque <code>&amp;</code> convierte la variable
+                        numero en un texto antes de leerla.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="C">
+                    <span>
+                        C. Porque sin <code>&amp;</code>, la función
+                        <code>scanf</code> no puede compilarse dentro de un
+                        programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p5" value="D">
+                    <span>
+                        D. Porque <code>&amp;</code> es un símbolo decorativo
+                        que no afecta el funcionamiento del programa.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 6 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    6. Observa el siguiente código:
+                    <br><br>
+
+                    <code>
+                        float promedio = 4.5;<br>
+                        char inicial = 'C';<br><br>
+
+                        printf("Promedio: %f, Inicial: %c", promedio, inicial);
+                    </code>
+
+                    <br><br>
+
+                    ¿Qué representan <code>%f</code> y <code>%c</code> en
+                    esta instrucción?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="A">
+                    <span>
+                        A. Son especificadores de formato para mostrar un
+                        número decimal (<code>%f</code>) y un carácter
+                        (<code>%c</code>), respectivamente.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="B">
+                    <span>
+                        B. Son los nombres de dos funciones que se ejecutan
+                        automáticamente dentro de printf.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="C">
+                    <span>
+                        C. Son comentarios que explican el propósito de las
+                        variables promedio e inicial.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p6" value="D">
+                    <span>
+                        D. Indican que las variables promedio e inicial deben
+                        eliminarse después de mostrarse.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 7 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    7. Un programa debe pedirle al usuario su edad y luego
+                    mostrarla en pantalla. Observa el siguiente código, que
+                    contiene un error:
+                    <br><br>
+
+                    <code>
+                        int edad;<br>
+                        printf("Ingresa tu edad: ");<br>
+                        scanf("%d", edad);<br>
+                        printf("Tu edad es %d", edad);
+                    </code>
+
+                    <br><br>
+
+                    ¿Cuál es el error en este código?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="A">
+                    <span>
+                        A. No hay ningún error, el programa funcionará
+                        correctamente tal como está escrito.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="B">
+                    <span>
+                        B. En la línea <code>scanf("%d", edad);</code> falta
+                        el símbolo <code>&amp;</code> antes de edad, ya que
+                        scanf necesita la dirección de memoria de la
+                        variable para poder almacenar el valor leído.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="C">
+                    <span>
+                        C. El error está en el primer <code>printf</code>,
+                        porque no se puede mostrar texto antes de usar
+                        <code>scanf</code>.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p7" value="D">
+                    <span>
+                        D. El error está en declarar la variable edad como
+                        <code>int</code>, debería declararse como
+                        <code>char</code>.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- PREGUNTA 8 -->
+
+            <div class="pregunta">
+
+                <h3>
+                    8. En un programa que primero pide la edad con
+                    <code>scanf</code> y después la muestra con
+                    <code>printf</code>, ¿por qué es importante que el orden
+                    de las instrucciones sea ese y no al revés?
+                </h3>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="A">
+                    <span>
+                        A. Porque en C el orden de las instrucciones nunca
+                        afecta el resultado del programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="B">
+                    <span>
+                        B. Porque el programa ejecuta las instrucciones en
+                        el mismo orden en que están escritas, por lo que
+                        primero se debe leer el dato con scanf antes de poder
+                        mostrarlo con printf.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="C">
+                    <span>
+                        C. Porque scanf solo puede usarse una vez al final de
+                        todo el programa.
+                    </span>
+                </label>
+
+                <label class="opcion">
+                    <input type="radio" name="p8" value="D">
+                    <span>
+                        D. Porque printf siempre debe ejecutarse antes que
+                        cualquier otra instrucción del programa.
+                    </span>
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN
+            ========================== -->
+
+            <div class="boton-container">
+
+                <button type="button" onclick="calificar()">
+                    Finalizar cuestionario
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado">
+
+            <h2>¡Cuestionario terminado!</h2>
+
+
+            <div class="puntaje">
+
+                <p>Tu puntaje es:</p>
+
+                <strong id="porcentaje">0%</strong>
+
+            </div>
+
+
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>Aciertos</p>
+
+                    <span id="aciertos">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Respuestas incorrectas</p>
+
+                    <span id="errores">0</span>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <p>Total</p>
+
+                    <span>8</span>
+
+                </div>
+
+            </div>
+
+
+
+            <p id="mensaje"></p>
+
+
+
+            <!-- =========================
+                 REVISIÓN DE RESPUESTAS
+            ========================== -->
+
+            <div class="revision">
+
+                <h3>Revisión de tus respuestas</h3>
+
+                <div id="listaRevision"></div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BOTÓN PARA REINTENTAR
+            ========================== -->
+
+            <div class="reiniciar-container">
+
+                <button class="reiniciar" onclick="reiniciarCuestionario()">
+                    ¡Intentar nuevamente!
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Aprende, practica y sigue programando.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================== -->
+
+    <script>
+
+        function calificar() {
+
+
+            /* =========================
+               RESPUESTAS CORRECTAS
+            ========================= */
+
+            const respuestasCorrectas = {
+
+                p1: "B",
+                p2: "B",
+                p3: "A",
+                p4: "B",
+                p5: "A",
+                p6: "A",
+                p7: "B",
+                p8: "B"
+
+            };
+
+
+            /* =========================
+               TEXTOS DE LAS RESPUESTAS
+            ========================= */
+
+            const textosRespuestas = {
+
+                p1: {
+                    A: "Para leer un valor que el usuario escribe por teclado y guardarlo en una variable.",
+                    B: "Para mostrar texto o valores en la pantalla como salida del programa.",
+                    C: "Para declarar nuevas variables dentro del programa.",
+                    D: "Para detener por completo la ejecución del programa."
+                },
+
+                p2: {
+                    A: "Es un comentario que el compilador ignora por completo.",
+                    B: "Es un especificador de formato que indica que en ese lugar se mostrará un número entero, en este caso el valor de edad.",
+                    C: "Es el nombre de una variable declarada automáticamente por el compilador.",
+                    D: "Es una instrucción que borra el valor de la variable edad después de mostrarla."
+                },
+
+                p3: {
+                    A: "HolaMundo, en una sola línea, porque no se incluyó ningún salto de línea entre ambas instrucciones.",
+                    B: "Hola y Mundo aparecerán siempre en líneas separadas, sin importar si se usa o no \\n.",
+                    C: "El programa genera un error porque no se puede usar printf dos veces seguidas.",
+                    D: "Solo se mostrará \"Mundo\", ya que el segundo printf reemplaza al primero."
+                },
+
+                p4: {
+                    A: "Para mostrar mensajes de texto en pantalla, igual que printf.",
+                    B: "Para leer un valor ingresado por el usuario desde el teclado y almacenarlo en una variable.",
+                    C: "Para incluir bibliotecas adicionales dentro del programa.",
+                    D: "Para convertir automáticamente cualquier variable en un número decimal."
+                },
+
+                p5: {
+                    A: "Porque &amp; indica la dirección de memoria de la variable, y scanf necesita saber dónde guardar el valor ingresado.",
+                    B: "Porque &amp; convierte la variable numero en un texto antes de leerla.",
+                    C: "Porque sin &amp;, la función scanf no puede compilarse dentro de un programa.",
+                    D: "Porque &amp; es un símbolo decorativo que no afecta el funcionamiento del programa."
+                },
+
+                p6: {
+                    A: "Son especificadores de formato para mostrar un número decimal (%f) y un carácter (%c), respectivamente.",
+                    B: "Son los nombres de dos funciones que se ejecutan automáticamente dentro de printf.",
+                    C: "Son comentarios que explican el propósito de las variables promedio e inicial.",
+                    D: "Indican que las variables promedio e inicial deben eliminarse después de mostrarse."
+                },
+
+                p7: {
+                    A: "No hay ningún error, el programa funcionará correctamente tal como está escrito.",
+                    B: "En la línea scanf(\"%d\", edad); falta el símbolo &amp; antes de edad, ya que scanf necesita la dirección de memoria de la variable para poder almacenar el valor leído.",
+                    C: "El error está en el primer printf, porque no se puede mostrar texto antes de usar scanf.",
+                    D: "El error está en declarar la variable edad como int, debería declararse como char."
+                },
+
+                p8: {
+                    A: "Porque en C el orden de las instrucciones nunca afecta el resultado del programa.",
+                    B: "Porque el programa ejecuta las instrucciones en el mismo orden en que están escritas, por lo que primero se debe leer el dato con scanf antes de poder mostrarlo con printf.",
+                    C: "Porque scanf solo puede usarse una vez al final de todo el programa.",
+                    D: "Porque printf siempre debe ejecutarse antes que cualquier otra instrucción del programa."
+                }
+
+            };
+
+
+            /* =========================
+               JUSTIFICACIONES
+               (por qué la respuesta correcta lo es,
+               y por qué las otras no aplican)
+            ========================= */
+
+            const justificaciones = {
+
+                p1: "printf es la función de salida de C: se utiliza para mostrar texto, valores de " +
+                    "variables o mensajes en la pantalla. No sirve para leer datos del teclado, esa es la " +
+                    "función de scanf (A); no declara variables, eso se hace indicando su tipo antes del " +
+                    "nombre (C); y no detiene la ejecución del programa (D).",
+
+                p2: "%d es un especificador de formato que le indica a printf que, en ese lugar del texto, " +
+                    "debe mostrarse un número entero, tomado del valor de la variable edad. No es un " +
+                    "comentario, ya que sí forma parte de lo que se imprime en pantalla (A); no es una " +
+                    "variable declarada por el compilador (C); y no borra ningún valor, solo lo muestra (D).",
+
+                p3: "Como ninguna de las dos instrucciones printf incluye un salto de línea (\\n), el texto " +
+                    "\"Hola\" y \"Mundo\" se mostrarán uno justo después del otro, en la misma línea, como " +
+                    "\"HolaMundo\". No es cierto que siempre aparezcan en líneas separadas sin usar \\n (B); " +
+                    "sí es válido usar printf varias veces seguidas dentro de un programa (C); y ambos " +
+                    "mensajes se muestran, uno no reemplaza al otro (D).",
+
+                p4: "scanf es la función utilizada en C para leer un valor que el usuario escribe por " +
+                    "teclado y almacenarlo en una variable previamente declarada. No sirve para mostrar " +
+                    "mensajes en pantalla, esa es la función de printf (A); no incluye bibliotecas, eso se " +
+                    "hace con #include (C); y no convierte variables en decimales automáticamente (D).",
+
+                p5: "El símbolo &amp; indica la dirección de memoria donde está almacenada la variable, y " +
+                    "scanf necesita esa dirección para saber en qué lugar de la memoria debe guardar el " +
+                    "valor que el usuario ingresa. No convierte la variable en texto (B); su ausencia no " +
+                    "impide siempre que el programa compile, pero sí provoca un comportamiento incorrecto o " +
+                    "errores en tiempo de ejecución (C); y no es un símbolo decorativo, cumple una función " +
+                    "esencial (D).",
+
+                p6: "%f y %c son especificadores de formato: %f indica que se mostrará un número decimal " +
+                    "(tipo float) y %c indica que se mostrará un solo carácter (tipo char). No son nombres " +
+                    "de funciones (B); no son comentarios, ya que sí influyen en lo que se imprime (C); y no " +
+                    "eliminan las variables después de mostrarlas, solo las muestran en pantalla (D).",
+
+                p7: "En scanf(\"%d\", edad); falta el símbolo &amp; antes de edad; sin él, scanf no recibe la " +
+                    "dirección de memoria de la variable y no puede almacenar correctamente el valor " +
+                    "ingresado por el usuario, lo que provoca un comportamiento incorrecto del programa. No " +
+                    "es cierto que el código esté libre de errores (A); sí es válido usar printf antes de " +
+                    "scanf para mostrar un mensaje al usuario (C); y el tipo de dato correcto para una edad " +
+                    "es int, no char (D).",
+
+                p8: "Un programa en C ejecuta sus instrucciones en el mismo orden en que están escritas, de " +
+                    "arriba hacia abajo; por eso es necesario leer primero el valor con scanf para que la " +
+                    "variable tenga un dato antes de mostrarla con printf. No es cierto que el orden nunca " +
+                    "afecte el resultado (A); scanf puede usarse varias veces a lo largo de un programa, no " +
+                    "solo al final (C); y printf no tiene que ejecutarse siempre primero, su posición " +
+                    "depende de la lógica del programa (D)."
+
+            };
+
+
+            let aciertos = 0;
+            let respondidas = 0;
+
+            let listaRevision = "";
+
+
+            /* =========================
+               REVISAR CADA PREGUNTA
+            ========================= */
+
+            for (let pregunta in respuestasCorrectas) {
+
+
+                const respuestaSeleccionada =
+                    document.querySelector(
+                        `input[name="${pregunta}"]:checked`
+                    );
+
+
+                if (respuestaSeleccionada) {
+
+                    respondidas++;
+
+
+                    const respuestaUsuario =
+                        respuestaSeleccionada.value;
+
+                    const respuestaCorrecta =
+                        respuestasCorrectas[pregunta];
+
+
+                    const numeroPregunta =
+                        pregunta.replace("p", "");
+
+
+                    /* =========================
+                       RESPUESTA CORRECTA
+                    ========================= */
+
+                    if (respuestaUsuario === respuestaCorrecta) {
+
+                        aciertos++;
+
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision correcta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — ¡Correcta!
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    /* =========================
+                       RESPUESTA INCORRECTA
+                    ========================= */
+
+                    else {
+
+                        listaRevision += `
+
+                            <div class="respuesta-revision incorrecta">
+
+                                <h4>
+                                    Pregunta ${numeroPregunta} — Incorrecta
+                                </h4>
+
+                                <p>
+                                    <strong>Tu respuesta:</strong>
+                                    <span class="respuesta-incorrecta">
+                                        ${respuestaUsuario}. ${textosRespuestas[pregunta][respuestaUsuario]}
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <strong>✓ Respuesta correcta:</strong>
+                                    <span class="respuesta-correcta">
+                                        ${respuestaCorrecta}. ${textosRespuestas[pregunta][respuestaCorrecta]}
+                                    </span>
+                                </p>
+
+                                <div class="justificacion">
+                                    <strong>Justificación:</strong> ${justificaciones[pregunta]}
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+
+            /* =========================
+               VERIFICAR QUE ESTÉN TODAS
+            ========================= */
+
+            if (respondidas < 8) {
+
+                alert(
+                    "¡Debes responder las 8 preguntas antes de finalizar el cuestionario!"
+                );
+
+                return;
+
+            }
+
+
+            /* =========================
+               CALCULAR RESULTADOS
+            ========================= */
+
+            const errores = 8 - aciertos;
+
+            const porcentaje = (aciertos / 8) * 100;
+
+
+            /* =========================
+               MOSTRAR RESULTADOS
+            ========================= */
+
+            document.getElementById("aciertos").textContent =
+                aciertos;
+
+            document.getElementById("errores").textContent =
+                errores;
+
+            document.getElementById("porcentaje").textContent =
+                porcentaje + "%";
+
+
+            /* =========================
+               MOSTRAR REVISIÓN
+            ========================= */
+
+            document.getElementById("listaRevision").innerHTML =
+                listaRevision;
+
+
+            /* =========================
+               MENSAJE FINAL
+            ========================= */
+
+            let mensaje = "";
+
+
+            if (porcentaje === 100) {
+
+                mensaje =
+                    "¡Excelente! Dominas muy bien el manejo de printf y scanf.";
+
+            }
+
+            else if (porcentaje >= 75) {
+
+                mensaje =
+                    "¡Muy buen trabajo! Comprendes la mayoría de los conceptos. Sigue practicando para fortalecer tus conocimientos.";
+
+            }
+
+            else if (porcentaje >= 50) {
+
+                mensaje =
+                    "¡Vas por buen camino! Tienes conocimientos importantes, pero todavía puedes reforzar algunos conceptos.";
+
+            }
+
+            else {
+
+                mensaje =
+                    "No te desanimes. Los errores también forman parte del aprendizaje. Revisa las respuestas y vuelve a intentarlo.";
+
+            }
+
+
+            document.getElementById("mensaje").textContent =
+                mensaje;
+
+
+            /* =========================
+               MOSTRAR RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").style.display =
+                "block";
+
+
+            /* =========================
+               DESPLAZARSE AL RESULTADO
+            ========================= */
+
+            document.getElementById("resultado").scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+
+        /* =========================
+           REINICIAR CUESTIONARIO
+        ========================= */
+
+        function reiniciarCuestionario() {
+
+            document.getElementById("cuestionario").reset();
+
+            document.getElementById("resultado").style.display =
+                "none";
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

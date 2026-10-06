@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 3. Multímetro y mediciones eléctricas | TecnoLiceo</title>
+
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+   
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+        <h1>TecnoLiceo</h1>
+    </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 3. Multímetro y mediciones eléctricas</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/ELECTRONICA/Multimetro.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+
+<main class="mod">
+
+    <!-- ==================== PORTADA ==================== -->
+
+    <section class="portada">
+        <span class="pill">Modulo 3</span>
+
+        <h1>Multímetro y mediciones eléctricas (R, V, I)</h1>
+
+        <span class="pill">Electrónica</span>
+    </section>
+
+
+    <!-- ==================== ¿QUÉ ES? ==================== -->
+
+    <section class="bloque">
+        <h2>¿Qué es un multímetro?</h2>
+
+        <p>
+            Un multímetro es un instrumento de medición electrónico que permite
+            medir tres magnitudes eléctricas fundamentales: voltaje (V),
+            corriente (I) y resistencia (R). Es una herramienta indispensable
+            en electrónica y electricidad, utilizada para diagnosticar fallas,
+            verificar circuitos y realizar mediciones precisas.
+
+            Su versatilidad lo convierte en el instrumento más importante del
+            técnico electrónico.
+        </p>
+    </section>
+
+
+    <!-- ==================== MAGNITUDES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Magnitudes eléctricas</h2>
+
+        <p>
+            Estas son las tres magnitudes básicas que se miden con el multímetro.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Voltaje (V)</h4>
+                <p>Diferencia de potencial eléctrico. Se mide en Voltios (V).</p>
+            </article>
+
+            <article class="ej">
+                <h4>Corriente (I)</h4>
+                <p>Flujo de carga eléctrica. Se mide en Amperios (A).</p>
+            </article>
+
+            <article class="ej">
+                <h4>Resistencia (R)</h4>
+                <p>Oposición al paso de la corriente. Se mide en Ohmios (Ω).</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== VOLTAJE, CORRIENTE, RESISTENCIA ==================== -->
+
+    <section class="bloque">
+
+        <h2>Conceptos fundamentales</h2>
+
+        <h3 class="sub">Voltaje (V)</h3>
+
+        <p>
+            El voltaje es la diferencia de potencial eléctrico entre dos puntos
+            de un circuito. Es la "fuerza" que impulsa a los electrones a moverse.
+            Se mide en Voltios (V) con un voltímetro o con el multímetro en modo V,
+            conectando las puntas en paralelo al componente.
+        </p>
+
+        <div class="tarjetas">
+            <article class="ej">
+                <h4>Ejemplo</h4>
+                <p>
+                    Una pila AA tiene 1.5 V. Una batería de 9 V puede encender una
+                    bombilla pequeña conectada en un circuito simple.
+                </p>
+            </article>
+        </div>
+
+
+        <h3 class="sub">Corriente eléctrica (I)</h3>
+
+        <p>
+            La corriente eléctrica es el flujo ordenado de cargas eléctricas
+            (electrones) a través de un conductor. Por convenio, la dirección
+            convencional de la corriente va del polo positivo al negativo, aunque
+            los electrones se mueven en sentido contrario.
+
+            Se mide en Amperios (A) con un amperímetro, conectado en serie dentro
+            del circuito. Una mayor corriente significa más carga fluyendo por
+            segundo.
+        </p>
+
+
+        <h3 class="sub">Resistencia (R)</h3>
+
+        <p>
+            La resistencia eléctrica es la oposición que ofrece un material al
+            paso de la corriente eléctrica. Se representa con la letra R y se mide
+            en Ohmios (Ω). Cuanto mayor es la resistencia, menor es la corriente
+            que fluye por el circuito.
+
+            Los resistores son componentes diseñados específicamente para limitar
+            o controlar el flujo de corriente. La resistencia depende del material,
+            la longitud y el grosor del conductor.
+        </p>
+
+        <div class="tarjetas">
+            <article class="ej">
+                <h4>Ejemplo</h4>
+                <p>
+                    En un circuito simple con una batería de 9 V y un resistor de
+                    100 Ω, la corriente que circula es de 0.09 A (según la Ley de
+                    Ohm: I = V / R).
+                </p>
+            </article>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== LEY DE OHM ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ley de Ohm</h2>
+
+        <p>
+            La Ley de Ohm establece la relación fundamental entre las tres
+            magnitudes eléctricas básicas.
+        </p>
+
+        <div class="cod">
+            <code>
+V = I × R
+            </code>
+        </div>
+
+        <ul class="lista">
+            <li><strong>V:</strong> Voltaje (Voltios).</li>
+            <li><strong>I:</strong> Corriente (Amperios).</li>
+            <li><strong>R:</strong> Resistencia (Ohmios).</li>
+        </ul>
+
+        <h3 class="sub">Relación entre las magnitudes</h3>
+
+        <p>
+            Si la resistencia es constante, al aumentar el voltaje, la corriente
+            aumenta proporcionalmente. Si la resistencia aumenta, la corriente
+            disminuye.
+        </p>
+
+        <div class="tarjetas">
+            <article class="ej">
+                <h4>Ejemplo numérico</h4>
+                <p>
+                    Si una batería entrega 9 V y el circuito tiene una resistencia
+                    de 3 Ω, la corriente que fluye es:
+                </p>
+
+                <div class="cod">
+                    <code>
+I = V ÷ R = 9 ÷ 3 = 3 A
+                    </code>
+                </div>
+            </article>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== PARTES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Partes del multímetro</h2>
+
+        <ul class="lista">
+
+            <li>
+                <strong>Pantalla:</strong>
+                Muestra el valor medido (voltaje, corriente o resistencia).
+            </li>
+
+            <li>
+                <strong>Selector de función y rango:</strong>
+                Perilla giratoria que permite elegir el tipo de medición (V, A, Ω)
+                y el rango adecuado.
+            </li>
+
+            <li>
+                <strong>Terminal (+) roja:</strong>
+                Conecta la punta roja; se usa para el polo positivo o la entrada
+                de señal.
+            </li>
+
+            <li>
+                <strong>Terminal (–) negra (COM):</strong>
+                Conecta la punta negra; es la referencia común o negativo.
+            </li>
+
+            <li>
+                <strong>Botones adicionales:</strong>
+                Incluyen funciones como HOLD (congelar lectura), SEL (selección
+                de modo) y encendido/apagado.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== CÓMO MEDIR ==================== -->
+
+    <section class="bloque">
+
+        <h2>Cómo medir con el multímetro</h2>
+
+        <h3 class="sub">Cómo medir voltaje</h3>
+
+        <div class="pasos">
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Configurar el multímetro</h4>
+                <p>Gira el selector al modo Voltios (V). Elige VDC para corriente continua o VAC para alterna.</p>
+            </article>
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Conectar en paralelo</h4>
+                <p>La punta roja al terminal positivo (+) y la negra al negativo (–) del componente.</p>
+            </article>
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Leer el resultado</h4>
+                <p>Observa el valor en la pantalla y asegúrate de que las unidades sean correctas (mV o V).</p>
+            </article>
+        </div>
+
+        <div class="nota">
+            <p><strong>Precauciones:</strong> No toques las puntas metálicas, verifica el rango antes de medir y nunca conectes en serie para medir voltaje.</p>
+        </div>
+
+
+        <h3 class="sub">Cómo medir corriente</h3>
+
+        <div class="pasos">
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Configurar el multímetro</h4>
+                <p>Gira el selector al modo amperios (A). Elige la escala adecuada (mA para corrientes pequeñas, A para corrientes mayores).</p>
+            </article>
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Conectar en serie</h4>
+                <p>Abre el circuito e inserta el multímetro en serie. La punta roja al terminal positivo y la negra al negativo.</p>
+            </article>
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Leer el resultado</h4>
+                <p>Observa el valor en pantalla y asegúrate de que la unidad sea la correcta (A o mA).</p>
+            </article>
+        </div>
+
+        <div class="nota">
+            <p><strong>Advertencias:</strong> Nunca conectes en paralelo al medir corriente. Verifica que el multímetro soporte el nivel de corriente del circuito para evitar daños al equipo.</p>
+        </div>
+
+
+        <h3 class="sub">Cómo medir resistencia</h3>
+
+        <div class="pasos">
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Configurar en modo ohmios (Ω)</h4>
+                <p>Gira el selector al símbolo Ω y elige el rango adecuado según la resistencia esperada.</p>
+            </article>
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Desconectar el componente</h4>
+                <p>Nunca midas resistencia con el circuito energizado; retira el componente antes de medir.</p>
+            </article>
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Conectar las puntas</h4>
+                <p>Coloca la punta roja en el terminal positivo (+) y la punta negra en el terminal COM del componente.</p>
+            </article>
+            <article class="paso c4">
+                <span class="num">4</span>
+                <h4>Leer el resultado</h4>
+                <p>Si aparece "OL" o "1", el rango es muy bajo; auméntalo. El resultado se expresa en Ω, kΩ o MΩ.</p>
+            </article>
+        </div>
+
+        <div class="nota">
+            <p><strong>Precaución:</strong> Asegúrate de que el componente esté completamente desconectado y sin carga antes de medir.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== SEGURIDAD ==================== -->
+
+    <section class="bloque">
+
+        <h2>Reglas de seguridad</h2>
+
+        <ul class="lista">
+            <li>No medir corriente en modo de voltaje directo.</li>
+            <li>Revisar la configuración antes de cada medición.</li>
+            <li>Usar equipo con puntas completamente aisladas.</li>
+            <li>Evitar medir circuitos dañados o en mal estado.</li>
+            <li>Protegerse ante circuitos de alta tensión.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLOS PRÁCTICOS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplos prácticos</h2>
+
+        <div class="tarjetas">
+
+            <!-- EJEMPLO 1 -->
+
+            <article class="ej">
+
+                <h4>Ejemplo 1: Voltaje en una batería</h4>
+
+                <p>
+                    <strong>Paso 1:</strong> Configura el multímetro en modo
+                    voltios DC (V—).
+                </p>
+                <p>
+                    <strong>Paso 2:</strong> Conecta la punta roja al terminal
+                    positivo (+) de la batería y la punta negra al terminal
+                    negativo (–).
+                </p>
+                <p>
+                    <strong>Paso 3:</strong> Lee el valor en la pantalla.
+                </p>
+                <p>
+                    <strong>Resultado esperado:</strong> Una batería AA nueva
+                    marcará aproximadamente 1.5 V. Una batería de 9 V marcará
+                    cerca de 9 V si está cargada.
+                </p>
+                <p>
+                    <strong>Interpretación:</strong> Si el valor es
+                    significativamente menor al nominal, la batería está
+                    descargada. Si el multímetro muestra un valor negativo, las
+                    puntas están invertidas. Este procedimiento es seguro y
+                    sencillo para verificar el estado de cualquier batería
+                    doméstica.
+                </p>
+
+            </article>
+
+
+            <!-- EJEMPLO 2 -->
+
+            <article class="ej">
+
+                <h4>Ejemplo 2: Corriente</h4>
+
+                <p>
+                    <strong>Objetivo:</strong> Medir la corriente en un circuito
+                    simple con una batería, un resistor y un LED.
+                </p>
+                <p>
+                    <strong>1.</strong> Configura el multímetro en modo Amperios
+                    (A) o mA.
+                </p>
+                <p>
+                    <strong>2.</strong> Conecta las puntas en serie: abre el
+                    circuito e inserta el multímetro entre los componentes.
+                </p>
+                <p>
+                    <strong>3.</strong> La punta roja va al polo positivo y la
+                    negra al polo negativo.
+                </p>
+                <p>
+                    <strong>4.</strong> Lee el valor en la pantalla.
+                </p>
+                <p>
+                    <strong>Resultado esperado:</strong> ~20 mA. Si el valor es
+                    muy alto, verifica la configuración del rango para proteger
+                    el equipo.
+                </p>
+
+            </article>
+
+
+            <!-- EJEMPLO 3 -->
+
+            <article class="ej">
+
+                <h4>Ejemplo 3: Resistencia</h4>
+
+                <p>
+                    <strong>Procedimiento:</strong> Apaga y desconecta el circuito
+                    antes de medir. Configura el multímetro en modo Ohmios (Ω) y
+                    selecciona el rango adecuado. Conecta las puntas roja (+) y
+                    negra (–) en los extremos del resistor.
+                </p>
+                <p>
+                    <strong>Montaje:</strong> Con el resistor aislado, toca sus
+                    terminales con las puntas del multímetro. La pantalla mostrará
+                    el valor en ohmios (Ω), kiloohmios (kΩ) o megaohmios (MΩ).
+                </p>
+                <p>
+                    <strong>Interpretación:</strong> Compara el valor medido con
+                    las bandas de color del resistor. Una lectura cercana al valor
+                    nominal indica que el resistor está en buen estado. Si la
+                    lectura es "OL" (sobrecarga), sube el rango o el resistor está
+                    dañado.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== ERRORES COMUNES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Errores comunes</h2>
+
+        <ul class="lista">
+            <li>Medir en modo incorrecto (V en lugar de A).</li>
+            <li>No desconectar el circuito al medir resistencia.</li>
+            <li>Confundir conexiones en serie y en paralelo.</li>
+            <li>Olvidar configurar el rango adecuado.</li>
+            <li>Usar puntas en terminales incorrectas.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== APLICACIONES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Aplicaciones del multímetro</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Reparación de aparatos eléctricos</h4>
+                <p>Permite identificar componentes defectuosos en electrodomésticos y dispositivos.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Diagnóstico de fallas en circuitos</h4>
+                <p>Detecta cortos, interrupciones y problemas de continuidad en placas y conexiones.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Instalaciones eléctricas domésticas</h4>
+                <p>Verifica voltajes en enchufes, interruptores y tableros eléctricos del hogar.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Proyectos y experimentos de electrónica</h4>
+                <p>Herramienta esencial en prototipos, Arduino, robótica y laboratorios educativos.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Control de calidad</h4>
+                <p>Comprueba el correcto funcionamiento de componentes antes de ensamblar circuitos.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== RESUMEN ==================== -->
+
+    <section class="bloque resumen">
+
+        <h2>Resumen</h2>
+
+        <p>
+            Un multímetro es un instrumento que mide voltaje (V), corriente (I) y
+            resistencia (R) en circuitos eléctricos. <br>Las magnitudes eléctricas
+            fundamentales son: voltaje en voltios, corriente en amperios y
+            resistencia en ohmios. <br>La Ley de Ohm establece que V = I × R,
+            relacionando las tres magnitudes. <br>Para medir V se conecta en
+            paralelo; para I, en serie; y para R, se desconecta el componente.
+            <br>Como reglas de seguridad, se debe verificar la configuración,
+            usar puntas aisladas y evitar circuitos de alta tensión sin protección.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+    <h2>TecnoLiceo</h2>
+
+    <p>
+        Plataforma informativa con módulos educativos sobre la
+        Modalidad Técnica en Informática.
+    </p>
+
+    <p class="footer-copy">
+        © 2026 - Institución Educativa Liceo Tame
+    </p>
+
+</footer>
+
+</body>
+</html>
