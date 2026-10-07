@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas frecuentes | Tecnoliceo</title>
     <link rel="icon" type="image/png" href="/img/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Cambio: se añade la cursiva de Fraunces para la palabra resaltada del título -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <style>
-
-@import url('https://googleapis.com');
 
 :root {
     --color-fondo: #9cc97f;
@@ -21,14 +20,20 @@
     --crema: #FCDD9D; 
     --fc-verde: #2f6b3f;
     --fc-claro: #9dc983;
-    --fc-crema: #fdfcfa;
-    --fc-suave: #eef3e6;   
+    --fc-crema: #fdfdfb;
+    --fc-suave: #e8f0ea;   
     --fc-texto: #1f2a22;
+
+    /* NUEVOS */
+    --fondo-pagina: #dfe9db;
+    --verde-acento: #5f9d73;
+    --lateral: #e4ede0;
+    --borde-suave: #d6e2d1;
 }
 
 /* CODIGO PARA ANULAR LA BARRA DE DESPLAZAMIENTO */
 html, body {
-  scrollbar-width: none; /*Firefox *//
+  scrollbar-width: none; /* Firefox */
 }
 
 /* Chrome, Safari, Opera y Edge moderno */
@@ -37,8 +42,6 @@ body::-webkit-scrollbar {
   display: none !important;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -46,8 +49,12 @@ body::-webkit-scrollbar {
 }
 
 body{
-    background-color: var(--color-fondo);
+    background: linear-gradient(180deg, #dce7d8 0%, #e6eee2 100%);
+    background-attachment: fixed;
+    background-color: var(--fondo-pagina);
 }
+
+/* ============ HEADER ============ */
 header {
     background-color: var(--color-oscuro);
     display: flex;
@@ -57,12 +64,12 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%; /* por si el padre tiene display flex/grid que lo achique */
+    width: 100%;
 }
 .logo-img {
-    width: 60px;   /* ajusta el tamaño según se vea bien al lado del texto */
+    width: 60px;
     height: 60px;
-    object-fit: contain; /* evita que la imagen se deforme si no es cuadrada */
+    object-fit: contain;
     display: block;
 }
 .logo {
@@ -77,114 +84,132 @@ header h1 {
     cursor: pointer;
 }
 
-
 .botones_principales {
     display: flex;
-    gap: 5px;
+    gap: 8px;
     align-items: center;
 }
 
+/* Ahora TODOS los botones son píldoras azul grisáceo */
 .botonn {
     border: none;
-    background: none;
+    background-color: var(--naranja);
     color: var(--blanco);
     font-size: 15px;
     cursor: pointer;
-    padding: 8px 16px;
+    padding: 9px 18px;
     font-family: 'DM Sans', sans-serif;
-    border-radius: 20px;
-}
-
-/* Solo el primer botón (Inicio) tiene fondo naranja */
-.botonn:first-child {
-    background-color: var(--naranja);
+    border-radius: 999px;
+    transition: background-color .15s;
 }
 
 .botonn:hover {
-    background-color: rgba(255,255,255,0.15);
+    background-color: var(--azul-claro);
 }
-/* Footer */
+
+/* ============ FOOTER ============ */
 footer {
     background-color: var(--color-oscuro);
     color: var(--color-fondo);
     text-align: center;
-    padding: 40px 20px;
+    padding: 44px 20px 50px;
+    margin-top: 60px;
 }
 
 footer h2 {
     font-family: 'Fraunces', serif;
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 footer p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: var(--color-fondo);
+    font-size: 13px;
+    color: #cfe0cc;
 }
 
 .footer-copy {
-    margin-top: 20px;
+    margin-top: 18px;
     font-size: 12px;
-    color: var(--color-fondo);
+    color: #cfe0cc;
 }
 
+/* ============ HERO (texto a la izquierda, datos a la derecha) ============ */
 .faq-hero {
-    background-image: linear-gradient(rgba(18, 43, 29, 0.82), rgba(18, 43, 29, 0.82)), url('/img/fondoliceo.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 90px 70px 110px;
-    text-align: center;
+    background: none;
+    text-align: left;
+    height: 270px;
+    padding: 62px max(30px, calc((100% - 1140px) / 2 + 30px)) 0;
+}
+
+/* Etiqueta pequeña sobre el título (sin tocar el HTML) */
+.faq-hero::before {
+    content: "Asistente TecnoLiceo";
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    color: var(--verde-acento);
 }
 
 .faq-hero h1 {
     font-family: 'Fraunces', serif;
-    font-size: 56px;
-    line-height: 1.2;
-    color: var(--blanco);
-    margin-bottom: 14px;
+    font-size: 40px;
+    line-height: 1.12;
+    color: var(--color-oscuro);
+    margin-bottom: 16px;
 }
 
 .faq-hero em {
-    color: var(--azul-claro);
+    color: var(--verde-acento);
     font-style: italic;
 }
 
 .faq-hero p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    line-height: 1.55;
+    max-width: 460px;
+    color: #3d5446;
 }
 
+/* ============ DATOS (a la derecha del hero) ============ */
 .faq {
-    max-width: 1000px;
+    position: relative;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 30px 70px;
+    padding: 0 30px;
 }
 
-/* Datos de la encuesta (se montan un poco sobre el hero) */
 .faq .datos {
-    position: relative;
+    position: absolute;
+    top: -208px;
+    right: 30px;
+    width: 520px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: -50px;
-    margin-bottom: 45px;
+    gap: 12px;
 }
 
 .faq .dato {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    justify-content: center;
+    gap: 6px;
+    min-height: 112px;
     background-color: var(--blanco);
     border-radius: 16px;
-    padding: 22px 16px;
+    padding: 16px 10px;
     text-align: center;
+    box-shadow: 0 6px 18px rgba(18, 43, 29, .08);
 }
 
 .faq .dato b {
     font-family: 'Fraunces', serif;
-    font-size: 34px;
+    font-size: 27px;
     line-height: 1.1;
     color: var(--color-oscuro);
 }
@@ -192,36 +217,57 @@ footer p {
 .faq .dato span {
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
+    line-height: 1.25;
     color: #5f6b64;
 }
 
-/* Chat de preguntas frecuentes — TecnoLiceo
-   Los colores están al inicio: cámbialos aquí si quieres ajustarlos a tu styles.css */
+/* ============ CHAT ============ */
+/* Rejilla: [cabecera | barra superior]
+            [lateral  | mensajes      ]
+            [lateral  | entrada       ] */
 .fc-chat {
-  max-width: 700px; margin: 28px auto;
-  background: var(--fc-crema, #fdfcfa); color: var(--fc-texto, #1f2a22);
-  border-radius: 24px; overflow: hidden;
-  box-shadow: 0 12px 32px rgba(18, 41, 28, .22);
-  display: flex; flex-direction: column;
-  height: 72vh; min-height: 480px;
-  font-family: 'DM Sans', system-ui, sans-serif;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 570px;
+    background: var(--fc-crema);
+    color: var(--fc-texto);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(18, 41, 28, .14);
+    display: grid;
+    grid-template-columns: 313px minmax(0, 1fr);
+    grid-template-rows: 64px 29px minmax(0, 1fr) auto;
+    font-family: 'DM Sans', system-ui, sans-serif;
 }
 .fc-chat * { box-sizing: border-box; }
 
+/* Barra superior derecha con el engranaje */
+.fc-chat::before {
+    content: "";
+    grid-column: 2;
+    grid-row: 1;
+    background: #fff url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232b4a3a' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='3'/><path d='M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z'/></svg>") right 26px center / 22px no-repeat;
+    border-bottom: 1px solid #e3ebdf;
+}
+
 /* Cabecera con el bot */
 .fc-cabecera { 
+    grid-column: 1;
+    grid-row: 1 / 3;
     display: flex; 
     align-items: center; 
-    gap: 12px; padding: 14px 20px; 
+    gap: 14px; 
+    padding: 0 26px; 
     background: var(--color-oscuro, #12291c); 
     color: #fff; 
 }
 
 .fc-avatar-grande { 
-    width: 48px; height: 48px; 
+    width: 62px; 
+    height: 62px; 
     border-radius: 50%; 
     background: var(--fc-claro, #9dc983); 
-    padding: 4px; 
+    padding: 5px; 
     flex-shrink: 0; 
 }
 
@@ -229,70 +275,154 @@ footer p {
     display: block; 
     font-family: 'Fraunces', Georgia, serif; 
     font-size: 1.1rem; 
+    margin-bottom: 2px;
 }
 
 .fc-cabecera span { 
     display: flex; 
     align-items: center; 
     gap: 6px; 
-    font-size: .8rem; 
-    opacity: .85; 
+    font-size: .82rem; 
+    opacity: .9; 
 }
 
 .fc-punto { 
     width: 8px; 
     height: 8px; 
     border-radius: 50%;
-    background: #7ddc7a; 
+    background: #3fcf6e; 
 }
+
+/* Panel lateral de preguntas frecuentes */
+.fc-lateral {
+    grid-column: 1;
+    grid-row: 3 / 5;
+    background: var(--lateral);
+    padding: 26px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--fc-claro) transparent;
+}
+
+.fc-lateral h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--color-oscuro);
+    margin: 0 0 6px 4px;
+}
+
+.fc-q {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--borde-suave);
+    border-radius: 22px;
+    background: #f6f9f3;
+    color: #1d3a2b;
+    font: inherit;
+    font-size: .9rem;
+    line-height: 1.3;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(18, 43, 29, .05);
+    transition: background .15s, border-color .15s, transform .15s, box-shadow .15s;
+}
+
+/* Icono a la izquierda */
+.fc-q::before {
+    content: "";
+    flex: 0 0 24px;
+    height: 24px;
+    background: var(--color-oscuro);
+    -webkit-mask: var(--ico) center / contain no-repeat;
+            mask: var(--ico) center / contain no-repeat;
+}
+
+/* Flecha a la derecha */
+.fc-q::after {
+    content: "";
+    flex: 0 0 16px;
+    height: 16px;
+    margin-left: auto;
+    background: var(--panel-oscuro);
+    -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 5l7 7-7 7'/></svg>") center / contain no-repeat;
+            mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 5l7 7-7 7'/></svg>") center / contain no-repeat;
+}
+
+.fc-q:hover {
+    background: #fff;
+    border-color: var(--fc-verde);
+    transform: translateX(3px);
+    box-shadow: 0 6px 14px rgba(18, 43, 29, .1);
+}
+
+.fc-q:focus-visible {
+    outline: 3px solid rgba(47, 107, 63, .35);
+    outline-offset: 2px;
+}
+
+/* Iconos de cada pregunta (por orden) */
+.fc-q:nth-of-type(1) { --ico: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='3' width='16' height='18' rx='2'/><path d='M8 8h8M8 12h8M8 16h5'/></svg>"); }
+.fc-q:nth-of-type(2) { --ico: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z'/></svg>"); }
+.fc-q:nth-of-type(3) { --ico: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><rect x='6' y='6' width='12' height='12' rx='2'/><rect x='9.5' y='9.5' width='5' height='5'/><path d='M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3'/></svg>"); }
+.fc-q:nth-of-type(4) { --ico: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01'/></svg>"); }
 
 /* Mensajes */
 #fc-mensajes { 
+    grid-column: 2;
+    grid-row: 2 / 4;
+    background: var(--fc-crema);
     flex: 1; 
     overflow-y: auto; 
-    padding: 20px; 
+    padding: 26px 30px; 
     display: flex; 
     flex-direction: column; 
-    gap: 12px; 
+    gap: 16px; 
     scrollbar-width: thin; 
     scrollbar-color: var(--fc-claro, #9dc983) transparent; 
 }
 
 .fc-fila { 
     display: flex; 
-    align-items: flex-end; 
-    gap: 8px; 
+    align-items: flex-start; 
+    gap: 14px; 
     align-self: flex-start; 
-    max-width: 90%; 
+    max-width: 85%; 
 }
 
 .fc-avatar { 
-    width: 34px; 
-    height: 34px; 
+    width: 46px; 
+    height: 46px; 
     border-radius: 50%; 
-    background: var(--fc-suave, #eef3e6); 
-    padding: 2px; 
+    background: #c9e0b8; 
+    padding: 4px; 
     flex-shrink: 0; 
 }
 
 .fc-burbuja { 
-    padding: 10px 15px; 
+    padding: 12px 18px; 
     border-radius: 18px; 
     line-height: 1.5; 
     font-size: .95rem; 
 }
 
 .fc-bot {
-    background: var(--fc-suave, #eef3e6); 
-    border-bottom-left-radius: 6px; 
+    background: var(--fc-suave, #e8f0ea); 
+    color: #264034;
+    border-top-left-radius: 8px; 
 }
 
 .fc-yo { 
-    background: var(--fc-verde, #2f6b3f); 
+    background: #2c5a45; 
     color: #fff; 
     align-self: flex-end; 
-    max-width: 80%; 
-    border-bottom-right-radius: 6px; 
+    max-width: 75%; 
+    border-top-right-radius: 8px; 
 }
 
 /* "Escribiendo..." */
@@ -311,65 +441,128 @@ footer p {
     animation: fc-salto 1s infinite; 
 }
 
-.fc-escribiendo i:nth-child(2) { 
-    animation-delay: .15s;
-}
-
-.fc-escribiendo i:nth-child(3) { 
-    animation-delay: .3s; 
-}
+.fc-escribiendo i:nth-child(2) { animation-delay: .15s; }
+.fc-escribiendo i:nth-child(3) { animation-delay: .3s; }
 
 @keyframes fc-salto { 
     0%, 60%, 100% { transform: translateY(0); opacity: .35; } 30% { transform: translateY(-5px); opacity: 1; } 
 }
 
-/* Botones de preguntas */
-.fc-panel { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-start; 
-    gap: 7px; 
-    margin-left: 42px; 
-}
+/* Los botones de preguntas ahora viven en el panel lateral,
+   así que se ocultan los que genera chat.js dentro de los mensajes.
+   (Borra este bloque si quieres volver a verlos en el chat.) */
+.fc-panel { display: none; }
 
-.fc-cat { 
-    margin-top: 10px; 
-    font-size: .72rem; 
-    font-weight: 700; 
-    letter-spacing: .08em; 
-    text-transform: uppercase; 
-    color: var(--fc-verde, #2f6b3f); 
-}
-
-.fc-chip { 
-    background: #fff; 
-    color: var(--color-oscuro, #12291c); 
-    border: 1.5px solid var(--fc-verde, #2f6b3f); 
-    padding: 8px 14px; 
-    border-radius: 16px; 
-    font: inherit; 
-    font-size: .9rem; 
-    text-align: left; 
-    cursor: pointer; 
-    transition: background .15s, color .15s, transform .15s; 
-}
-
-.fc-chip:hover { 
-    background: var(--fc-verde, #2f6b3f); 
-    color: #fff; 
-    transform: translateX(3px); 
+@media (prefers-reduced-motion: reduce) {
+    .fc-escribiendo i { animation: none; opacity: .6; }
+    .fc-q { transition: none; }
 }
 
 /* Entrada */
-.fc-entrada { display: flex; gap: 10px; padding: 14px 16px; border-top: 1px solid #e3ead9; background: var(--fc-crema, #fdfcfa); }
-.fc-entrada input { flex: 1; padding: 11px 16px; border: 1.5px solid #d4dfca; border-radius: 999px; background: #fff; font: inherit; color: inherit; outline: none; }
+.fc-entrada { 
+    grid-column: 2;
+    grid-row: 4;
+    display: flex; 
+    align-items: center;
+    gap: 14px; 
+    padding: 16px 24px; 
+    border-top: 1px solid #e3ebdf; 
+    background: var(--fc-crema, #fdfdfb); 
+}
+
+/* Botón de adjuntar (decorativo) */
+.fc-entrada::before {
+    content: "";
+    flex: 0 0 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #d9e3d3;
+    background: #eef3e6 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f6b3f' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5'/></svg>") center / 20px no-repeat;
+}
+
+.fc-entrada input { 
+    flex: 1; 
+    height: 48px;
+    padding: 0 20px; 
+    border: 1px solid #d9e3d3; 
+    border-radius: 999px; 
+    background: #fff; 
+    font: inherit; 
+    color: inherit; 
+    outline: none; 
+}
 .fc-entrada input:focus { border-color: var(--fc-verde, #2f6b3f); box-shadow: 0 0 0 3px rgba(47, 107, 63, .15); }
-.fc-entrada button { padding: 11px 22px; border: 0; border-radius: 999px; background: var(--color-oscuro, #12291c); color: #fff; font: inherit; font-weight: 500; cursor: pointer; transition: background .15s; }
+
+.fc-entrada button { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 48px;
+    padding: 0 28px; 
+    border: 0; 
+    border-radius: 999px; 
+    background: var(--color-oscuro, #12291c); 
+    color: #fff; 
+    font: inherit; 
+    font-weight: 500; 
+    cursor: pointer; 
+    transition: background .15s; 
+}
+
+/* Avión de papel junto a "Enviar" */
+.fc-entrada button::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'><path d='M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z'/></svg>") center / contain no-repeat;
+}
+
 .fc-entrada button:hover { background: var(--fc-verde, #2f6b3f); }
 
-@media (max-width: 520px) {
-  .fc-chat { margin: 16px 10px; height: 78vh; border-radius: 20px; }
-  .fc-fila { max-width: 96%; }
+/* ============ RESPONSIVE ============ */
+
+/* Pantallas medianas: los datos bajan debajo del texto */
+@media (max-width: 1150px) {
+    .faq-hero { height: auto; padding-bottom: 28px; }
+    .faq .datos {
+        position: static;
+        width: 100%;
+        margin-bottom: 28px;
+    }
+}
+
+/* Móvil: el panel lateral pasa a ser una fila deslizable */
+@media (max-width: 760px) {
+    header { flex-direction: column; gap: 10px; padding: 12px 16px; }
+    .botones_principales { flex-wrap: wrap; justify-content: center; }
+    .faq-hero h1 { font-size: 30px; }
+    .faq { padding: 0 14px; }
+    .faq .datos { grid-template-columns: repeat(2, 1fr); }
+
+    .fc-chat {
+        height: 82vh;
+        min-height: 520px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto minmax(0, 1fr) auto;
+    }
+    .fc-chat::before { display: none; }
+    .fc-cabecera { grid-column: 1; grid-row: 1; padding: 12px 18px; }
+    .fc-avatar-grande { width: 48px; height: 48px; }
+    .fc-lateral {
+        grid-column: 1;
+        grid-row: 2;
+        flex-direction: row;
+        align-items: stretch;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 12px 14px;
+    }
+    .fc-lateral h3 { display: none; }
+    .fc-q { flex: 0 0 230px; width: 230px; }
+    #fc-mensajes { grid-column: 1; grid-row: 3; padding: 18px 14px; }
+    .fc-entrada { grid-column: 1; grid-row: 4; padding: 12px 14px; }
+    .fc-entrada::before { display: none; }
+    .fc-entrada button { padding: 0 18px; }
 }
 </style>   
 </head>
@@ -391,8 +584,8 @@ footer p {
     </header>
 
     <section class="faq-hero">
-        <h1>Preguntas frecuentes <br>sobre la <em>modalidad</em></h1>
-        <p>Respuestas basadas en encuestas recientes.</p>
+        <h1>Resuelve tus dudas sobre <br>nuestra <em>modalidad</em></h1>
+        <p>Estoy aquí para ayudarte con todo lo relacionado a la modalidad en programación y tecnologias digitales.</p>
     </section>
 
 <main class="faq">
@@ -404,7 +597,7 @@ footer p {
         <div class="dato"><b>4</b><span>grados consultados</span></div>
     </div>
 
-    <!-- Chat de preguntas frecuentes (reemplaza los grupos de preguntas anteriores) -->
+    <!-- Chat de preguntas frecuentes -->
     <section class="fc-chat">
         <div class="fc-cabecera">
             <img class="fc-avatar-grande" src="/img/bot.svg" alt="Asistente TecnoLiceo">
@@ -413,6 +606,16 @@ footer p {
                 <span><i class="fc-punto"></i> En línea</span>
             </div>
         </div>
+
+        <!-- NUEVO: panel lateral de preguntas -->
+        <aside class="fc-lateral">
+            <h3>Preguntas frecuentes</h3>
+            <button type="button" class="fc-q">¿Qué voy a ver durante la modalidad?</button>
+            <button type="button" class="fc-q">¿Qué temas son más importantes?</button>
+            <button type="button" class="fc-q">¿Se trabaja con Arduino y montajes reales?</button>
+            <button type="button" class="fc-q">¿Por qué elegir esta modalidad?</button>
+        </aside>
+
         <div id="fc-mensajes">
             <div class="fc-fila">
                 <img class="fc-avatar" src="/img/bot.svg" alt="">
@@ -438,5 +641,14 @@ footer p {
         </p>
     </footer>
 <script src="/js/chat.js"></script>
+<!-- NUEVO: los botones del panel lateral escriben la pregunta y la envían con el chat de siempre -->
+<script>
+document.querySelectorAll('.fc-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        document.getElementById('fc-texto').value = btn.textContent.trim();
+        document.getElementById('fc-enviar').click();
+    });
+});
+</script>
 </body>
 </html>
