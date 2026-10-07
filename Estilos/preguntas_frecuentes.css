@@ -2,13 +2,126 @@
    PREGUNTAS FRECUENTES
    ==================================================== */
 
+@import url('https://googleapis.com');
+
 :root {
+    --color-fondo: #9cc97f;
+    --color-oscuro: #122b1d;
+    --naranja: #90b7bf;
+    --blanco: #fcfbfa;
+    --azul-claro: #6fa9bb;
+    --panel-oscuro: #5c7d72; 
+    --ambar: #ffbf00; 
+    --crema: #FCDD9D; 
     --fc-oscuro: #12291c;
     --fc-verde: #2f6b3f;
     --fc-claro: #9dc983;
     --fc-crema: #fdfcfa;
-    --fc-suave: #eef3e6;
+    --fc-suave: #eef3e6;   
     --fc-texto: #1f2a22;
+}
+
+/* CODIGO PARA ANULAR LA BARRA DE DESPLAZAMIENTO */
+html, body {
+  scrollbar-width: none; /*Firefox *//
+}
+
+/* Chrome, Safari, Opera y Edge moderno */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-fondo);
+}
+header {
+    background-color: var(--color-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* por si el padre tiene display flex/grid que lo achique */
+}
+.logo-img {
+    width: 60px;   /* ajusta el tamaño según se vea bien al lado del texto */
+    height: 60px;
+    object-fit: contain; /* evita que la imagen se deforme si no es cuadrada */
+    display: block;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header h1 {
+    color: var(--color-fondo);
+    font-size: 30px;
+    font-family: 'Fraunces', serif;
+    cursor: pointer;
+}
+
+
+.botones_principales {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.botonn {
+    border: none;
+    background: none;
+    color: var(--blanco);
+    font-size: 15px;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 20px;
+}
+
+/* Solo el primer botón (Inicio) tiene fondo naranja */
+.botonn:first-child {
+    background-color: var(--naranja);
+}
+
+.botonn:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+/* Footer */
+footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--color-fondo);
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--color-fondo);
 }
 
 .faq-hero {
@@ -80,12 +193,6 @@
 /* Chat de preguntas frecuentes — TecnoLiceo
    Los colores están al inicio: cámbialos aquí si quieres ajustarlos a tu styles.css */
 .fc-chat {
-  --fc-oscuro: #12291c;
-  --fc-verde: #2f6b3f;
-  --fc-claro: #9dc983;
-  --fc-crema: #fdfcfa;
-  --fc-suave: #eef3e6;
-  --fc-texto: #1f2a22;
   max-width: 700px; margin: 28px auto;
   background: var(--fc-crema, #fdfcfa); color: var(--fc-texto, #1f2a22);
   border-radius: 24px; overflow: hidden;
