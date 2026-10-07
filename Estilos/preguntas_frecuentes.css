@@ -13,7 +13,6 @@
     --panel-oscuro: #5c7d72; 
     --ambar: #ffbf00; 
     --crema: #FCDD9D; 
-    --fc-oscuro: #12291c;
     --fc-verde: #2f6b3f;
     --fc-claro: #9dc983;
     --fc-crema: #fdfcfa;
@@ -204,7 +203,7 @@ footer p {
 .fc-chat * { box-sizing: border-box; }
 
 /* Cabecera con el bot */
-.fc-cabecera { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: var(--fc-oscuro, #12291c); color: #fff; }
+.fc-cabecera { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: var(--color-oscuro, #12291c); color: #fff; }
 .fc-avatar-grande { width: 48px; height: 48px; border-radius: 50%; background: var(--fc-claro, #9dc983); padding: 4px; flex-shrink: 0; }
 .fc-cabecera strong { display: block; font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; }
 .fc-cabecera span { display: flex; align-items: center; gap: 6px; font-size: .8rem; opacity: .85; }
@@ -228,14 +227,14 @@ footer p {
 /* Botones de preguntas */
 .fc-panel { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin-left: 42px; }
 .fc-cat { margin-top: 10px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--fc-verde, #2f6b3f); }
-.fc-chip { background: #fff; color: var(--fc-oscuro, #12291c); border: 1.5px solid var(--fc-verde, #2f6b3f); padding: 8px 14px; border-radius: 16px; font: inherit; font-size: .9rem; text-align: left; cursor: pointer; transition: background .15s, color .15s, transform .15s; }
+.fc-chip { background: #fff; color: var(--color-oscuro, #12291c); border: 1.5px solid var(--fc-verde, #2f6b3f); padding: 8px 14px; border-radius: 16px; font: inherit; font-size: .9rem; text-align: left; cursor: pointer; transition: background .15s, color .15s, transform .15s; }
 .fc-chip:hover { background: var(--fc-verde, #2f6b3f); color: #fff; transform: translateX(3px); }
 
 /* Entrada */
 .fc-entrada { display: flex; gap: 10px; padding: 14px 16px; border-top: 1px solid #e3ead9; background: var(--fc-crema, #fdfcfa); }
 .fc-entrada input { flex: 1; padding: 11px 16px; border: 1.5px solid #d4dfca; border-radius: 999px; background: #fff; font: inherit; color: inherit; outline: none; }
 .fc-entrada input:focus { border-color: var(--fc-verde, #2f6b3f); box-shadow: 0 0 0 3px rgba(47, 107, 63, .15); }
-.fc-entrada button { padding: 11px 22px; border: 0; border-radius: 999px; background: var(--fc-oscuro, #12291c); color: #fff; font: inherit; font-weight: 500; cursor: pointer; transition: background .15s; }
+.fc-entrada button { padding: 11px 22px; border: 0; border-radius: 999px; background: var(--color-oscuro, #12291c); color: #fff; font: inherit; font-weight: 500; cursor: pointer; transition: background .15s; }
 .fc-entrada button:hover { background: var(--fc-verde, #2f6b3f); }
 
 @media (max-width: 520px) {
