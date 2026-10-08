@@ -8,6 +8,9 @@ session_set_cookie_params([
 ]);
 session_start();
 header('Content-Type: application/json; charset=utf-8');
+// Que ningún caché (navegador, servidor o CDN) guarde las respuestas de la API
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('X-LiteSpeed-Cache-Control: no-cache');
 
 function responder($datos, $codigo = 200) {
     http_response_code($codigo);
@@ -18,7 +21,10 @@ function responder($datos, $codigo = 200) {
 // Si algo se rompe, no mostramos detalles al público
 set_exception_handler(function ($e) {
     error_log($e->getMessage());
-    responder(['error' => 'Error del servidor'], 500);
+    $salida = ['error' => 'Error del servidor'];
+    // Solo para depurar: define('DEBUG', true); en config.php muestra el motivo real
+    if (defined('DEBUG') && DEBUG) $salida['detalle'] = $e->getMessage();
+    responder($salida, 500);
 });
 
 function db() {
@@ -50,6 +56,12 @@ function requiere_admin() {
     if (empty($_SESSION['admin'])) {
         responder(['error' => 'no autorizado'], 401);
     }
+}
+
+function ip_cliente() {
+    if (!empty($_SERVER['HTTP_CF_CONNECTING_IP'])) return $_SERVER['HTTP_CF_CONNECTING_IP'];
+    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) return trim(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0]);
+    return $_SERVER['REMOTE_ADDR'] ?? '';
 }
 
 function campos($datos) {
@@ -95,7 +107,36 @@ if ($ruta === 'chat' && $metodo === 'POST') {
         if ($c > $puntaje) { $mejor = $f; $puntaje = $c; }
     }
     if ($mejor) responder(['respuesta' => $mejor['respuesta']]);
-    responder(['respuesta' => 'No te entendí 😅 Prueba con otras palabras, por ejemplo: «arduino», «difícil» o «programación», o toca una de las preguntas de arriba.']);
+    responder(['sinRespuesta' => true, 'respuesta' => 'No te entendí 😅 Prueba con otras palabras, por ejemplo: «arduino», «difícil» o «programación», o toca una de las preguntas de arriba.']);
+}
+
+if ($ruta === 'sugerencia' && $metodo === 'POST') {
+    $dato = function ($k, $max) use ($datos) {
+        $v = isset($datos[$k]) && is_string($datos[$k]) ? trim($datos[$k]) : '';
+        return mb_substr($v, 0, $max, 'UTF-8');
+    };
+    // Campo trampa: las personas no lo ven, los bots sí lo llenan
+    if ($dato('web', 50) !== '') responder(['ok' => true]);
+
+    $texto = $dato('texto', 600);
+    $largo = mb_strlen($texto, 'UTF-8');
+    if ($largo < 5 || $largo > 500) {
+        responder(['error' => 'Escribe tu pregunta (entre 5 y 500 caracteres).'], 400);
+    }
+    $tema   = $dato('tema', 80);
+    $nombre = $dato('nombre', 80);
+    $grado  = $dato('grado', 10);
+
+    // Freno anti-spam: máximo 10 sugerencias cada 10 minutos por conexión (se guarda solo un código, no la IP)
+    $ip = hash('sha256', ip_cliente() . DB_NAME);
+    $st = db()->prepare('SELECT COUNT(*) FROM sugerencias WHERE ip_hash = ? AND creado > (NOW() - INTERVAL 10 MINUTE)');
+    $st->execute([$ip]);
+    if ((int)$st->fetchColumn() >= 10) {
+        responder(['error' => 'Enviaste varias sugerencias seguidas. Intenta de nuevo más tarde.'], 429);
+    }
+    db()->prepare('INSERT INTO sugerencias (texto, tema, nombre, grado, ip_hash) VALUES (?, ?, ?, ?, ?)')
+        ->execute([$texto, $tema ?: null, $nombre ?: null, $grado ?: null, $ip]);
+    responder(['ok' => true]);
 }
 
 // ---------- Admin del FAQ ----------
@@ -121,6 +162,24 @@ if ($p[0] === 'admin') {
         $_SESSION = [];
         session_destroy();
         responder(['ok' => true]);
+    }
+
+    if ($accion === 'sugerencias') {
+        requiere_admin();
+        $id = isset($p[2]) ? (int)$p[2] : 0;
+
+        if ($metodo === 'GET' && !$id) {
+            responder(db()->query('SELECT id, texto, tema, nombre, grado, leida, creado FROM sugerencias ORDER BY leida ASC, creado DESC')->fetchAll());
+        }
+        if ($metodo === 'PUT' && $id) {
+            $leida = !empty($datos['leida']) ? 1 : 0;
+            db()->prepare('UPDATE sugerencias SET leida = ? WHERE id = ?')->execute([$leida, $id]);
+            responder(['ok' => true]);
+        }
+        if ($metodo === 'DELETE' && $id) {
+            db()->prepare('DELETE FROM sugerencias WHERE id = ?')->execute([$id]);
+            responder(['ok' => true]);
+        }
     }
 
     if ($accion === 'faq') {
