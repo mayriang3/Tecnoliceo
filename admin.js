@@ -68,10 +68,42 @@ function limpiar() {
 }
 
 // ---------- Sugerencias ----------
+// Si tu admin.html no tiene la sección de sugerencias, la crea sola debajo de la lista
+function asegurarSeccion() {
+  if ($("sugerencias")) return;
+  const titulo = document.createElement("h2");
+  titulo.className = "titulo-lista";
+  titulo.textContent = "Sugerencias recibidas ";
+  const badge = document.createElement("span");
+  badge.id = "contador";
+  badge.className = "badge";
+  badge.hidden = true;
+  badge.textContent = "0";
+  titulo.append(badge);
+  const cont = document.createElement("div");
+  cont.id = "sugerencias";
+  $("lista").after(titulo, cont);
+  if (!document.getElementById("sg-admin-css")) {
+    const st = document.createElement("style");
+    st.id = "sg-admin-css";
+    st.textContent = ".badge{display:inline-block;min-width:24px;padding:1px 8px;margin-left:6px;border-radius:999px;background:#2f6b3f;color:#fff;font:700 .8rem sans-serif;text-align:center;vertical-align:middle}.item.nueva{background:#f4faee;border-color:#2f6b3f}";
+    document.head.append(st);
+  }
+}
+
 async function cargarSugerencias() {
-  const { datos } = await api("/api/admin/sugerencias");
+  asegurarSeccion();
   const cont = $("sugerencias");
   cont.innerHTML = "";
+  const resp = await api("/api/admin/sugerencias");
+  if (!resp.ok || !Array.isArray(resp.datos)) {
+    const p = document.createElement("p");
+    p.className = "ayuda";
+    p.textContent = "No se pudieron cargar las sugerencias" + (resp.datos && resp.datos.error ? " (" + resp.datos.error + ")" : "") + ".";
+    cont.appendChild(p);
+    return;
+  }
+  const datos = resp.datos;
   const nuevas = datos.filter((s) => Number(s.leida) !== 1).length;
   $("contador").textContent = nuevas;
   $("contador").hidden = nuevas === 0;
