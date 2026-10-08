@@ -1,0 +1,299 @@
+/* =====================================================================
+   RESPONSIVE — TecnoLiceo
+   Cárgalo DESPUÉS de tu CSS principal:
+   <link rel="stylesheet" href="/css/styles.css">
+   <link rel="stylesheet" href="/css/responsive.css">
+   Orden: de pantallas grandes a pequeñas (cada bloque hereda del anterior).
+   ===================================================================== */
+
+/* Evita que iOS agrande el texto al girar el celular */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+
+/* =====================================================================
+   1) TABLET GRANDE / PORTÁTIL PEQUEÑO  ≤ 1366px
+      iPad Pro 12.9" horizontal (1366)
+   ===================================================================== */
+@media (max-width: 1366px) {
+    .info { margin-left: 300px; margin-right: 300px; }
+}
+
+
+/* =====================================================================
+   2) TABLET HORIZONTAL  ≤ 1024px
+      iPad, iPad Air, Galaxy Tab, iPad Pro 11" vertical
+   ===================================================================== */
+@media (max-width: 1024px) {
+
+    /* Header */
+    header { padding: 10px 24px; }
+    .botonn { padding: 8px 12px; font-size: 14px; }
+
+    /* Inicio: hero */
+    .hero__badge,
+    .hero__title,
+    .hero__description,
+    .hero__buttons { margin-left: 40px; }
+    .hero__title { font-size: 60px; margin-top: 50px; }
+
+    /* Bloques que redirigen: 2 por fila */
+    .Bloques__redirigibles { flex-wrap: wrap; padding: 40px; }
+    .Bloques__redirigibles a { flex: 1 1 calc(50% - 20px); }
+
+    /* Márgenes laterales de las secciones */
+    .information,
+    .contenido-evaluado,
+    .cards,
+    .materia { padding-left: 40px; padding-right: 40px; }
+
+    .information { background-size: cover; gap: 40px; }
+    .information-header h2 { font-size: 38px; }
+
+    .hero_proyect h1,
+    .hero_proyect h2 { padding-left: 40px; }
+
+    /* Información general */
+    .body_info { height: auto; min-height: 100vh; }
+    .info { margin-left: 120px; margin-right: 120px; }
+    .top { padding-left: 40px; padding-right: 40px; }
+    .acc { margin-left: 40px; margin-right: 40px; }
+
+    /* Material de estudio */
+    .mat-hero { padding: 90px 40px 40px; }
+    .mat-hero h1 { font-size: 80px; }
+    .modulos-grid--full { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+/* =====================================================================
+   3) TABLET VERTICAL  ≤ 900px
+      iPad mini / iPad vertical (768-834)
+   ===================================================================== */
+@media (max-width: 900px) {
+
+    /* Header en dos filas: logo arriba, menú abajo (deslizable) */
+    header {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 16px;
+    }
+    .logo-img { width: 46px; height: 46px; }
+    header h1 { font-size: 24px; }
+
+    .botones_principales {
+        width: 100%;
+        gap: 6px;
+        overflow-x: auto;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .botones_principales::-webkit-scrollbar { display: none; }
+    .botones_principales a { flex: 0 0 auto; }
+    .botonn { white-space: nowrap; }
+
+    /* "¿Cómo funciona?" en una sola columna */
+    .information {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .information-header { max-width: none; }
+    .information ol { max-width: none; width: 100%; }
+}
+
+
+/* =====================================================================
+   4) TABLET PEQUEÑA / MÓVIL GRANDE EN HORIZONTAL  ≤ 768px
+   ===================================================================== */
+@media (max-width: 768px) {
+
+    /* Inicio */
+    .indexx {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding-bottom: 30px;
+    }
+    .hero__badge,
+    .hero__title,
+    .hero__description,
+    .hero__buttons { margin-left: 28px; }
+    .hero__title { font-size: 48px; margin-top: 40px; }
+    .hero__description { margin-right: 28px; }
+
+    .Bloques__redirigibles { padding: 30px 24px; }
+
+    .stats-bar { flex-wrap: wrap; gap: 20px; padding: 24px; }
+    .stat-item { flex: 1 1 40%; }
+    .stat-number { font-size: 30px; }
+
+    .contenido-evaluado { padding: 50px 24px; }
+    .contenido-evaluado h2 { font-size: 28px; }
+    .information { padding-top: 40px; padding-bottom: 40px; padding-left: 24px; padding-right: 24px; }
+
+    /* Sección de tarjetas (equipo / objetivos) */
+    .hero_proyect h1 { font-size: 32px; padding-left: 28px; }
+    .hero_proyect h2 { padding-left: 28px; }
+    .cards { grid-template-columns: 1fr; gap: 16px; padding: 30px 24px; }
+
+    /* Información general */
+    .info { margin-left: 40px; margin-right: 40px; }
+    .top { padding-top: 24px; padding-bottom: 24px; }
+    .top h1 { font-size: 32px; }
+    .acc { margin: 16px 20px; padding: 16px; }
+    .acc-btn h2 { font-size: 22px; }
+
+    .profesor { flex-direction: column; }
+    .profesor img { width: 100%; height: auto; max-height: 360px; }
+
+    .detalle { flex-direction: column; }
+
+    .proyecto { flex-direction: column; }
+    .proyecto .fotos { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+    /* ".info" también está definido como caja centrada; aquí se anula */
+    .proyecto .info { margin-left: 0; margin-right: 0; }
+
+    /* Material de estudio */
+    .mat-hero { padding: 70px 24px 30px; }
+    .mat-hero h1 { font-size: 56px; margin-bottom: 25px; }
+    .mat-filtros { flex-direction: column; align-items: stretch; gap: 14px; }
+    .filtro { min-width: 0; width: 100%; }
+
+    .materia { padding-top: 40px; padding-bottom: 40px; padding-left: 24px; padding-right: 24px; }
+    .materia-titulo { font-size: 26px; margin-bottom: 20px; }
+    .modulo-card__info { padding: 10px 12px; }
+    .modulo-card__info h4 { font-size: 15px; }
+}
+
+
+/* =====================================================================
+   5) MÓVIL GRANDE / ESTÁNDAR  ≤ 600px
+      iPhone 12-16 (390-430), Pixel (412), Galaxy S (360-412)
+   ===================================================================== */
+@media (max-width: 600px) {
+
+    /* Inicio */
+    .hero__badge,
+    .hero__title,
+    .hero__description,
+    .hero__buttons { margin-left: 20px; }
+    .hero__title { font-size: 40px; margin-top: 30px; }
+    .hero__description { margin-right: 20px; max-width: none; font-size: 14px; }
+    .btn { padding: 12px 22px; font-size: 14px; }
+
+    .Bloques__redirigibles { flex-direction: column; gap: 14px; padding: 24px 16px; }
+    .Bloques__redirigibles a { flex: none; }
+
+    .stats-bar { padding: 20px 14px; }
+
+    .contenido-evaluado { padding: 40px 16px; }
+    .tarjetas-grid { gap: 16px; }
+    .tarjeta,
+    .tarjeta.activa { flex: 1 1 100%; min-height: auto; padding: 22px; }
+    .tarjeta p { min-height: 0; }
+
+    .information { padding-left: 16px; padding-right: 16px; }
+    .information-header h2 { font-size: 30px; }
+
+    .hero_proyect h1,
+    .hero_proyect h2 { padding-left: 16px; }
+    .cards { padding: 24px 16px; }
+
+    /* Información general */
+    .info { margin-left: 12px; margin-right: 12px; }
+    .top { padding-left: 16px; padding-right: 16px; }
+    .acc { margin: 12px 10px; padding: 12px; }
+    .acc-btn { gap: 8px; }
+    .acc-btn h2 { font-size: 18px; }
+    .carritos-titulo { font-size: 18px; }
+    .acc-btn.sub { padding: 12px 16px; }
+    .item-titulo { font-size: 16px; }
+
+    .ganadores { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .ganador img { height: 110px; }
+
+    .recos { padding: 18px; }
+
+    /* Material de estudio */
+    .mat-hero { padding: 60px 16px 24px; }
+    .mat-hero h1 { font-size: 44px; }
+    .materia { padding-left: 16px; padding-right: 16px; }
+    .kit-panel h2 { font-size: 24px; margin-bottom: 20px; }
+
+    footer { padding: 30px 16px; }
+}
+
+
+/* =====================================================================
+   6) MÓVIL PEQUEÑO  ≤ 380px
+      iPhone SE / mini (375-320), Galaxy A (360), Z Fold cerrado
+   ===================================================================== */
+@media (max-width: 380px) {
+
+    .logo-img { width: 40px; height: 40px; }
+    header h1 { font-size: 21px; }
+    .botonn { font-size: 13px; padding: 7px 12px; }
+
+    .hero__title { font-size: 32px; }
+    .hero__description { font-size: 13px; }
+
+    .stat-item { flex: 1 1 100%; }
+    .stat-number { font-size: 26px; }
+
+    .contenido-evaluado h2 { font-size: 22px; }
+    .information-header h2 { font-size: 26px; }
+
+    .top h1 { font-size: 26px; }
+    .ganadores { grid-template-columns: 1fr; }
+
+    .mat-hero h1 { font-size: 36px; }
+    .filtro { padding: 10px 14px; }
+    .filtro-ico { width: 40px; height: 40px; }
+}
+
+
+/* =====================================================================
+   7) MÓVIL EN HORIZONTAL (poca altura)
+   ===================================================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+
+    /* El menú fijo ocuparía media pantalla */
+    header { position: static; }
+
+    .indexx { height: auto; min-height: auto; padding-bottom: 30px; }
+    .hero__badge { margin-bottom: 8px; padding-top: 10px; }
+    .hero__title { font-size: 34px; margin-top: 16px; margin-bottom: 10px; }
+
+    .mat-hero { padding-top: 40px; }
+    .mat-hero h1 { font-size: 48px; }
+}
+
+
+/* =====================================================================
+   8) PANTALLAS TÁCTILES (sin mouse)
+   ===================================================================== */
+
+/* En el celular no existe "hover": el detalle de los filtros se muestra siempre */
+@media (hover: none) {
+    .filtro-detalle {
+        opacity: 1;
+        visibility: visible;
+        min-height: 0;
+    }
+}
+
+/* Botones cómodos de tocar (mínimo 44px, recomendado por Apple y Google) */
+@media (pointer: coarse) {
+    .botonn,
+    .btn,
+    .acc-btn { min-height: 44px; }
+
+    .redirigibles_info li a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+}
