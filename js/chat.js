@@ -12,7 +12,6 @@ function formato(t) {
 
 function bajar() { caja.scrollTop = caja.scrollHeight; }
 
-// Burbuja del bot, con su muñequito al lado
 function filaBot(contenidoHtml, extraClase) {
   const fila = document.createElement("div");
   fila.className = "fc-fila";
@@ -39,6 +38,20 @@ function mensajeUsuario(t) {
   bajar();
 }
 
+// Botón de acción debajo de una respuesta (no usa .fc-panel, que es de la lista lateral)
+function botonAccion(etiqueta, alClic) {
+  const cont = document.createElement("div");
+  cont.className = "fc-accion-fila";
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = "fc-accion";
+  b.textContent = etiqueta;
+  b.addEventListener("click", () => { cont.remove(); alClic(); });
+  cont.appendChild(b);
+  caja.appendChild(cont);
+  bajar();
+}
+
 const espera = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function pedir(cuerpo) {
@@ -50,11 +63,15 @@ async function pedir(cuerpo) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(cuerpo),
       }),
-      espera(600), // para que se note el "escribiendo..."
+      espera(600),
     ]);
     const datos = await r.json();
     escribiendo.remove();
     mensajeBot(datos.respuesta);
+    // Si el bot no entendió, ofrece mandar la pregunta como sugerencia (abre la ventanita)
+    if (datos.sinRespuesta && cuerpo.mensaje && typeof abrirSugerencia === "function") {
+      setTimeout(() => botonAccion("💡 Sugerir esta pregunta", () => abrirSugerencia(cuerpo.mensaje)), 1000);
+    }
   } catch (e) {
     escribiendo.remove();
     mensajeBot("Ups, no pude conectar con el servidor.");

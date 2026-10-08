@@ -14,9 +14,18 @@ async function api(url, metodo = "GET", cuerpo) {
 function mostrar(dentro) {
   $("login").hidden = dentro;
   $("panel").hidden = !dentro;
-  if (dentro) cargar();
+  if (dentro) { cargar(); cargarSugerencias(); }
 }
 
+function boton(texto, clase, alClic) {
+  const b = document.createElement("button");
+  b.className = clase;
+  b.textContent = texto;
+  b.onclick = alClic;
+  return b;
+}
+
+// ---------- Preguntas frecuentes ----------
 async function cargar() {
   const { datos } = await api("/api/admin/faq");
   const lista = $("lista");
@@ -32,17 +41,12 @@ async function cargar() {
     info.append(t, c);
     const acc = document.createElement("div");
     acc.className = "acciones";
-    const e = document.createElement("button");
-    e.className = "sec";
-    e.textContent = "Editar";
-    e.onclick = () => editar(f);
-    const b = document.createElement("button");
-    b.className = "rojo";
-    b.textContent = "Borrar";
-    b.onclick = async () => {
-      if (confirm("¿Borrar esta pregunta?")) { await api("/api/admin/faq/" + f.id, "DELETE"); cargar(); }
-    };
-    acc.append(e, b);
+    acc.append(
+      boton("Editar", "sec", () => editar(f)),
+      boton("Borrar", "rojo", async () => {
+        if (confirm("¿Borrar esta pregunta?")) { await api("/api/admin/faq/" + f.id, "DELETE"); cargar(); }
+      })
+    );
     fila.append(info, acc);
     lista.appendChild(fila);
   });
@@ -63,6 +67,68 @@ function limpiar() {
   $("guardar").textContent = "Guardar";
 }
 
+// ---------- Sugerencias ----------
+async function cargarSugerencias() {
+  const { datos } = await api("/api/admin/sugerencias");
+  const cont = $("sugerencias");
+  cont.innerHTML = "";
+  const nuevas = datos.filter((s) => Number(s.leida) !== 1).length;
+  $("contador").textContent = nuevas;
+  $("contador").hidden = nuevas === 0;
+
+  if (!datos.length) {
+    const p = document.createElement("p");
+    p.className = "ayuda";
+    p.textContent = "Todavía no hay sugerencias.";
+    cont.appendChild(p);
+    return;
+  }
+
+  datos.forEach((s) => {
+    const nueva = Number(s.leida) !== 1;
+    const fila = document.createElement("div");
+    fila.className = "item" + (nueva ? " nueva" : "");
+    const info = document.createElement("div");
+    const t = document.createElement("strong");
+    t.textContent = s.texto;
+    info.append(t);
+    // Etiquetas: tema, grado, nombre, fecha y estado
+    [s.tema, s.grado ? "Grado " + s.grado : "", s.nombre, s.creado.slice(0, 16), nueva ? "Nueva" : "Leída"]
+      .filter(Boolean)
+      .forEach((txt) => {
+        const f = document.createElement("small");
+        f.textContent = txt;
+        f.style.marginRight = "6px";
+        info.append(f);
+      });
+
+    const acc = document.createElement("div");
+    acc.className = "acciones";
+    acc.append(
+      // Responder: pasa la sugerencia al formulario para crear la pregunta
+      boton("Responder", "", async () => {
+        limpiar();
+        $("pregunta").value = s.texto;
+        if (s.tema && s.tema !== "Otro") $("categoria").value = s.tema;
+        if (nueva) await api("/api/admin/sugerencias/" + s.id, "PUT", { leida: true });
+        cargarSugerencias();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        $("categoria").focus();
+      }),
+      boton(nueva ? "Marcar leída" : "Marcar nueva", "sec", async () => {
+        await api("/api/admin/sugerencias/" + s.id, "PUT", { leida: nueva });
+        cargarSugerencias();
+      }),
+      boton("Borrar", "rojo", async () => {
+        if (confirm("¿Borrar esta sugerencia?")) { await api("/api/admin/sugerencias/" + s.id, "DELETE"); cargarSugerencias(); }
+      })
+    );
+    fila.append(info, acc);
+    cont.appendChild(fila);
+  });
+}
+
+// ---------- Formulario y sesión ----------
 $("guardar").onclick = async () => {
   const cuerpo = {};
   CAMPOS.forEach((k) => (cuerpo[k] = $(k).value));
