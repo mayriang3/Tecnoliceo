@@ -31,9 +31,8 @@
     --borde-suave: #d6e2d1;
 }
 
-/* CODIGO PARA ANULAR LA BARRA DE DESPLAZAMIENTO */
 html, body {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; /*Firefox *//
 }
 
 /* Chrome, Safari, Opera y Edge moderno */
@@ -42,6 +41,8 @@ body::-webkit-scrollbar {
   display: none !important;
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -49,12 +50,8 @@ body::-webkit-scrollbar {
 }
 
 body{
-    background: linear-gradient(180deg, #dce7d8 0%, #e6eee2 100%);
-    background-attachment: fixed;
-    background-color: var(--fondo-pagina);
+    background-color: var(--color-fondo);
 }
-
-/* ============ HEADER ============ */
 header {
     background-color: var(--color-oscuro);
     display: flex;
@@ -64,12 +61,12 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%;
+    width: 100%; /* por si el padre tiene display flex/grid que lo achique */
 }
 .logo-img {
-    width: 60px;
+    width: 60px;   /* ajusta el tamaño según se vea bien al lado del texto */
     height: 60px;
-    object-fit: contain;
+    object-fit: contain; /* evita que la imagen se deforme si no es cuadrada */
     display: block;
 }
 .logo {
@@ -84,27 +81,31 @@ header h1 {
     cursor: pointer;
 }
 
+
 .botones_principales {
     display: flex;
-    gap: 8px;
+    gap: 5px;
     align-items: center;
 }
 
-/* Ahora TODOS los botones son píldoras azul grisáceo */
 .botonn {
     border: none;
-    background-color: var(--naranja);
+    background: none;
     color: var(--blanco);
     font-size: 15px;
     cursor: pointer;
-    padding: 9px 18px;
+    padding: 8px 16px;
     font-family: 'DM Sans', sans-serif;
-    border-radius: 999px;
-    transition: background-color .15s;
+    border-radius: 20px;
+}
+
+/* Solo el primer botón (Inicio) tiene fondo naranja */
+.botonn:first-child {
+    background-color: var(--naranja);
 }
 
 .botonn:hover {
-    background-color: var(--azul-claro);
+    background-color: rgba(255,255,255,0.15);
 }
 
 /* ============ FOOTER ============ */
