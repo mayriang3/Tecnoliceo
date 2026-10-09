@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Crear cuenta | Tecnoliceo</title>
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="/Estilos/cuentas.css?v=1">
+</head>
+<body class="cuentas" data-pagina="registro">
+    <header>
+        <a href="index.html">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+            <h1>TecnoLiceo</h1>
+        </div>
+        </a>
+
+        <section class="botones_principales">
+            <a href="index.html"><button class="botonn">Inicio</button></a>
+            <a href="info.html"><button class="botonn">Información general</button></a>
+            <a href="material.html"><button class="botonn">Material de Estudio</button></a>
+            <a href="preguntas.html"><button class="botonn">Preguntas Frecuentes</button></a>
+            <a href="login.html"><button class="botonn">Ingresar</button></a>
+        </section>
+    </header>
+
+    <main class="cu-main">
+        <section class="cu-tarjeta">
+            <div class="cu-cab">
+                <img src="/img/bot.svg" alt="">
+                <div><h2>Crear mi cuenta</h2><span>Solo para estudiantes</span></div>
+            </div>
+            <div class="cu-cuerpo">
+                <label for="cu-codigo">Código de tu grado</label>
+                <input id="cu-codigo" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Te lo da tu profesor">
+                <label for="cu-nombre">Nombre completo</label>
+                <input id="cu-nombre" autocomplete="name">
+                <label for="cu-usuario">Usuario</label>
+                <input id="cu-usuario" autocomplete="username" autocapitalize="none" spellcheck="false">
+                <p class="cu-ayuda">De 4 a 30 caracteres: letras minúsculas, números, punto, guion o guion bajo. Ej: ana.perez</p>
+                <label for="cu-clave">Clave</label>
+                <input id="cu-clave" type="password" autocomplete="new-password">
+                <label for="cu-clave2">Repite la clave</label>
+                <input id="cu-clave2" type="password" autocomplete="new-password">
+                <p class="cu-ayuda">Mínimo 8 caracteres.</p>
+                <p class="cu-error" id="cu-error" role="alert"></p>
+                <button class="cu-btn" id="cu-enviar">Crear mi cuenta</button>
+                <p class="cu-pie">¿Ya tienes cuenta? <a href="login.html">Ingresa aquí</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>TecnoLiceo</h2>
+        <p>
+            Plataforma informativa con módulos educativos
+            sobre la Modalidad Técnica en Informática.
+        </p>
+        <p class="footer-copy">
+            © 2026 - Institución Educativa Liceo Tame
+        </p>
+    </footer>
+<script src="/js/cuentas.js?v=1"></script>
+</body>
+</html>
