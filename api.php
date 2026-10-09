@@ -94,7 +94,7 @@ function codigo_aleatorio() {
 }
 function usuario_actual() {
     if (empty($_SESSION['usuario_id'])) return null;
-    $st = db()->prepare('SELECT u.id, u.nombre, u.usuario, u.rol, g.nombre AS grado FROM usuarios u LEFT JOIN grados g ON g.id = u.grado_id WHERE u.id = ?');
+    $st = db()->prepare('SELECT u.id, u.nombre, u.usuario, u.rol, u.grado_id, g.nombre AS grado FROM usuarios u LEFT JOIN grados g ON g.id = u.grado_id WHERE u.id = ?');
     $st->execute([(int)$_SESSION['usuario_id']]);
     $u = $st->fetch();
     if (!$u) { unset($_SESSION['usuario_id']); return null; } // la cuenta ya no existe
@@ -153,6 +153,12 @@ function guardar_grados_tarea($tareaId, $grados) {
     db()->prepare('DELETE FROM tarea_grados WHERE tarea_id = ?')->execute([$tareaId]);
     $ins = db()->prepare('INSERT INTO tarea_grados (tarea_id, grado_id) VALUES (?, ?)');
     foreach ($grados as $g) $ins->execute([$tareaId, $g]);
+}
+
+function requiere_estudiante() {
+    $u = usuario_actual();
+    if (!$u || $u['rol'] !== 'estudiante' || !$u['grado_id']) responder(['error' => 'no autorizado'], 401);
+    return $u;
 }
 
 function requiere_gestion() {
@@ -324,6 +330,65 @@ if ($p[0] === 'auth') {
     if ($accion === 'logout' && $metodo === 'POST') {
         unset($_SESSION['usuario_id']);
         session_regenerate_id(true);
+        responder(['ok' => true]);
+    }
+}
+
+// ---------- Tareas del estudiante ----------
+if ($p[0] === 'mis-tareas') {
+    $est  = requiere_estudiante();
+    $sub1 = $p[1] ?? '';
+    $id   = ctype_digit($sub1) ? (int)$sub1 : 0;
+
+    if ($metodo === 'GET' && $sub1 === '') {
+        $st = db()->prepare("SELECT t.id, t.titulo, t.descripcion, m.nombre AS materia, t.fecha_limite, pr.nombre AS profesor,
+                e.fecha_entrega, e.comentario, e.archivo_url
+            FROM tareas t
+            JOIN tarea_grados tg ON tg.tarea_id = t.id AND tg.grado_id = ?
+            JOIN materias m ON m.id = t.materia_id
+            JOIN usuarios pr ON pr.id = t.profesor_id
+            LEFT JOIN entregas e ON e.tarea_id = t.id AND e.estudiante_id = ?
+            ORDER BY t.fecha_limite");
+        $st->execute([$est['grado_id'], $est['id']]);
+        $ahora = ahora_bogota();
+        $filas = [];
+        foreach ($st->fetchAll() as $f) {
+            $entregada = $f['fecha_entrega'] !== null;
+            $filas[] = [
+                'id' => (int)$f['id'], 'titulo' => $f['titulo'], 'descripcion' => $f['descripcion'],
+                'materia' => $f['materia'], 'profesor' => $f['profesor'], 'fecha_limite' => $f['fecha_limite'],
+                'vencida' => $f['fecha_limite'] < $ahora,
+                'entrega' => $entregada ? [
+                    'fecha_entrega' => $f['fecha_entrega'], 'comentario' => $f['comentario'], 'enlace' => $f['archivo_url'],
+                    'tarde' => $f['fecha_entrega'] > $f['fecha_limite'],
+                ] : null,
+            ];
+        }
+        responder($filas);
+    }
+
+    if ($id && ($p[2] ?? '') === 'entrega' && ($metodo === 'POST' || $metodo === 'DELETE')) {
+        // La tarea debe estar asignada al grado del estudiante
+        $q = db()->prepare('SELECT t.id FROM tareas t JOIN tarea_grados tg ON tg.tarea_id = t.id AND tg.grado_id = ? WHERE t.id = ?');
+        $q->execute([$est['grado_id'], $id]);
+        if (!$q->fetch()) responder(['error' => 'Tarea no encontrada'], 404);
+
+        if ($metodo === 'DELETE') {
+            db()->prepare('DELETE FROM entregas WHERE tarea_id = ? AND estudiante_id = ?')->execute([$id, $est['id']]);
+            responder(['ok' => true]);
+        }
+
+        $coment = texto_campo($datos, 'comentario', 1000);
+        $enlace = texto_campo($datos, 'enlace', 1000);
+        if ($coment === '' && $enlace === '') responder(['error' => 'Escribe un comentario o pega el enlace de tu evidencia.'], 400);
+        if ($enlace !== '') {
+            if (!preg_match('#^https?://[^\s]+$#i', $enlace)) responder(['error' => 'El enlace debe empezar por http:// o https:// y no tener espacios.'], 400);
+            if (mb_strlen($enlace, 'UTF-8') > 255) responder(['error' => 'El enlace es demasiado largo (máximo 255 caracteres).'], 400);
+        }
+        // Se guarda la hora de Colombia, igual que el plazo, para saber si fue a tiempo
+        db()->prepare('INSERT INTO entregas (tarea_id, estudiante_id, comentario, archivo_url, fecha_entrega) VALUES (?,?,?,?,?)
+            ON DUPLICATE KEY UPDATE comentario = VALUES(comentario), archivo_url = VALUES(archivo_url), fecha_entrega = VALUES(fecha_entrega)')
+            ->execute([$id, $est['id'], $coment === '' ? null : $coment, $enlace === '' ? null : $enlace, ahora_bogota()]);
         responder(['ok' => true]);
     }
 }
