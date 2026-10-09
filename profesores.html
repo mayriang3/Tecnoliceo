@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="/img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Estilos/styles.css">
-    <link rel="stylesheet" href="/Estilos/cuentas.css?v=1">
+    <link rel="stylesheet" href="/Estilos/cuentas.css?v=2">
 </head>
 <body class="cuentas" data-pagina="profesores">
     <header>
@@ -36,11 +36,13 @@
                 <button class="cu-sec" id="cu-salir">Salir</button>
             </div>
             <div class="cu-cuerpo">
-                <p>Aquí vas a crear tareas por grado, ver quién las entregó y armar tus módulos. Estamos terminando de construirlo. 🛠️</p>
+                <h3 class="cu-h3">Mis tareas</h3>
+                <div id="gestion-tareas"></div>
+                <h3 class="cu-h3">Mis estudiantes</h3>
+                <div id="gestion-estudiantes"></div>
+                <h3 class="cu-h3">Próximamente</h3>
                 <div class="cu-bloques">
-                    <div>Tareas<small>Próximamente</small></div>
                     <div>Módulos<small>Próximamente</small></div>
-                    <div>Entregas<small>Próximamente</small></div>
                 </div>
             </div>
         </section>
@@ -56,6 +58,8 @@
             © 2026 - Institución Educativa Liceo Tame
         </p>
     </footer>
-<script src="/js/cuentas.js?v=1"></script>
+<script src="/js/cuentas.js?v=2"></script>
+<script src="/js/estudiantes.js?v=1"></script>
+<script src="/js/tareas.js?v=1"></script>
 </body>
 </html>

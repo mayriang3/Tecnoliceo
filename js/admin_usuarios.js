@@ -94,10 +94,12 @@
   }
 
   // ---------- Materias y profesores ----------
+  let listaMaterias = [];
   async function cargarMaterias() {
     const r = await api("/api/admin/materias");
     zMat.innerHTML = "";
     if (!r.ok || !Array.isArray(r.datos)) return;
+    listaMaterias = r.datos;
     r.datos.forEach((m) => {
       const l = el("label");
       const c = el("input");
@@ -119,6 +121,30 @@
     cargarUsuarios();
   }
 
+  // ---------- Materias de un profesor ----------
+  function editarMaterias(u, info) {
+    const previo = info.querySelector(".au-editor");
+    if (previo) { previo.remove(); return; }       // segundo clic: se cierra
+    const marcadas = String(u.materias_ids || "").split(",").filter(Boolean);
+    const caja = el("div", "au-mat au-editor");
+    caja.style.marginTop = "10px";
+    listaMaterias.forEach((m) => {
+      const l = el("label");
+      const c = el("input");
+      c.type = "checkbox"; c.value = m.id; c.checked = marcadas.indexOf(String(m.id)) !== -1;
+      l.append(c, document.createTextNode(m.nombre));
+      caja.append(l);
+    });
+    const guardar = boton("Guardar materias", "", async () => {
+      const ids = Array.prototype.map.call(caja.querySelectorAll("input:checked"), (c) => Number(c.value));
+      const r = await api("/api/admin/usuarios/" + u.id, "PUT", { materias: ids });
+      if (!r.ok) { alert(r.datos.error || "No se pudieron guardar las materias."); return; }
+      cargarUsuarios();
+    });
+    caja.append(el("br"), guardar);
+    info.append(caja);
+  }
+
   // ---------- Usuarios ----------
   async function cargarUsuarios() {
     const r = await api("/api/admin/usuarios");
@@ -132,6 +158,9 @@
       if (u.grado) info.append(chip("Grado " + u.grado));
       if (u.materias) info.append(chip(u.materias));
       const acc = el("div", "acciones");
+      if (u.rol === "profesor") {
+        acc.append(boton("Materias", "sec", () => editarMaterias(u, info)));
+      }
       acc.append(
         boton("Nueva clave", "sec", async () => {
           const nueva = prompt("Nueva clave para " + u.nombre + " (mínimo 8 caracteres):");
