@@ -161,6 +161,59 @@ function requiere_estudiante() {
     return $u;
 }
 
+// Convierte un enlace (o ruta) del propio sitio en una ruta como /modulos/PROGRAMACION/python.html
+// Devuelve [true, ruta|null] si está bien (null = vacío) o [false, null] si no es válido.
+function ruta_local($v) {
+    $v = trim((string)$v);
+    if ($v === '') return [true, null];
+    $ruta = parse_url($v, PHP_URL_PATH);
+    if (!is_string($ruta) || $ruta === '' || $ruta[0] !== '/') return [false, null];
+    $ruta = rawurldecode($ruta);
+    if (preg_match('/\s|\.\./u', $ruta) || mb_strlen($ruta, 'UTF-8') > 255) return [false, null];
+    return [true, $ruta];
+}
+
+// Admin (todas las materias) o profesor (solo las suyas)
+function requiere_modulos() {
+    if (!empty($_SESSION['admin'])) return ['materias' => null, 'id' => null];
+    $u = usuario_actual();
+    if (!$u || $u['rol'] !== 'profesor') responder(['error' => 'no autorizado'], 401);
+    $st = db()->prepare('SELECT materia_id FROM profesor_materia WHERE profesor_id = ?');
+    $st->execute([$u['id']]);
+    return ['materias' => array_map('intval', $st->fetchAll(PDO::FETCH_COLUMN)), 'id' => (int)$u['id']];
+}
+function materia_permitida($ctx, $mid) { return $ctx['materias'] === null || in_array((int)$mid, $ctx['materias'], true); }
+
+function modulo_permitido($id, $ctx) {
+    $st = db()->prepare('SELECT * FROM modulos WHERE id = ?');
+    $st->execute([$id]);
+    $m = $st->fetch();
+    if (!$m || !materia_permitida($ctx, $m['materia_id'])) responder(['error' => 'Módulo no encontrado'], 404);
+    return $m;
+}
+
+// Valida los datos de un módulo y devuelve [titulo, descripcion, materia_id, url, evaluacion_url, orden, publicado]
+function leer_modulo($datos, $ctx, $idActual) {
+    $titulo = texto_campo($datos, 'titulo', 150);
+    if (mb_strlen($titulo, 'UTF-8') < 3) responder(['error' => 'Escribe un título (mínimo 3 caracteres).'], 400);
+    $desc = texto_campo($datos, 'descripcion', 300);
+    $mid = isset($datos['materia_id']) ? (int)$datos['materia_id'] : 0;
+    if (!materia_permitida($ctx, $mid)) responder(['error' => 'Elige una de tus materias.'], 400);
+    $q = db()->prepare('SELECT 1 FROM materias WHERE id = ?');
+    $q->execute([$mid]);
+    if (!$q->fetch()) responder(['error' => 'Elige una materia válida.'], 400);
+    [$ok1, $url] = ruta_local($datos['url'] ?? '');
+    if (!$ok1 || $url === null) responder(['error' => 'Escribe el enlace del módulo, por ejemplo /modulos/PROGRAMACION/python.html'], 400);
+    [$ok2, $ev] = ruta_local($datos['evaluacion_url'] ?? '');
+    if (!$ok2) responder(['error' => 'El enlace de la evaluación no es válido. Debe ser algo como /evaluacionmodulos/PROGRAMACION/python.html'], 400);
+    $q = db()->prepare('SELECT 1 FROM modulos WHERE LOWER(url) = LOWER(?) AND id <> ?');
+    $q->execute([$url, $idActual]);
+    if ($q->fetch()) responder(['error' => 'Ya hay un módulo registrado con ese enlace.'], 409);
+    $orden = max(0, min(9999, (int)($datos['orden'] ?? 0)));
+    $pub = !empty($datos['publicado']) ? 1 : 0;
+    return [$titulo, $desc === '' ? null : $desc, $mid, $url, $ev, $orden, $pub];
+}
+
 function requiere_gestion() {
     if (!empty($_SESSION['admin'])) return;
     $u = usuario_actual();
@@ -332,6 +385,112 @@ if ($p[0] === 'auth') {
         session_regenerate_id(true);
         responder(['ok' => true]);
     }
+}
+
+// ---------- Módulos: catálogo (profesores y admin) ----------
+if ($p[0] === 'modulos') {
+    $ctx  = requiere_modulos();
+    $sub1 = $p[1] ?? '';
+    $id   = ctype_digit($sub1) ? (int)$sub1 : 0;
+    $filtroMat = $ctx['materias'] === null ? '' : ($ctx['materias'] ? ' WHERE m.materia_id IN (' . implode(',', $ctx['materias']) . ')' : ' WHERE 1 = 0');
+
+    if ($metodo === 'GET' && $sub1 === 'opciones') {
+        responder(['materias' => db()->query('SELECT m.id, m.nombre FROM materias m' . str_replace('m.materia_id', 'm.id', $filtroMat) . ' ORDER BY m.nombre')->fetchAll()]);
+    }
+
+    if ($metodo === 'GET' && !$id && $sub1 === '') {
+        $filas = db()->query("SELECT m.id, m.titulo, m.descripcion, m.materia_id, ma.nombre AS materia, m.url, m.evaluacion_url, m.orden, m.publicado,
+            (SELECT COUNT(*) FROM progreso_modulos x WHERE x.modulo_id = m.id AND x.porcentaje >= 50) AS leidos,
+            (SELECT COUNT(*) FROM progreso_modulos x WHERE x.modulo_id = m.id AND x.porcentaje = 100) AS completados,
+            (SELECT COUNT(*) FROM usuarios WHERE rol = 'estudiante') AS total
+            FROM modulos m JOIN materias ma ON ma.id = m.materia_id" . $filtroMat . " ORDER BY ma.nombre, m.orden, m.titulo")->fetchAll();
+        foreach ($filas as &$f) {
+            $f['publicado'] = (int)$f['publicado'] === 1;
+            foreach (['leidos', 'completados', 'total', 'orden'] as $k) $f[$k] = (int)$f[$k];
+        }
+        unset($f);
+        responder($filas);
+    }
+
+    if ($metodo === 'POST' && !$id && $sub1 === '') {
+        [$t, $d, $mid, $url, $ev, $orden, $pub] = leer_modulo($datos, $ctx, 0);
+        db()->prepare('INSERT INTO modulos (materia_id, titulo, descripcion, url, evaluacion_url, orden, publicado) VALUES (?,?,?,?,?,?,?)')
+            ->execute([$mid, $t, $d, $url, $ev, $orden, $pub]);
+        responder(['ok' => true]);
+    }
+
+    if ($metodo === 'PUT' && $id && ($p[2] ?? '') === '') {
+        modulo_permitido($id, $ctx);
+        [$t, $d, $mid, $url, $ev, $orden, $pub] = leer_modulo($datos, $ctx, $id);
+        db()->prepare('UPDATE modulos SET materia_id = ?, titulo = ?, descripcion = ?, url = ?, evaluacion_url = ?, orden = ?, publicado = ? WHERE id = ?')
+            ->execute([$mid, $t, $d, $url, $ev, $orden, $pub, $id]);
+        responder(['ok' => true]);
+    }
+
+    if ($metodo === 'DELETE' && $id && ($p[2] ?? '') === '') {
+        modulo_permitido($id, $ctx);
+        db()->prepare('DELETE FROM modulos WHERE id = ?')->execute([$id]);   // borra también su progreso
+        responder(['ok' => true]);
+    }
+
+    if ($metodo === 'GET' && $id && ($p[2] ?? '') === 'progreso') {
+        $m = modulo_permitido($id, $ctx);
+        $st = db()->prepare("SELECT u.id, u.nombre, u.usuario, g.nombre AS grado, COALESCE(p.porcentaje, 0) AS porcentaje, p.nota, p.actualizado
+            FROM usuarios u JOIN grados g ON g.id = u.grado_id
+            LEFT JOIN progreso_modulos p ON p.estudiante_id = u.id AND p.modulo_id = ?
+            WHERE u.rol = 'estudiante' ORDER BY g.nombre, u.nombre");
+        $st->execute([$id]);
+        $filas = $st->fetchAll();
+        foreach ($filas as &$f) { $f['porcentaje'] = (int)$f['porcentaje']; $f['nota'] = $f['nota'] === null ? null : (float)$f['nota']; }
+        unset($f);
+        responder(['modulo' => ['id' => (int)$m['id'], 'titulo' => $m['titulo']], 'filas' => $filas]);
+    }
+}
+
+// ---------- Módulos del estudiante y su progreso ----------
+if ($p[0] === 'mis-modulos' && $metodo === 'GET') {
+    $est = requiere_estudiante();
+    $st = db()->prepare("SELECT m.id, m.titulo, m.descripcion, m.url, m.evaluacion_url, m.orden, ma.nombre AS materia,
+            COALESCE(p.porcentaje, 0) AS porcentaje, p.nota
+        FROM modulos m JOIN materias ma ON ma.id = m.materia_id
+        LEFT JOIN progreso_modulos p ON p.modulo_id = m.id AND p.estudiante_id = ?
+        WHERE m.publicado = 1 AND m.url IS NOT NULL
+        ORDER BY ma.nombre, m.orden, m.titulo");
+    $st->execute([$est['id']]);
+    $filas = $st->fetchAll();
+    foreach ($filas as &$f) { $f['id'] = (int)$f['id']; $f['porcentaje'] = (int)$f['porcentaje']; $f['nota'] = $f['nota'] === null ? null : (float)$f['nota']; }
+    unset($f);
+    responder($filas);
+}
+
+if ($p[0] === 'progreso' && $metodo === 'POST') {
+    $est    = requiere_estudiante();
+    $evento = $datos['evento'] ?? '';
+    if ($evento !== 'leido' && $evento !== 'evaluado') responder(['error' => 'Evento no válido'], 400);
+    [$ok, $ruta] = ruta_local($datos['ruta'] ?? '');
+    if (!$ok || $ruta === null) responder(['error' => 'Ruta no válida'], 400);
+    // "leido" debe venir de la página del módulo y "evaluado" de la de su evaluación
+    $col = $evento === 'leido' ? 'url' : 'evaluacion_url';
+    $q = db()->prepare("SELECT id FROM modulos WHERE publicado = 1 AND LOWER($col) = LOWER(?)");
+    $q->execute([$ruta]);
+    $m = $q->fetch();
+    if (!$m) responder(['error' => 'Esta página no está registrada como módulo'], 404);
+
+    if ($evento === 'leido') {
+        db()->prepare('INSERT INTO progreso_modulos (estudiante_id, modulo_id, porcentaje) VALUES (?,?,50)
+            ON DUPLICATE KEY UPDATE porcentaje = GREATEST(porcentaje, 50)')->execute([$est['id'], $m['id']]);
+        responder(['ok' => true, 'porcentaje' => 50]);
+    }
+    $nota = isset($datos['nota']) && is_numeric($datos['nota']) ? max(0, min(100, round((float)$datos['nota'], 2))) : null;
+    if ($nota === null) {
+        db()->prepare('INSERT INTO progreso_modulos (estudiante_id, modulo_id, porcentaje) VALUES (?,?,100)
+            ON DUPLICATE KEY UPDATE porcentaje = 100')->execute([$est['id'], $m['id']]);
+    } else {
+        // Se queda la mejor nota de todos sus intentos
+        db()->prepare('INSERT INTO progreso_modulos (estudiante_id, modulo_id, porcentaje, nota) VALUES (?,?,100,?)
+            ON DUPLICATE KEY UPDATE porcentaje = 100, nota = GREATEST(COALESCE(nota, 0), VALUES(nota))')->execute([$est['id'], $m['id'], $nota]);
+    }
+    responder(['ok' => true, 'porcentaje' => 100]);
 }
 
 // ---------- Tareas del estudiante ----------
