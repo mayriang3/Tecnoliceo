@@ -6,7 +6,10 @@
   st.textContent = `
 .gm, .gm-fondo { font-family: 'DM Sans', system-ui, sans-serif; color: #1f2a22; }
 .gm *, .gm-fondo * { box-sizing: border-box; }
-.gm-barra { display: flex; justify-content: flex-end; margin-bottom: 14px; }
+.gm-barra { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.gm-det { margin-bottom: 14px; padding: 10px 14px; border: 1.5px dashed #d4dfca; border-radius: 14px; }
+.gm-det summary { cursor: pointer; font-size: .85rem; font-weight: 700; color: #2f6b3f; }
+.gm-det .gm-campo { margin-top: 12px; }
 .gm-btn { height: 38px; padding: 0 18px; border: 0; border-radius: 999px; background: #122b1d; color: #fff; font: inherit; font-weight: 500; cursor: pointer; transition: background .15s; }
 .gm-btn:hover { background: #2f6b3f; }
 .gm-btn:disabled { opacity: .5; cursor: not-allowed; }
@@ -82,9 +85,18 @@
 
     // ---------- Pantalla ----------
     const gm = el("div", "gm");
-    const nuevo = boton("+ Registrar módulo", "", () => abrir(null));
+    const buscarNuevos = boton("Buscar módulos nuevos", "", async () => {
+      buscarNuevos.disabled = true;
+      try {
+        const r = await api("/api/modulos/sincronizar", "POST");
+        mostrarAviso(!r.ok ? (r.datos.error || "No se pudo buscar.") : r.datos.nuevos > 0 ? "Se agregaron " + r.datos.nuevos + (r.datos.nuevos === 1 ? " módulo nuevo." : " módulos nuevos.") : "No hay módulos nuevos.", !r.ok);
+        cargar();
+      } catch (e) { mostrarAviso("No pudimos conectar con el servidor.", true); }
+      finally { buscarNuevos.disabled = false; }
+    });
+    const nuevo = boton("+ Agregar manualmente", "gm-sec", () => abrir(null));
     const barra = el("div", "gm-barra");
-    barra.append(nuevo);
+    barra.append(buscarNuevos, nuevo);
     const aviso = el("div", "gm-aviso");
     aviso.hidden = true;
     const lista = el("div");
@@ -120,11 +132,13 @@
     const guardar = boton("Guardar", "", guardarModulo);
     const bots = el("div", "gm-botones");
     bots.append(boton("Cancelar", "gm-sec", cerrar), guardar);
+    const det = el("details", "gm-det");
+    det.append(el("summary", "", "Enlaces de la página (avanzado)"),
+      campo("Enlace del módulo", fUrl, "La ruta de la página, tal como aparece en tu sitio."),
+      campo("Enlace de la evaluación (opcional)", fEval, "Si lo dejas vacío, el módulo solo llegará al 50 %."));
     cuerpo.append(
       campo("Título", fTitulo), campo("Materia", fMateria),
-      campo("Enlace del módulo", fUrl, "La ruta de la página, tal como aparece en tu sitio."),
-      campo("Enlace de la evaluación (opcional)", fEval, "Si lo dejas vacío, el módulo solo llegará al 50 %."),
-      campo("Orden", fOrden, "El 1 sale primero dentro de su materia."), campo("Descripción corta (opcional)", fDesc), cPub, error, bots);
+      campo("Orden", fOrden, "El 1 sale primero dentro de su materia."), campo("Descripción corta (opcional)", fDesc), cPub, det, error, bots);
     vent.append(cab, cuerpo);
     fondo.append(vent);
     document.body.append(fondo);
@@ -138,6 +152,7 @@
       fOrden.value = m ? m.orden : (modulos.length + 1);
       fDesc.value = m ? m.descripcion || "" : "";
       fPub.checked = m ? m.publicado : true;
+      det.open = !m || !m.url;      // los módulos encontrados solos ya traen sus enlaces
       fMateria.innerHTML = "";
       opciones.forEach((o) => { const op = el("option", "", o.nombre); op.value = o.id; fMateria.append(op); });
       if (m) fMateria.value = m.materia_id;
@@ -229,7 +244,7 @@
     function pintar() {
       lista.innerHTML = "";
       if (!opciones.length) { lista.append(el("div", "gm-vacio", "Aún no tienes materias asignadas. Pídele al administrador que te las asigne.")); return; }
-      if (!modulos.length) { lista.append(el("div", "gm-vacio", "Todavía no hay módulos registrados. Pulsa «+ Registrar módulo» para añadir el primero.")); return; }
+      if (!modulos.length) { lista.append(el("div", "gm-vacio", "Todavía no hay módulos. Pulsa «Buscar módulos nuevos» para traer los de tu sitio.")); return; }
       let actual = null;
       modulos.forEach((m) => {
         if (m.materia !== actual) { actual = m.materia; lista.append(el("h4", "gm-materia", m.materia)); }
@@ -255,10 +270,10 @@
         acc.append(
           boton("Ver progreso", "", () => verProgreso(m)),
           boton("Editar", "gm-sec", () => abrir(m)),
-          boton("Borrar", "gm-rojo", async () => {
-            if (!confirm("¿Borrar «" + m.titulo + "»? Solo se quita del catálogo y se borra el progreso de los estudiantes; la página no se elimina.")) return;
+          boton("Quitar", "gm-rojo", async () => {
+            if (!confirm("¿Quitar «" + m.titulo + "» del catálogo? Se borra el progreso de los estudiantes. Si su página sigue en tu sitio, volverá a aparecer; para esconderla, mejor edítala y desmarca «Visible».")) return;
             const r = await api("/api/modulos/" + m.id, "DELETE");
-            mostrarAviso(r.ok ? "Módulo borrado." : (r.datos.error || "No se pudo borrar."), !r.ok);
+            mostrarAviso(r.ok ? "Módulo quitado del catálogo." : (r.datos.error || "No se pudo borrar."), !r.ok);
             cargar();
           })
         );

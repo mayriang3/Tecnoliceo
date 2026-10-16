@@ -214,6 +214,70 @@ function leer_modulo($datos, $ctx, $idActual) {
     return [$titulo, $desc === '' ? null : $desc, $mid, $url, $ev, $orden, $pub];
 }
 
+// Minúsculas, sin tildes ni símbolos: "Programación" y "PROGRAMACION" quedan iguales
+function normalizar($t) {
+    $t = mb_strtolower((string)$t, 'UTF-8');
+    $t = strtr($t, ['á'=>'a','é'=>'e','í'=>'i','ó'=>'o','ú'=>'u','ü'=>'u','ñ'=>'n']);
+    return preg_replace('/[^a-z0-9]/', '', $t);
+}
+
+// Busca en la carpeta /modulos las páginas de módulo que aún no están en el catálogo y las registra.
+// Título: del <title>. Evaluación: del enlace /evaluacionmodulos/... de la página.
+// Materia: de la carpeta (modulos/PROGRAMACION/...), o de la carpeta de la evaluación, o de la etiqueta "pill".
+// Devuelve cuántos módulos nuevos agregó. Sin $forzar, revisa como máximo una vez cada 5 minutos.
+function sincronizar_modulos($forzar = false) {
+    $dir = __DIR__ . '/modulos';
+    if (!is_dir($dir)) return 0;
+    $marca = sys_get_temp_dir() . '/tl_sync_modulos_' . md5(__DIR__);
+    if (!$forzar && is_file($marca) && time() - filemtime($marca) < 300) return 0;
+    @touch($marca);
+
+    $materias = [];
+    foreach (db()->query('SELECT id, nombre FROM materias')->fetchAll() as $m) $materias[normalizar($m['nombre'])] = (int)$m['id'];
+    $nuevos = 0;
+    $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS));
+    foreach ($it as $f) {
+        if (!$f->isFile() || !preg_match('/\.html?$/i', $f->getFilename())) continue;
+        $ruta = '/modulos/' . str_replace('\\', '/', substr($f->getPathname(), strlen($dir) + 1));
+        $html = @file_get_contents($f->getPathname(), false, null, 0, 300000);
+        if ($html === false || stripos($html, '<main class="mod"') === false) continue;   // solo páginas de módulo
+
+        $titulo = '';
+        if (preg_match('#<title>(.*?)</title>#is', $html, $t)) {
+            $titulo = trim(preg_replace('/\s*\|\s*TecnoLiceo.*$/iu', '', html_entity_decode(trim($t[1]), ENT_QUOTES, 'UTF-8')));
+        }
+        if ($titulo === '') $titulo = pathinfo($f->getFilename(), PATHINFO_FILENAME);
+        $titulo = mb_substr($titulo, 0, 150, 'UTF-8');
+        $orden = preg_match('/M[óo]dulo\s+(\d+)/iu', $titulo, $n) ? min(9999, (int)$n[1]) : 0;
+
+        $ev = null;
+        if (preg_match_all('/href=["\']([^"\']*\/evaluacionmodulos\/[^"\']*)["\']/i', $html, $h)) {
+            foreach ($h[1] as $href) {
+                [$ok, $r] = ruta_local($href);
+                if ($ok && $r !== null && stripos($r, '/evaluacionmodulos/') === 0) { $ev = $r; break; }
+            }
+        }
+
+        $candidatas = [];
+        $partes = explode('/', substr($ruta, strlen('/modulos/')));
+        if (count($partes) > 1) $candidatas[] = $partes[0];
+        if ($ev !== null) {
+            $pe = explode('/', trim(substr($ev, strlen('/evaluacionmodulos/')), '/'));
+            if (count($pe) > 1) $candidatas[] = $pe[0];
+        }
+        if (preg_match_all('#<span class="pill">([^<]+)</span>#iu', $html, $pills)) $candidatas = array_merge($candidatas, $pills[1]);
+        $mid = 0;
+        foreach ($candidatas as $c) { $k = normalizar($c); if (isset($materias[$k])) { $mid = $materias[$k]; break; } }
+        if (!$mid) continue;                                                              // no se pudo saber la materia
+
+        $ins = db()->prepare('INSERT INTO modulos (materia_id, titulo, url, evaluacion_url, orden, publicado)
+            SELECT ?, ?, ?, ?, ?, 1 FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM modulos WHERE LOWER(url) = LOWER(?))');
+        $ins->execute([$mid, $titulo, $ruta, $ev, $orden, $ruta]);
+        $nuevos += $ins->rowCount();
+    }
+    return $nuevos;
+}
+
 function requiere_gestion() {
     if (!empty($_SESSION['admin'])) return;
     $u = usuario_actual();
@@ -398,7 +462,12 @@ if ($p[0] === 'modulos') {
         responder(['materias' => db()->query('SELECT m.id, m.nombre FROM materias m' . str_replace('m.materia_id', 'm.id', $filtroMat) . ' ORDER BY m.nombre')->fetchAll()]);
     }
 
+    if ($metodo === 'POST' && $sub1 === 'sincronizar') {
+        responder(['ok' => true, 'nuevos' => sincronizar_modulos(true)]);
+    }
+
     if ($metodo === 'GET' && !$id && $sub1 === '') {
+        sincronizar_modulos(false);
         $filas = db()->query("SELECT m.id, m.titulo, m.descripcion, m.materia_id, ma.nombre AS materia, m.url, m.evaluacion_url, m.orden, m.publicado,
             (SELECT COUNT(*) FROM progreso_modulos x WHERE x.modulo_id = m.id AND x.porcentaje >= 50) AS leidos,
             (SELECT COUNT(*) FROM progreso_modulos x WHERE x.modulo_id = m.id AND x.porcentaje = 100) AS completados,
@@ -450,6 +519,7 @@ if ($p[0] === 'modulos') {
 // ---------- Módulos del estudiante y su progreso ----------
 if ($p[0] === 'mis-modulos' && $metodo === 'GET') {
     $est = requiere_estudiante();
+    sincronizar_modulos(false);
     $st = db()->prepare("SELECT m.id, m.titulo, m.descripcion, m.url, m.evaluacion_url, m.orden, ma.nombre AS materia,
             COALESCE(p.porcentaje, 0) AS porcentaje, p.nota
         FROM modulos m JOIN materias ma ON ma.id = m.materia_id
