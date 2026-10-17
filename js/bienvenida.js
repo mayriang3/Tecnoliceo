@@ -3,6 +3,7 @@
   function marcar() {
     try { localStorage.setItem("tl_visto", "1"); } catch (e) {}
     try { sessionStorage.setItem("tl_visto", "1"); } catch (e) {}
+    
   }
   marcar();   // con solo ver esta página ya cuenta como vista: no se vuelve a redirigir
 
