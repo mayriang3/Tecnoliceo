@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="/Estilos/bienvenida.css?v=1">
 </head>
 <body class="bv">
+    <div class="bv-deco" aria-hidden="true"><i></i><i></i></div>
     <header class="bv-header">
-        <a class="bv-logo" href="/index.html" data-marca>
-            <img src="/img/logo.png" alt="Logo TecnoLiceo">
-            <span>TecnoLiceo</span>
+        <a href="index.html">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+            <h1>TecnoLiceo</h1>
+        </div>
         </a>
         <a class="bv-saltar" href="/index.html" data-marca>Saltar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </header>
@@ -20,7 +23,7 @@
     <main class="bv-main">
         <section class="bv-hero">
             <small>Bienvenido a TecnoLiceo</small>
-            <h1>Tu camino en la modalidad<br>de Informática <em>comienza aquí</em></h1>
+            <h1>Tu camino en la modalidad <br>de Informática <em>comienza aquí</em></h1>
             <p>Esta plataforma te brinda información, recursos y herramientas para que conozcas, explores y aproveches al máximo la Modalidad Técnica en Informática.</p>
             <hr>
         </section>
@@ -43,7 +46,7 @@
                     <li>Aprende a usar el asistente virtual</li>
                     <li>Descubre cómo encontrar información</li>
                 </ul>
-                <a class="bv-btn" href="/index.html?tutorial=1" data-marca>Ver tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <div class="bv-cta"><a class="bv-btn" href="/index.html?tutorial=1" data-marca>Ver tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
             </article>
 
             <article class="bv-card bv-dest">
@@ -64,8 +67,8 @@
                     <li>Consulta tus avances y calificaciones</li>
                     <li>Interactúa con el asistente virtual</li>
                 </ul>
-                <a class="bv-btn" id="bv-estudiante" href="/login.html" data-marca><span class="bv-txt">Comenzar como estudiante</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                <p class="bv-extra" id="bv-registro">¿Primera vez? <a href="/registro.html" data-marca>Crea tu cuenta con el código de tu grado</a></p>
+                <div class="bv-cta"><a class="bv-btn" id="bv-estudiante" href="/login.html" data-marca><span class="bv-txt">Comenzar como estudiante</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <p class="bv-extra" id="bv-registro">¿Primera vez? <a href="/registro.html" data-marca>Crea tu cuenta con el código de tu grado</a></p></div>
             </article>
 
             <article class="bv-card">
@@ -88,7 +91,7 @@
                     <li>Revisa el progreso de tus estudiantes</li>
                     <li>Accede a recursos y herramientas</li>
                 </ul>
-                <a class="bv-btn" id="bv-profesor" href="/login.html" data-marca><span class="bv-txt">Comenzar como profesor</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <div class="bv-cta"><a class="bv-btn" id="bv-profesor" href="/login.html" data-marca><span class="bv-txt">Comenzar como profesor</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
             </article>
         </section>
 
@@ -102,9 +105,15 @@
         </aside>
     </main>
 
-    <footer class="bv-footer">
-        <svg viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46 V26 C240 -6 480 -6 720 20 C960 46 1200 40 1440 10 V46Z"/></svg>
-        <p>TecnoLiceo <span>•</span> Modalidad Técnica en Informática <span>•</span> Liceo Tame</p>
+    <footer>
+        <h2>TecnoLiceo</h2>
+        <p>
+            Plataforma informativa con módulos educativos
+            sobre la Modalidad Técnica en Informática.
+        </p>
+        <p class="footer-copy">
+            © 2026 - Institución Educativa Liceo Tame
+        </p>
     </footer>
 
 <script src="/js/bienvenida.js?v=1"></script>

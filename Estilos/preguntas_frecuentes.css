@@ -354,14 +354,60 @@ footer p {
     transform: translateX(3px); 
 }
 
-/* Entrada */
-.fc-entrada { display: flex; gap: 10px; padding: 14px 16px; border-top: 1px solid #e3ead9; background: var(--fc-crema, #fdfcfa); }
-.fc-entrada input { flex: 1; padding: 11px 16px; border: 1.5px solid #d4dfca; border-radius: 999px; background: #fff; font: inherit; color: inherit; outline: none; }
-.fc-entrada input:focus { border-color: var(--fc-verde, #2f6b3f); box-shadow: 0 0 0 3px rgba(47, 107, 63, .15); }
-.fc-entrada button { padding: 11px 22px; border: 0; border-radius: 999px; background: var(--color-oscuro, #12291c); color: #fff; font: inherit; font-weight: 500; cursor: pointer; transition: background .15s; }
-.fc-entrada button:hover { background: var(--fc-verde, #2f6b3f); }
+/* Barra de entrada del chat */
+.fc-entrada {
+    display: flex;
+    gap: 10px;
+    padding: 14px 16px;
+    border-top: 1px solid #e3ead9;
+    background: var(--fc-crema, #fdfcfa);
+}
 
+/* Campo de texto */
+.fc-entrada input {
+    flex: 1;
+    padding: 11px 16px;
+    border: 1.5px solid #d4dfca;
+    border-radius: 999px;
+    background: #fff;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+/* Efecto al seleccionar el campo */
+.fc-entrada input:focus {
+    border-color: var(--fc-verde, #2f6b3f);
+    box-shadow: 0 0 0 3px rgba(47, 107, 63, .15);
+}
+
+/* Botón de enviar */
+.fc-entrada button {
+    padding: 11px 22px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--color-oscuro, #12291c);
+    color: #fff;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+/* Efecto al pasar el cursor */
+.fc-entrada button:hover {
+    background: var(--fc-verde, #2f6b3f);
+}
+
+/* Adaptación para dispositivos móviles */
 @media (max-width: 520px) {
-  .fc-chat { margin: 16px 10px; height: 78vh; border-radius: 20px; }
-  .fc-fila { max-width: 96%; }
+    .fc-chat {
+        margin: 16px 10px;
+        height: 78vh;
+        border-radius: 20px;
+    }
+
+    .fc-fila {
+        max-width: 96%;
+    }
 }

@@ -1,44 +1,333 @@
 /* Tutorial de bienvenida (ventana de 3 pasos) */
-.tt-fondo { position: fixed; inset: 0; z-index: 3000; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(14, 38, 26, .72); backdrop-filter: blur(3px); animation: tt-fade .2s ease-out; }
-.tt-fondo[hidden] { display: none; }
-.tt-fondo * { box-sizing: border-box; }
-.tt-ventana { position: relative; width: min(720px, 100%); max-height: 94vh; overflow-y: auto; padding: 26px 36px 28px; border-radius: 22px; background: #f6f9f2; color: #2d4a3a; font-family: 'DM Sans', system-ui, sans-serif; box-shadow: 0 30px 70px rgba(0, 0, 0, .4); animation: tt-subir .25s ease-out; }
-.tt-pasos { display: inline-block; padding: 5px 14px; border-radius: 999px; background: #8fbf8e; color: #fff; font-size: .8rem; font-weight: 700; }
-.tt-cerrar { position: absolute; top: 18px; right: 20px; width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: #4d7a68; cursor: pointer; transition: background .15s; }
-.tt-cerrar:hover { background: #e3eddc; }
-.tt-cerrar svg { width: 22px; height: 22px; }
-.tt-fila { display: flex; align-items: center; gap: 30px; margin: 14px 0 20px; }
-.tt-ilus { position: relative; flex: 0 0 230px; height: 190px; }
-.tt-ilus svg.tt-blob { position: absolute; inset: 0; width: 100%; height: 100%; }
-.tt-ilus img.tt-bot { position: absolute; left: 34px; top: 22px; width: 130px; height: 130px; }
-.tt-burbuja { position: absolute; right: 2px; top: 14px; display: flex; gap: 5px; padding: 12px 15px; border-radius: 14px 14px 14px 3px; background: #7fb98a; }
-.tt-burbuja i { width: 8px; height: 8px; border-radius: 50%; background: #fff; }
-.tt-texto h2 { margin: 0 0 14px; font: 700 clamp(1.5rem, 3.4vw, 2.1rem) / 1.15 'Fraunces', Georgia, serif; color: #14402c; }
-.tt-texto p { margin: 0; font-size: 1rem; line-height: 1.6; color: #3d5a4a; }
-.tt-consejo { display: flex; align-items: center; gap: 16px; padding: 16px 22px; border-radius: 18px; background: #e3eedc; }
-.tt-consejo svg { flex: 0 0 38px; width: 38px; height: 38px; }
-.tt-consejo strong { display: block; margin-bottom: 3px; font-size: 1.02rem; color: #14402c; }
-.tt-consejo span { font-size: .93rem; line-height: 1.5; color: #4a6656; }
-.tt-pie { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 24px; }
-.tt-puntos { display: flex; gap: 10px; }
-.tt-punto { width: 12px; height: 12px; padding: 0; border: 0; border-radius: 50%; background: #d3dccf; cursor: pointer; transition: background .15s, transform .15s; }
-.tt-punto.tt-act { background: #3d7b57; transform: scale(1.15); }
-.tt-botones { display: flex; gap: 10px; }
-.tt-btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 26px; border: 0; border-radius: 999px; font: 500 1rem 'DM Sans', sans-serif; cursor: pointer; transition: background .15s; }
-.tt-sig { background: #14402c; color: #fff; }
-.tt-sig:hover { background: #2f6b3f; }
-.tt-sig svg { width: 18px; height: 18px; }
-.tt-atras { background: #e3eedc; color: #14402c; border: 1.5px solid #cbdcc3; }
-.tt-atras:hover { background: #d8e7cf; }
-.tt-atras[hidden] { display: none; }
-.tt-ventana :focus-visible { outline: 3px solid rgba(47, 107, 63, .45); outline-offset: 2px; }
-@keyframes tt-fade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes tt-subir { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: none; } }
-@media (max-width: 620px) {
-  .tt-ventana { padding: 22px 20px 22px; }
-  .tt-fila { flex-direction: column; align-items: flex-start; gap: 6px; }
-  .tt-ilus { flex-basis: auto; width: 200px; height: 165px; align-self: center; }
-  .tt-ilus img.tt-bot { width: 110px; height: 110px; left: 28px; top: 18px; }
-  .tt-consejo { align-items: flex-start; }
+
+/* Fondo de la ventana */
+.tt-fondo {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(14, 38, 26, .72);
+    backdrop-filter: blur(3px);
+    animation: tt-fade .2s ease-out;
 }
-@media (prefers-reduced-motion: reduce) { .tt-fondo, .tt-ventana { animation: none; } }
+
+/* Ocultar el fondo */
+.tt-fondo[hidden] {
+    display: none;
+}
+
+/* Ajuste del modelo de caja */
+.tt-fondo * {
+    box-sizing: border-box;
+}
+
+/* Ventana principal */
+.tt-ventana {
+    position: relative;
+    width: min(720px, 100%);
+    max-height: 94vh;
+    overflow-y: auto;
+    padding: 26px 36px 28px;
+    border-radius: 22px;
+    background: #f6f9f2;
+    color: #2d4a3a;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .4);
+    animation: tt-subir .25s ease-out;
+}
+
+/* Indicador de pasos */
+.tt-pasos {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: #8fbf8e;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+/* Botón para cerrar */
+.tt-cerrar {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #4d7a68;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+/* Efecto al pasar el cursor */
+.tt-cerrar:hover {
+    background: #e3eddc;
+}
+
+/* Icono de cerrar */
+.tt-cerrar svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Fila de ilustración y texto */
+.tt-fila {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 14px 0 20px;
+}
+
+/* Contenedor de la ilustración */
+.tt-ilus {
+    position: relative;
+    flex: 0 0 230px;
+    height: 190px;
+}
+
+/* Forma decorativa SVG */
+.tt-ilus svg.tt-blob {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imagen del robot */
+.tt-ilus img.tt-bot {
+    position: absolute;
+    left: 34px;
+    top: 22px;
+    width: 130px;
+    height: 130px;
+}
+
+/* Burbuja decorativa */
+.tt-burbuja {
+    position: absolute;
+    right: 2px;
+    top: 14px;
+    display: flex;
+    gap: 5px;
+    padding: 12px 15px;
+    border-radius: 14px 14px 14px 3px;
+    background: #7fb98a;
+}
+
+/* Puntos dentro de la burbuja */
+.tt-burbuja i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+/* Título del tutorial */
+.tt-texto h2 {
+    margin: 0 0 14px;
+    font: 700 clamp(1.5rem, 3.4vw, 2.1rem) / 1.15 'Fraunces', Georgia, serif;
+    color: #14402c;
+}
+
+/* Descripción del tutorial */
+.tt-texto p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #3d5a4a;
+}
+
+/* Caja del consejo */
+.tt-consejo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 22px;
+    border-radius: 18px;
+    background: #e3eedc;
+}
+
+/* Icono del consejo */
+.tt-consejo svg {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+}
+
+/* Título del consejo */
+.tt-consejo strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 1.02rem;
+    color: #14402c;
+}
+
+/* Texto del consejo */
+.tt-consejo span {
+    font-size: .93rem;
+    line-height: 1.5;
+    color: #4a6656;
+}
+
+/* Pie de la ventana */
+.tt-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* Indicadores de navegación */
+.tt-puntos {
+    display: flex;
+    gap: 10px;
+}
+
+/* Punto individual */
+.tt-punto {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #d3dccf;
+    cursor: pointer;
+    transition: background .15s, transform .15s;
+}
+
+/* Punto del paso activo */
+.tt-punto.tt-act {
+    background: #3d7b57;
+    transform: scale(1.15);
+}
+
+/* Contenedor de botones */
+.tt-botones {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos generales de los botones */
+.tt-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 26px;
+    border: 0;
+    border-radius: 999px;
+    font: 500 1rem 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+/* Botón siguiente y finalizar */
+.tt-sig {
+    background: #14402c;
+    color: #fff;
+}
+
+/* Efecto del botón siguiente */
+.tt-sig:hover {
+    background: #2f6b3f;
+}
+
+/* Icono del botón siguiente */
+.tt-sig svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Botón para volver al paso anterior */
+.tt-atras {
+    background: #e3eedc;
+    color: #14402c;
+    border: 1.5px solid #cbdcc3;
+}
+
+/* Efecto del botón anterior */
+.tt-atras:hover {
+    background: #d8e7cf;
+}
+
+/* Ocultar el botón anterior cuando corresponda */
+.tt-atras[hidden] {
+    display: none;
+}
+
+/* Indicador de enfoque para accesibilidad */
+.tt-ventana :focus-visible {
+    outline: 3px solid rgba(47, 107, 63, .45);
+    outline-offset: 2px;
+}
+
+/* Animación de aparición del fondo */
+@keyframes tt-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de entrada de la ventana */
+@keyframes tt-subir {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 620px) {
+    .tt-ventana {
+        padding: 22px 20px 22px;
+    }
+
+    .tt-fila {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .tt-ilus {
+        flex-basis: auto;
+        width: 200px;
+        height: 165px;
+        align-self: center;
+    }
+
+    .tt-ilus img.tt-bot {
+        width: 110px;
+        height: 110px;
+        left: 28px;
+        top: 18px;
+    }
+
+    .tt-consejo {
+        align-items: flex-start;
+    }
+}
+
+/* Accesibilidad: reducir las animaciones */
+@media (prefers-reduced-motion: reduce) {
+    .tt-fondo,
+    .tt-ventana {
+        animation: none;
+    }
+}

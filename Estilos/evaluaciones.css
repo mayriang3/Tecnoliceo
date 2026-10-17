@@ -87,7 +87,231 @@
             color: var(--verde);
             margin-bottom: 8px;
         }
+        /* =========================
+           TABLA DE MAGNITUDES
+        ========================= */
 
+        .magnitudes {
+            background-color: var(--blanco);
+            padding: 20px 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(18, 43, 29, 0.12);
+        }
+
+        .magnitudes h2 {
+            color: var(--verde-oscuro);
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .magnitudes table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .magnitudes th, .magnitudes td {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--gris-claro);
+            font-size: 14.5px;
+        }
+
+        .magnitudes th {
+            background-color: var(--verde-oscuro);
+            color: var(--gris-claro);
+        }
+
+        .magnitudes tr:nth-child(even) {
+            background-color: var(--gris-claro);
+        }
+        /* =========================
+           BANDAS DE COLOR (ilustración)
+        ========================= */
+
+        .resistencia {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            margin: 15px 0 20px;
+            padding: 14px 10px;
+            background-color: #F2E9D8;
+            border-radius: 30px;
+            width: fit-content;
+        }
+
+        .banda {
+            width: 14px;
+            height: 34px;
+            border-radius: 3px;
+        }
+
+        .b-negro { background-color: #1a1a1a; }
+        .b-marron { background-color: #7B3F00; }
+        .b-rojo { background-color: #E53935; }
+        .b-naranja { background-color: #FB8C00; }
+        .b-amarillo { background-color: #FDD835; }
+        .b-verde { background-color: #43A047; }
+        .b-azul { background-color: #1E88E5; }
+        .b-violeta { background-color: #8E24AA; }
+        .b-gris { background-color: #9E9E9E; }
+        .b-blanco { background-color: #FFFFFF; border: 1px solid #ccc; }
+        .b-dorado { background-color: #C9A227; }
+        .b-plateado { background-color: #C0C0C0; }
+
+        /* =========================
+           TABLA DE REFERENCIA
+        ========================= */
+
+        .referencia {
+            background-color: var(--blanco);
+            padding: 20px 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(18, 43, 29, 0.12);
+        }
+
+        .referencia h2 {
+            color: var(--verde-oscuro);
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .referencia table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .referencia th, .referencia td {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--gris-claro);
+            font-size: 14px;
+        }
+
+        .referencia th {
+            background-color: var(--verde-oscuro);
+            color: var(--gris-claro);
+        }
+
+        .referencia tr:nth-child(even) {
+            background-color: var(--gris-claro);
+        }
+
+        /* =========================
+           ESQUEMA VISUAL DEL PROTOBOARD
+        ========================= */
+
+        .esquema {
+            background-color: var(--blanco);
+            padding: 20px 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(18, 43, 29, 0.12);
+        }
+
+        .esquema h2 {
+            color: var(--verde-oscuro);
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .placa {
+            background-color: #F2E9D8;
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+
+        .fila-riel {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 6px;
+            align-items: center;
+        }
+
+        .fila-riel .etiqueta {
+            width: 90px;
+            font-size: 12.5px;
+            font-weight: bold;
+        }
+
+        .punto {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: #b9ac8c;
+        }
+
+        .riel-mas .punto { background-color: #E57373; }
+        .riel-menos .punto { background-color: #1E88E5; }
+
+        .zanja {
+            height: 14px;
+            margin: 8px 0;
+            border-top: 2px dashed var(--verde-oscuro);
+            border-bottom: 2px dashed var(--verde-oscuro);
+        }
+
+        .esquema table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .esquema th, .esquema td {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--gris-claro);
+            font-size: 14px;
+        }
+
+        .esquema th {
+            background-color: var(--verde-oscuro);
+            color: var(--gris-claro);
+        }
+
+        .esquema tr:nth-child(even) {
+            background-color: var(--gris-claro);
+        }
+        
+        /* =========================
+           TABLA DE MODOS DE MEDICIÓN
+        ========================= */
+
+        .modos {
+            background-color: var(--blanco);
+            padding: 20px 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(18, 43, 29, 0.12);
+        }
+
+        .modos h2 {
+            color: var(--verde-oscuro);
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .modos table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .modos th, .modos td {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--gris-claro);
+            font-size: 14.5px;
+        }
+
+        .modos th {
+            background-color: var(--verde-oscuro);
+            color: var(--gris-claro);
+        }
+
+        .modos tr:nth-child(even) {
+            background-color: var(--gris-claro);
+        }
 
         /* =========================
            PREGUNTAS
