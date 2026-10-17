@@ -1,7 +1,13 @@
 // Landing de bienvenida: recuerda que ya la viste y, si ya iniciaste sesión, te lleva directo a tu panel.
 (function () {
-  function marcar() { try { localStorage.setItem("tl_visto", "1"); } catch (e) {} }
-  document.querySelectorAll("[data-marca]").forEach((a) => a.addEventListener("click", marcar));
+  function marcar() {
+    try { localStorage.setItem("tl_visto", "1"); } catch (e) {}
+    try { sessionStorage.setItem("tl_visto", "1"); } catch (e) {}
+  }
+  marcar();   // con solo ver esta página ya cuenta como vista: no se vuelve a redirigir
+
+  // Los enlaces al inicio llevan ?omitir=1 para que el inicio nunca te devuelva aquí
+  document.querySelectorAll('a[href="/index.html"]').forEach((a) => a.setAttribute("href", "/index.html?omitir=1"));
 
   fetch("/api/auth/yo", { headers: { "Content-Type": "application/json" } })
     .then((r) => r.json())
