@@ -73,28 +73,100 @@ header h1 {
 
 .botones_principales {
     display: flex;
-    gap: 5px;
+    gap: 8px;
     align-items: center;
 }
 
+/* Botón base: cerrado, solo icono */
 .botonn {
+    display: inline-flex;
+    align-items: center;
     border: none;
-    background: none;
+    background-color: var(--naranja);
     color: var(--blanco);
     font-size: 15px;
-    cursor: pointer;
-    padding: 8px 16px;
     font-family: 'DM Sans', sans-serif;
-    border-radius: 20px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
 }
 
-/* Solo el primer botón (Inicio) tiene fondo naranja */
-.botonn:first-child {
-    background-color: var(--naranja);
+.botonn .icono {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* Título oculto cuando está cerrado */
+.botonn .texto {
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+/* Abierto: al pasar el mouse o en la página actual */
+.botonn:hover .texto,
+.botonn:focus-visible .texto,
+.botonn.activo .texto {
+    max-width: 220px;
+    opacity: 1;
+    margin-left: 8px;
+    margin-right: 4px;
 }
 
 .botonn:hover {
-    background-color: rgba(255,255,255,0.15);
+    background-color: var(--azul-claro);
+}
+
+/* Menú "Más" */
+.mas {
+    position: relative;
+}
+
+.menu-mas {
+    display: none;
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 190px;
+    padding: 10px;
+    background-color: var(--fc-suave);
+    border-radius: 24px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.menu-mas.abierto {
+    display: flex;
+}
+
+/* Flechita del globo */
+.menu-mas::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 22px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid var(--fc-suave);
+}
+
+/* Botones del menú: siempre abiertos */
+.item-menu {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.item-menu .texto {
+    max-width: 200px;
+    opacity: 1;
+    margin-left: 10px;
 }
 
 .indexx{
