@@ -298,9 +298,7 @@ header h1 {
 
 /* Sección "¿Cómo funciona?" */
 .information {
-    background-image: url(/img/fondo1.png);
-    background-repeat: no-repeat;
-    background-size: 1550px;
+    background-color: #5c7d72;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
