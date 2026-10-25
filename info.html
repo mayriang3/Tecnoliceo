@@ -288,25 +288,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="item">
-                <button class="acc-btn sub" aria-expanded="false" aria-controls="c-seguidor">
-                    <span class="flecha girada">▼</span>
-                    <span class="item-titulo">Seguidor de línea</span>
-                </button>
-                <div class="acc-body sub oculto" id="c-seguidor">
-                    <div class="detalle">
-                        <div class="caja">
-                            <h4>Código</h4>
-                            <p>[Enlace o descripción del código]</p>
-                        </div>
-                        <div class="caja">
-                            <h4>Fotos del montaje</h4>
-                            <p>[Enlace a las fotos]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>
@@ -321,33 +302,29 @@
 
     <div class="acc-body" id="body-proyectos">
 
-        <article class="proyecto">
-            <div class="fotos">
-                <img src="/img.info/enproceso.png" alt="Foto del proyecto">
-                <img src="/img.info/enproceso.png" alt="Foto del proyecto">
-                <img src="/img.info/enproceso.png"alt="Foto del proyecto">
-                <img src="/img.info/enproceso.png" alt="Foto del proyecto">
-            </div>
-            <div class="info">
-                <h4>[Título del proyecto]</h4>
-                <p class="meta">[Año] · [Tipo de proyecto]</p>
-                <p class="est">[Estudiantes que lo realizaron]</p>
-            </div>
-        </article>
+<article class="proyecto">
+    <div class="fotos">
+        <img src="/img.info/enproceso.png" alt="Foto del proyecto">
+    </div>
+    <div class="p-info">
+        <h4>Implementación de una plataforma digital de bases de datos para la Biblioteca del Liceo Tame</h4>
+        <p class="meta">2026 · Digital</p>
+        <p class="est">Roger Alcantar <br> Luciana Parada <br> Jenifer Prieto</p>
+    </div>
+</article>
 
-        <article class="proyecto">
-            <div class="fotos">
-                <img src="/img.info/enproceso.png" alt="Foto del proyecto">
-                <img src="/img.info/enproceso.png" alt="Foto del proyecto">
-                <img src="/img.info/enproceso.png"alt="Foto del proyecto">
-                <img src="/img.info/enproceso.png" alt="Foto del proyecto">
-            </div>
-            <div class="info">
-                <h4>[Título del proyecto]</h4>
-                <p class="meta">[Año] · [Tipo de proyecto]</p>
-                <p class="est">[Estudiantes que lo realizaron]</p>
-            </div>
-        </article>
+<article class="proyecto">
+    <div class="fotos">
+        <img src="/img.info/enproceso.png" alt="Foto del proyecto">
+    </div>
+    <div class="p-info">
+        <h4>[Título del proyecto]</h4>
+        <p class="meta">[Año] · [Tipo de proyecto]</p>
+        <p class="est">[Estudiantes que lo realizaron]</p>
+    </div>
+</article>
+
+<p class="nota-proyectos">Si quieres saber más sobre los proyectos visita <a href="https://www.pladi-ptd.com" target="_blank">www.pladi-ptd.com</a></p>
 
     </div>
 </section>
@@ -409,7 +386,30 @@
             © 2026 - Institución Educativa Liceo Tame
         </p>
     </footer>
+<div class="visor" id="visor">
+    <button class="visor-x" id="visor-x">✕</button>
+    <img id="visor-img" src="" alt="Foto ampliada">
+</div>
 
+<script>
+const visor = document.getElementById('visor');
+const visorImg = document.getElementById('visor-img');
+
+document.querySelectorAll('.profesor img, .ganador img, .proyecto .fotos img, .img-sala').forEach(img => {
+    img.addEventListener('click', () => {
+        visorImg.src = img.src;
+        visor.classList.add('activo');
+    });
+});
+
+document.getElementById('visor-x').addEventListener('click', () => {
+    visor.classList.remove('activo');
+});
+
+visor.addEventListener('click', e => {
+    if (e.target === visor) visor.classList.remove('activo');
+});
+</script>
     <script src="/js/acordeon.js"></script>
     <script src="/js/BarraNavegacion.js"></script>
 </body>

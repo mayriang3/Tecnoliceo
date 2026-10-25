@@ -889,12 +889,12 @@ footer p {
     border-radius: 14px;
     padding: 20px;
 }
-
+.profesor img,
+.ganador img,
+.img-sala {
+    cursor: pointer;
+}
 .proyecto .fotos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 4px;
     width: 220px;
     height: 180px;
     flex-shrink: 0;
@@ -906,6 +906,56 @@ footer p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.proyecto .fotos img:hover {
+    transform: scale(1.05);
+}
+
+.visor {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.visor.activo {
+    display: flex;
+}
+
+.visor img {
+    max-width: 60%;
+    max-height: 60%;
+    border-radius: 12px;
+}
+
+.visor-x {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nota-proyectos {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.9);
+}
+
+.nota-proyectos a {
+    color: #fff;
+    font-weight: bold;
 }
 
 .proyecto .info {
