@@ -4,17 +4,17 @@
 (function () {
   const PASOS = [
     { titulo: "¡Bienvenido a TecnoLiceo!",
-      texto: "Esta plataforma te brinda información, recursos y herramientas para que conozcas, explores y aproveches al máximo la Modalidad Técnica en Informática.",
+      texto: "Esta plataforma te brinda información, recursos y herramientas para que conozcas, explores y aproveches al máximo la Modalidad en Sistemas y Tecnologías Digitales.",
       consejoTitulo: "¿Qué encontrarás aquí?",
-      consejo: "Preguntas frecuentes, material de estudio, códigos de registro, usuarios y estadísticas de la modalidad." },
+      consejo: "Preguntas frecuentes, material de estudio, mini evaluaciones para poner aprueba tu conocimiento y mucho mas" },
     { titulo: "Explora el menú",
       texto: "Arriba encuentras las secciones del sitio: Inicio, Información general (asignaturas, temas y maestros), Material de Estudio (módulos y evaluaciones) y Preguntas Frecuentes.",
       consejoTitulo: "Un consejo",
       consejo: "En Material de Estudio abre cada módulo y haz su evaluación cuando termines de leerlo." },
     { titulo: "Conoce al asistente virtual",
       texto: "En Preguntas Frecuentes te espera un asistente: toca una pregunta o escribe la tuya. Si no encuentra la respuesta, puedes enviar una sugerencia con el botón del clip.",
-      consejoTitulo: "¿Eres estudiante?",
-      consejo: "Inicia sesión para guardar tu avance en los módulos y ver tus tareas." },
+      consejoTitulo: "¿Eres estudiante de la modalidad?",
+      consejo: "Abre los modulos de los temas que tengas dudas y refuerza tu conocimiento!" },
   ];
 
   const ICONO_X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';

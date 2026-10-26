@@ -145,7 +145,6 @@ header h1 {
 /* Tarjetas principales */
 .bv-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 22px;
     margin-top: 34px;
     align-items: stretch;
@@ -201,7 +200,8 @@ header h1 {
     padding: 16px 0 0;
     list-style: none;
     border-top: 1.5px solid var(--b-borde);
-    text-align: left;
+    text-align: center;
+    align-items: center;
 }
 
 .bv-lista li {
