@@ -262,6 +262,10 @@
       <nav>
         <a href="#inicio" class="i-home activo">Panel de admin</a>
         <a href="#preguntas" class="i-help">Preguntas frecuentes</a>
+        <a href="#codigos" class="i-grid">Códigos de registro</a>
+        <a href="#profesor" class="i-user">Crear profesor</a>
+        <a href="#usuarios" class="i-users">Usuarios</a>
+        <a href="#estadisticas" class="i-chart">Estadísticas</a>
       </nav>
       <div class="lat-pie">
         <p>Institución Educativa<br><strong>Liceo Tame</strong></p>
@@ -279,6 +283,9 @@
         <!-- Números generales (se llenan con JS) -->
         <div class="stats">
           <div class="stat"><span class="ic i-chat"></span><b id="st-preguntas">—</b><p>preguntas frecuentes</p></div>
+          <div class="stat"><span class="ic i-users"></span><b id="st-estudiantes">—</b><p>estudiantes registrados</p></div>
+          <div class="stat"><span class="ic i-user"></span><b id="st-profesores">—</b><p>profesores registrados</p></div>
+          <div class="stat"><span class="ic i-chart"></span><b id="st-registros">—</b><p>registros totales</p></div>
         </div>
 
         <div class="fila-2">
@@ -344,6 +351,11 @@
           <div id="lista"></div>
         </section>
 
+        <!-- Estadísticas por grado (se llena con JS) -->
+        <section class="tarjeta" id="estadisticas">
+          <h2 class="tit"><span class="ico i-chart"></span>Estadísticas por grado</h2>
+          <div class="est-grid" id="est-grados"></div>
+        </section>
 
       </div>
     </main>
