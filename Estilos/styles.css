@@ -1281,5 +1281,11 @@ footer p {
     .mat-hero h1 {
         font-size: 40px;
     }
+        .menu-mas {
+    position: fixed;
+    top: 70px;      /* se reemplaza por JS */
+    right: 12px;    /* se reemplaza por JS */
+    z-index: 1100;
+}
 }
 

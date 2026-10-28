@@ -711,6 +711,12 @@ footer p {
     .fc-entrada { grid-column: 1; grid-row: 4; padding: 12px 14px; }
     .fc-adjuntar { flex-basis: 44px; height: 44px; }
     .fc-entrada button { padding: 0 18px; }
+    .menu-mas {
+    position: fixed;
+    top: 70px;      /* se reemplaza por JS */
+    right: 12px;    /* se reemplaza por JS */
+    z-index: 1100;
+}
 }
 </style>   
 </head>
@@ -832,7 +838,7 @@ footer p {
     </footer>
 <script src="/js/chat.js"></script>
 <script src="/js/sugerencias.js?v=1"></script>
-<script src="/js/BarraNavegacion.js"></script>
+<script src="/js/BarraNavegacion.js?v=2"></script>
 <script>
 (function () {
     var mensajes = document.getElementById('fc-mensajes');
