@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 1. Código de colores de las resistencias | TecnoLiceo</title>
+
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+
+    <!-- Estilos propios de esta página (tabla de colores y espacio para imagen) -->
+    <style>
+        .tabla-wrap {
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .tabla-colores {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .tabla-colores th,
+        .tabla-colores td {
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+            white-space: nowrap;
+        }
+
+        .tabla-colores th {
+            font-weight: 500;
+            border-bottom-width: 2px;
+        }
+
+        .muestra {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.35);
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        /* Espacio reservado para la imagen */
+        .espacio-imagen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-height: 260px;
+            margin: 20px 0;
+            padding: 24px;
+            border: 2px dashed rgba(128, 128, 128, 0.6);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .espacio-imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .espacio-imagen figcaption {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+        <h1>TecnoLiceo</h1>
+    </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 1. Código de colores de las resistencias</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/ELECTRONICA/coloresresistencia.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+
+<main class="mod">
+
+    <!-- ==================== PORTADA ==================== -->
+
+    <section class="portada">
+        <span class="pill">Modulo 1</span>
+
+        <h1>Código de colores de las resistencias: bandas, valores, multiplicador y tolerancia</h1>
+
+        <span class="pill">Electrónica</span>
+    </section>
+
+
+    <!-- ==================== INTRODUCCIÓN ==================== -->
+
+    <section class="bloque">
+
+        <h2>¿Por qué las resistencias tienen colores?</h2>
+
+        <p>
+            Las resistencias son tan pequeñas que no es posible escribir su
+            valor con números sobre su cuerpo. Por eso se usa un sistema de
+            bandas de colores: cada color representa un número, un
+            multiplicador o una tolerancia. Aprender a leerlo permite
+            identificar el valor de una resistencia en segundos, sin
+            necesidad de medirla.
+        </p>
+
+        <h3 class="sub">Partes de una resistencia con bandas</h3>
+
+        <ul class="lista">
+            <li><strong>Cuerpo:</strong> el material aislante donde van pintadas las bandas.</li>
+            <li><strong>Bandas de color:</strong> indican el valor en ohmios (Ω).</li>
+            <li><strong>Terminales:</strong> los extremos metálicos que se conectan al circuito.</li>
+        </ul>
+
+
+        <figure class="espacio-imagen">
+            <img src="/img.kit/figura1moduloE1.png" alt="partes de una resistencia">
+                
+        </figure>
+
+    </section>
+
+
+    <!-- ==================== OBJETIVOS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Objetivos del módulo</h2>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <p>Reconocer el número que representa cada color.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <p>Leer resistencias de 4 y de 5 bandas en el orden correcto.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <p>Calcular el valor y el rango de tolerancia de una resistencia.</p>
+            </article>
+
+            <article class="paso c4">
+                <span class="num">4</span>
+                <p>Evitar los errores más comunes al interpretar los colores.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== TABLA DE COLORES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Tabla del código de colores</h2>
+
+        <p>
+            Cada color tiene un valor numérico. Los colores dorado y plata
+            solo se usan como multiplicador o tolerancia.
+        </p>
+
+        <div class="tabla-wrap">
+            <table class="tabla-colores">
+                <thead>
+                    <tr>
+                        <th>Color</th>
+                        <th>Dígito</th>
+                        <th>Multiplicador</th>
+                        <th>Tolerancia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="muestra" style="background:#000000;"></span>Negro</td>
+                        <td>0</td>
+                        <td>× 1</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#8B4513;"></span>Marrón</td>
+                        <td>1</td>
+                        <td>× 10</td>
+                        <td>± 1 %</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#E53935;"></span>Rojo</td>
+                        <td>2</td>
+                        <td>× 100</td>
+                        <td>± 2 %</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#FB8C00;"></span>Naranja</td>
+                        <td>3</td>
+                        <td>× 1 000 (1 kΩ)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#FDD835;"></span>Amarillo</td>
+                        <td>4</td>
+                        <td>× 10 000 (10 kΩ)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#43A047;"></span>Verde</td>
+                        <td>5</td>
+                        <td>× 100 000 (100 kΩ)</td>
+                        <td>± 0,5 %</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#1E88E5;"></span>Azul</td>
+                        <td>6</td>
+                        <td>× 1 000 000 (1 MΩ)</td>
+                        <td>± 0,25 %</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#8E24AA;"></span>Violeta</td>
+                        <td>7</td>
+                        <td>× 10 000 000 (10 MΩ)</td>
+                        <td>± 0,1 %</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#9E9E9E;"></span>Gris</td>
+                        <td>8</td>
+                        <td>—</td>
+                        <td>± 0,05 %</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#FFFFFF;"></span>Blanco</td>
+                        <td>9</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#D4AF37;"></span>Dorado</td>
+                        <td>—</td>
+                        <td>× 0,1</td>
+                        <td>± 5 %</td>
+                    </tr>
+                    <tr>
+                        <td><span class="muestra" style="background:#C0C0C0;"></span>Plata</td>
+                        <td>—</td>
+                        <td>× 0,01</td>
+                        <td>± 10 %</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+
+
+    <!-- ==================== CÓMO LEER LAS BANDAS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Cómo leer las bandas</h2>
+
+        <p>
+            Se leen de izquierda a derecha, con la banda de tolerancia
+            (dorada, plateada o separada de las demás) ubicada a la derecha.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Resistencia de 4 bandas</h4>
+                <p>La más común en electrónica básica.</p>
+
+                <ul class="lista">
+                    <li><strong>Banda 1:</strong> primer dígito.</li>
+                    <li><strong>Banda 2:</strong> segundo dígito.</li>
+                    <li><strong>Banda 3:</strong> multiplicador.</li>
+                    <li><strong>Banda 4:</strong> tolerancia.</li>
+                </ul>
+
+                <div class="cod">
+                    <code>
+Valor = (B1 B2) × multiplicador ± tolerancia
+                    </code>
+                </div>
+            </article>
+
+            <article class="ej">
+                <h4>Resistencia de 5 bandas</h4>
+                <p>Se usa en resistencias de mayor precisión.</p>
+
+                <ul class="lista">
+                    <li><strong>Banda 1:</strong> primer dígito.</li>
+                    <li><strong>Banda 2:</strong> segundo dígito.</li>
+                    <li><strong>Banda 3:</strong> tercer dígito.</li>
+                    <li><strong>Banda 4:</strong> multiplicador.</li>
+                    <li><strong>Banda 5:</strong> tolerancia.</li>
+                </ul>
+
+                <div class="cod">
+                    <code>
+Valor = (B1 B2 B3) × multiplicador ± tolerancia
+                    </code>
+                </div>
+            </article>
+
+        </div>
+
+        <h3 class="sub">¿Qué es la tolerancia?</h3>
+
+        <p>
+            Es el margen de error del fabricante. Una resistencia de 1 000 Ω
+            con tolerancia de ± 5 % puede tener un valor real entre 950 Ω y
+            1 050 Ω.
+        </p>
+
+        <div class="cod">
+            <code>
+Valor mínimo = Valor × (1 − tolerancia)
+Valor máximo = Valor × (1 + tolerancia)
+            </code>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLO 1 ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo práctico 1: resistencia de 4 bandas</h2>
+
+        <p>
+            Bandas: <strong>marrón, negro, rojo, dorado</strong>.
+        </p>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Primeros dos dígitos</h4>
+                <p>Marrón = 1, negro = 0, entonces: 10.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Multiplicador</h4>
+                <p>Rojo = × 100.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Valor y tolerancia</h4>
+                <p>10 × 100 = 1 000 Ω, con dorado = ± 5 %.</p>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p>
+                <strong>Resultado: R = 1 kΩ ± 5 %.</strong> Su valor real está
+                entre 950 Ω y 1 050 Ω.
+            </p>
+        </div>
+
+        <!-- ===== ESPACIO PARA IMAGEN 3 ===== -->
+        <!-- Reemplaza el texto del interior por: <img src="/img/ejemplo_4_bandas.png" alt="Resistencia marrón, negro, rojo, dorado"> -->
+        <figure class="espacio-imagen">
+            <img src="/img.kit/figura2moduloE1.png" alt="">
+        </figure>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLO 2 ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo práctico 2: resistencia de 5 bandas</h2>
+
+        <p>
+            Bandas: <strong>marrón, negro, negro, rojo, marrón</strong>.
+        </p>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Tres dígitos</h4>
+                <p>Marrón = 1, negro = 0, negro = 0, entonces: 100.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Multiplicador</h4>
+                <p>Rojo = × 100.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Valor y tolerancia</h4>
+                <p>100 × 100 = 10 000 Ω, con marrón = ± 1 %.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">Resultados</h3>
+
+        <ul class="lista">
+            <li><strong>10 kΩ:</strong> valor nominal de la resistencia.</li>
+            <li><strong>± 1 %:</strong> tolerancia.</li>
+            <li><strong>9 900 Ω a 10 100 Ω:</strong> rango real del valor.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== TRUCO PARA MEMORIZAR ==================== -->
+
+    <section class="bloque">
+
+        <h2>Truco para memorizar los colores</h2>
+
+        <p>
+            Los diez colores siempre van en el mismo orden, del 0 al 9. Una
+            frase fácil de recordar ayuda a no equivocarse.
+        </p>
+
+        <div class="cod">
+            <code>
+Negro · Marrón · Rojo · Naranja · Amarillo · Verde · Azul · Violeta · Gris · Blanco
+  0       1       2      3         4         5       6      7        8       9
+            </code>
+        </div>
+
+        <div class="nota">
+            <p>
+                <strong>Consejo:</strong> inventa tu propia frase con las
+                iniciales de los colores. Mientras más graciosa sea, más fácil
+                se recuerda.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== ERRORES COMUNES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Errores comunes al leer resistencias</h2>
+
+        <p>
+            Evítalos para identificar bien cada componente.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej mal">
+                <h4>01. Leer las bandas al revés</h4>
+                <p>La banda de tolerancia (dorada o plateada) debe quedar a la derecha.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>02. Confundir marrón con rojo o naranja</h4>
+                <p>Con poca luz los tonos se parecen. Revisa con buena iluminación.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>03. Olvidar el multiplicador</h4>
+                <p>Leer solo los dígitos da un valor cientos o miles de veces menor.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>04. Mezclar el sistema de 4 y 5 bandas</h4>
+                <p>Cuenta primero las bandas antes de empezar a leer.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>05. No comprobar con el multímetro</h4>
+                <p>Si hay dudas, mide la resistencia para confirmar su valor real.</p>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p>Practicar con varias resistencias te hará leer los colores casi sin pensar.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== RESUMEN ==================== -->
+
+    <section class="bloque resumen">
+
+        <h2>Resumen</h2>
+
+        <p>
+            Lo esencial que necesitas dominar: cada color equivale a un dígito,
+            un multiplicador o una tolerancia; las resistencias de 4 bandas
+            usan dos dígitos y las de 5 bandas usan tres; la tolerancia indica
+            el margen de error del valor.
+            <br>Con el código de colores puedes identificar cualquier
+            resistencia y aplicar su valor en la Ley de Ohm y en el cálculo de
+            circuitos.
+        </p>
+
+    </section>
+
+    <section class="bloque eval">
+    <h2>¿Estás listo?</h2>
+    <p>Realiza una pequeña evaluación sobre el tema y pon a prueba lo aprendido.</p>
+    <a class="btn" href="">Hacer evaluación</a>
+  </section>
+
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+    <h2>TecnoLiceo</h2>
+
+    <p>
+        Plataforma informativa con módulos educativos sobre la
+        Modalidad Técnica en Informática.
+    </p>
+
+    <p class="footer-copy">
+        © 2026 - Institución Educativa Liceo Tame
+    </p>
+
+</footer>
+<script src="/js/seguimiento.js" data-tipo="modulo"></script>
+</body>
+</html>

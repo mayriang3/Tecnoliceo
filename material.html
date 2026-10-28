@@ -9,6 +9,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Estilos/styles.css?v=2">
     <link rel="stylesheet" href="/Estilos/responsive.css">
+
+    <!-- Estilos del bloque "¿Quieres conocer más?" -->
+    <style>
+        /* Tarjeta con colores propios: se ve bien sobre fondo oscuro o claro */
+        .conoce-mas {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding: 24px 28px;
+            background: #f3f8ef;
+            color: #14301f;
+            border-left: 6px solid #2e8b57;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.5;
+        }
+
+        .conoce-mas p {
+            margin: 0 0 14px;
+            font-size: 1.05rem;
+            color: #14301f;
+        }
+
+        .conoce-mas p strong {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: #0f4d2c;
+        }
+
+        .conoce-mas ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .conoce-mas li {
+            margin: 0;
+            padding: 12px 16px;
+            background: #ffffff;
+            border: 1px solid #cfe3d3;
+            border-radius: 10px;
+            color: #2b4636;
+        }
+
+        .conoce-mas a {
+            color: #0b6b3a;
+            font-weight: 500;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .conoce-mas a:hover,
+        .conoce-mas a:focus-visible {
+            color: #084d2a;
+            background: #e2f1e5;
+            outline: none;
+        }
+
+        @media (max-width: 600px) {
+            .conoce-mas {
+                margin: 28px 12px 0;
+                padding: 18px 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -81,7 +148,7 @@
                             <span class="filtro-detalle">
                                 <span>7 módulos</span>
                                 <span>7 evaluaciones</span>
-                                <span>7 videos</span>
+                                
                             </span>
                         </span>
                     </a>
@@ -92,9 +159,9 @@
                         <span class="filtro-texto">
                             <strong>Programación</strong>
                             <span class="filtro-detalle">
-                                <span>7 módulos</span>
-                                <span>7 evaluaciones</span>
-                                <span>7 videos</span>
+                                <span>8 módulos</span>
+                                <span>8 evaluaciones</span>
+                               
                             </span>
                         </span>
                     </a>
@@ -105,9 +172,9 @@
                         <span class="filtro-texto">
                             <strong>Todo</strong>
                             <span class="filtro-detalle">
-                                <span>14 módulos</span>
-                                <span>14 evaluaciones</span>
-                                <span>3 recomendaciones</span>
+                                <span>15 módulos</span>
+                                <span>15 evaluaciones</span>
+                                
                             </span>
                         </span>
                     </a>
@@ -132,7 +199,7 @@
                 </div>
 
                 <div class="modulos-grid">
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Emodulo1.html" class="modulo-card">
                         <img src="/img/resistencia-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 1</h4>
@@ -174,7 +241,7 @@
                             <p>introduccion a Arduino y Arduino IDE</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Emodulo7.html" class="modulo-card">
                         <img src="/img/salidayentrada-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 7</h4>
@@ -182,6 +249,21 @@
                         </div>
                     </a>
                 </div>
+            </div>
+
+            <!-- Recomendaciones de Electrónica -->
+            <div class="conoce-mas">
+                <p><strong>¿Quieres conocer más?</strong> Visita estas páginas relacionadas con electrónica:</p>
+                <ul>
+                    <li>
+                        <a href="https://www.tinkercad.com/circuits" target="_blank" rel="noopener noreferrer">Tinkercad Circuits</a>:
+                        simula circuitos y programas de Arduino gratis, sin necesidad de comprar componentes.
+                    </li>
+                    <li>
+                        <a href="https://docs.arduino.cc/" target="_blank" rel="noopener noreferrer">Arduino Docs</a>:
+                        documentación oficial de Arduino con tutoriales, referencia de funciones y guías de las placas (en inglés).
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -215,7 +297,7 @@
                     <img src="/img/Ppython-modulos.jpg" alt="">
                     <div class="modulo-card__info">
                         <h4>Modulo 4</h4>
-                        <p>Progrmación en pyhton</p>
+                        <p>Programación en Python</p>
                     </div>
                 </a>
                 <a href="/modulos/Pmodulo5.html" class="modulo-card">
@@ -247,13 +329,30 @@
                     </div>
                 </a>
             </div>
+
+            <!-- Recomendaciones de Programación -->
+            <div class="conoce-mas">
+                <p><strong>¿Quieres conocer más?</strong> Visita estas páginas relacionadas con programación:</p>
+                <ul>
+                    <li>
+                        <a href="https://docs.python.org/es/3/tutorial/" target="_blank" rel="noopener noreferrer">Tutorial oficial de Python</a>:
+                        guía en español de la documentación oficial para aprender Python paso a paso.
+                    </li>
+                    <li>
+                        <a href="https://www.learn-c.org/" target="_blank" rel="noopener noreferrer">Learn-C.org</a>:
+                        curso interactivo para practicar el lenguaje C directamente en el navegador (en inglés).
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <!--TODOS LOS MÓDULOS -->
         <section id="todos" class="materia">
             <h2 class="materia-titulo todos">Todos los módulos</h2>
             <div class="modulos-grid modulos-grid--full">
-                    <a href="#" class="modulo-card">
+
+                    <!-- Electrónica -->
+                    <a href="/modulos/Emodulo1.html" class="modulo-card">
                         <img src="/img/resistencia-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 1</h4>
@@ -261,7 +360,7 @@
                             <p>Electronica</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Emodulo2.html" class="modulo-card">
                         <img src="/img/circuitos-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 2</h4>
@@ -269,7 +368,7 @@
                             <p>Electronica</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Emodulo3.html" class="modulo-card">
                         <img src="/img/multimetro-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 3</h4>
@@ -277,7 +376,7 @@
                             <p>Electronica</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Emodulo4.html" class="modulo-card">
                         <img src="/img/diagrama-modulos.png" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 4</h4>
@@ -285,7 +384,7 @@
                             <p>Electronica</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Emodulo5.html" class="modulo-card">
                         <img src="/img/montaje-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 5</h4>
@@ -293,7 +392,7 @@
                             <p>Electronica</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Emodulo6.html" class="modulo-card">
                         <img src="/img/arduino-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 6</h4>
@@ -301,7 +400,7 @@
                             <p>Electronica</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Emodulo7.html" class="modulo-card">
                         <img src="/img/salidayentrada-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 7</h4>
@@ -309,7 +408,9 @@
                             <p>Electronica</p>
                         </div>
                     </a>
-                   <a href="#" class="modulo-card">
+
+                    <!-- Programación -->
+                    <a href="/modulos/Pmodulo1.html" class="modulo-card">
                         <img src="/img/Plenguajes-modulo.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 1</h4>
@@ -317,7 +418,7 @@
                             <p>Programacion</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Pmodulo2.html" class="modulo-card">
                         <img src="/img/Pcomputacional-modulos.png" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 2</h4>
@@ -325,23 +426,23 @@
                             <p>Programacion</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
-                        <img src="/img/Psintaxis-modulo.jpg" alt="">
-                        <div class="modulo-card__info">
-                            <h4>Modulo 3</h4>
-                            <p>Sintaxis en la programación</p>
-                            <p>Programacion</p>
-                        </div>
-                    </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Pmodulo3.html" class="modulo-card">
                         <img src="/img/Pdiagrama-modulos.jpg" alt="">
                         <div class="modulo-card__info">
-                            <h4>Modulo 4</h4>
+                            <h4>Modulo 3</h4>
                             <p>Diagramas de flujo y Arboles de decisión</p>
                             <p>Programacion</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
+                    <a href="/modulos/Pmodulo4.html" class="modulo-card">
+                        <img src="/img/Ppython-modulos.jpg" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 4</h4>
+                            <p>Programación en Python</p>
+                            <p>Programacion</p>
+                        </div>
+                    </a>
+                    <a href="/modulos/Pmodulo5.html" class="modulo-card">
                         <img src="/img/PlenguajeC-modulos.jpg" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 5</h4>
@@ -349,22 +450,45 @@
                             <p>Programacion</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
-                        <img src="/img/Pprintf.scanf-modulos.png" alt="">
+                    <a href="/modulos/Pmodulo6.html" class="modulo-card">
+                        <img src="/img/Pbucles-modulos.jpg" alt="">
                         <div class="modulo-card__info">
                            <h4>Modulo 6</h4>
-                           <p>Entradas y salidas de información (printf, scanf)</p>
+                           <p>Bucles o ciclos</p>
                            <p>Programacion</p>
                         </div>
                     </a>
-                    <a href="#" class="modulo-card">
-                        <img src="/img/Pcondicionales-modulos.png" alt="">
+                    <a href="/modulos/Pmodulo7.html" class="modulo-card">
+                        <img src="/img/Pprintf.scanf-modulos.png" alt="">
                         <div class="modulo-card__info">
                             <h4>Modulo 7</h4>
+                            <p>Entradas y salidas de información (printf, scanf)</p>
+                            <p>Programacion</p>
+                        </div>
+                    </a>
+                    <a href="/modulos/Pmodulo8.html" class="modulo-card">
+                        <img src="/img/Pcondicionales-modulos.png" alt="">
+                        <div class="modulo-card__info">
+                            <h4>Modulo 8</h4>
                             <p>Condicionales if, else-if</p>
                             <p>Programacion</p>
                         </div>
                     </a>
+            </div>
+
+            <!-- Recomendaciones generales (electrónica + programación) -->
+            <div class="conoce-mas">
+                <p><strong>¿Quieres conocer más?</strong> Visita estas páginas que combinan electrónica y programación:</p>
+                <ul>
+                    <li>
+                        <a href="https://wokwi.com/" target="_blank" rel="noopener noreferrer">Wokwi</a>:
+                        simulador en línea donde puedes programar Arduino y ver el circuito funcionando.
+                    </li>
+                    <li>
+                        <a href="https://www.freecodecamp.org/espanol/" target="_blank" rel="noopener noreferrer">freeCodeCamp en español</a>:
+                        artículos y tutoriales gratuitos sobre programación y tecnología.
+                    </li>
+                </ul>
             </div>
         </section>
 

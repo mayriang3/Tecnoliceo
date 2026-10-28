@@ -81,9 +81,8 @@
           <strong>Variables sin símbolos raros:</strong> Para guardar un dato no necesitas usar palabras técnicas ni símbolos de dinero; simplemente escribes el nombre que tú quieras, el signo de igual y el valor.
         </p>
 
-        <pre class="cod">
-          <code>nombre = "Juan" <br> edad = 15</code>
-        </pre>
+        <pre class="cod"><code>nombre = "Juan"
+edad = 15</code></pre>
 
         <p class="pie">
           Aquí simplemente se escribe el nombre de la variable, el signo = y el dato que queremos guardar.
@@ -96,9 +95,9 @@
           <strong>La indentación es obligatoria:</strong> En lugar de usar llaves {} para agrupar bloques de código (como en los bloques if o bucles), Python te obliga a usar cuatro espacios de separación (sangría) al inicio de la línea para saber qué instrucciones van dentro de otras.
         </p>
 
-        <pre class="cod">
-          <code>edad = 18 <br> if edad &gt;= 18: <br> print("Eres mayor de edad")</code>
-        </pre>
+        <pre class="cod"><code>edad = 18
+if edad &gt;= 18:
+    print("Eres mayor de edad")</code></pre>
 
         <p class="pie">
           En este ejemplo, los cuatro espacios antes de print() indican que esa instrucción pertenece al bloque del if. Sin la indentación, Python produciría un error.
@@ -135,13 +134,14 @@ print(nombre)
 print(edad)</code></pre>
       </article>
       <article class="ej">
-        <!-- En el PDF esta tarjeta no tiene título ni descripción -->
-        <h4>[Título]</h4>
-        <p>[Descripción]</p>
+        <h4>Tomar decisiones con if</h4>
+        <p>Las condiciones permiten que el programa elija qué hacer según una situación. La instrucción if evalúa una condición: si es verdadera, ejecuta el bloque de código que está indentado debajo; si es falsa, lo ignora. Con else se puede indicar qué hacer cuando la condición no se cumple. Recuerda poner dos puntos (:) al final de la línea del if y del else.</p>
         <pre class="cod"><code>edad = 18
 
 if edad &gt;= 18:
-    print("Eres mayor de edad")</code></pre>
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")</code></pre>
       </article>
     </div>
   </section>
@@ -178,8 +178,16 @@ print("Tengo " + str(edad) + " años")</code></pre></div>
 
   <section class="bloque resumen">
     <h2>Resumen</h2>
-    <!-- En el PDF el resumen todavía es texto de relleno (lorem ipsum) -->
-    <p>[Escribe aquí el resumen del módulo]</p>
+    <p>
+      Python es un lenguaje de programación de alto nivel, claro y fácil de leer, que se usa en inteligencia artificial, ciencia de datos, desarrollo web y automatización. Su intérprete convierte el código en bytecode y lo ejecuta línea por línea, de arriba hacia abajo, mientras gestiona la memoria de forma automática.
+      <br>En la sintaxis básica recuerda tres reglas: las variables se crean con el signo =, la indentación de cuatro espacios es obligatoria para agrupar bloques, y los comentarios empiezan con #. Con print() puedes mostrar mensajes, con variables guardas datos y con if tomas decisiones. Por último, aprende a reconocer los errores más comunes: SyntaxError (error de escritura), NameError (nombre no definido) y TypeError (tipos de datos incompatibles).
+    </p>
+  </section>
+
+    <section class="bloque eval">
+    <h2>¿Estás listo?</h2>
+    <p>Realiza una pequeña evaluación sobre el tema y pon a prueba lo aprendido.</p>
+    <a class="btn" href="/evaluacionmodulos/PROGRAMACION/programapiton.html">Hacer evaluación</a>
   </section>
 
 </main>

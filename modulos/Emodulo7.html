@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo 7. Entradas y salidas en Arduino | TecnoLiceo</title>
+
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="/Estilos/styles_modulos.css">
+
+    <!-- Estilos propios de esta página (tabla, bloques de código y espacios para imagen) -->
+    <style>
+        .tabla-wrap {
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .tabla-es {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .tabla-es th,
+        .tabla-es td {
+            padding: 10px 14px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+        }
+
+        .tabla-es th {
+            font-weight: 500;
+            border-bottom-width: 2px;
+        }
+
+        .cod code {
+            white-space: pre-wrap;
+        }
+
+        /* Espacio reservado para la imagen */
+        .espacio-imagen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-height: 260px;
+            margin: 20px 0;
+            padding: 24px;
+            border: 2px dashed rgba(128, 128, 128, 0.6);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .espacio-imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .espacio-imagen figcaption {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/img/logo.png" alt="Logo TecnoLiceo" class="logo-img">
+        <h1>TecnoLiceo</h1>
+    </div>
+
+    <section class="botones_principales">
+        <h2>Módulo 7. Entradas y salidas en Arduino</h2>
+        <a href="/material.html">
+            <button class="botonn">Volver</button>
+        </a>
+        <a href="/evaluacionmodulos/ELECTRONICA/entrasale.html">
+            <button class="botonn">Evaluacion</button>
+        </a>
+    </section>
+</header>
+
+
+<main class="mod">
+
+    <!-- ==================== PORTADA ==================== -->
+
+    <section class="portada">
+        <span class="pill">Modulo 7</span>
+
+        <h1>Entradas y salidas en Arduino: señales digitales y analógicas</h1>
+
+        <span class="pill">Electrónica</span>
+    </section>
+
+
+    <!-- ==================== INTRODUCCIÓN ==================== -->
+
+    <section class="bloque">
+
+        <h2>¿Cómo se comunica Arduino con el mundo?</h2>
+
+        <p>
+            Arduino se comunica con el exterior mediante sus pines. Un pin
+            puede <strong>recibir</strong> información (entrada), como el
+            estado de un pulsador o la lectura de un sensor, o puede
+            <strong>enviar</strong> información (salida), como encender un
+            LED o mover un motor. Además, esas señales pueden ser digitales
+            o analógicas.
+        </p>
+
+        <h3 class="sub">Los cuatro casos posibles</h3>
+
+        <ul class="lista">
+            <li><strong>Entrada digital:</strong> lee si algo está activado o desactivado (pulsador, interruptor).</li>
+            <li><strong>Salida digital:</strong> enciende o apaga un componente (LED, buzzer, relé).</li>
+            <li><strong>Entrada analógica:</strong> lee un valor que varía de forma continua (potenciómetro, sensor de luz).</li>
+            <li><strong>Salida analógica (PWM):</strong> controla cuánta energía recibe un componente (brillo de un LED, velocidad de un motor).</li>
+        </ul>
+
+        
+        <figure class="espacio-imagen">
+            <img src="/img.kit/figura1moduloE7.png" alt="Pines de la placa Arduino UNO">
+        </figure>
+
+    </section>
+
+
+    <!-- ==================== OBJETIVOS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Objetivos del módulo</h2>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <p>Diferenciar señales digitales y analógicas.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <p>Configurar pines como entrada o salida con pinMode().</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <p>Leer y escribir valores con digitalRead, digitalWrite, analogRead y analogWrite.</p>
+            </article>
+
+            <article class="paso c4">
+                <span class="num">4</span>
+                <p>Programar circuitos sencillos que combinen entradas y salidas.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== DIGITAL VS ANALÓGICO ==================== -->
+
+    <section class="bloque">
+
+        <h2>Señal digital y señal analógica</h2>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Señal digital</h4>
+                <p>Solo tiene dos estados posibles: <strong>HIGH</strong> (5 V, encendido) o <strong>LOW</strong> (0 V, apagado).</p>
+                <p><strong>Ejemplo:</strong> un pulsador presionado o sin presionar.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Señal analógica</h4>
+                <p>Puede tomar cualquier valor dentro de un rango continuo, por ejemplo entre 0 V y 5 V.</p>
+                <p><strong>Ejemplo:</strong> la posición de un potenciómetro.</p>
+            </article>
+
+        </div>
+
+        <h3 class="sub">Comparación de las cuatro funciones</h3>
+
+        <div class="tabla-wrap">
+            <table class="tabla-es">
+                <thead>
+                    <tr>
+                        <th>Función</th>
+                        <th>Tipo</th>
+                        <th>Valores</th>
+                        <th>Pines (Arduino UNO)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>digitalRead(pin)</td>
+                        <td>Entrada digital</td>
+                        <td>HIGH o LOW</td>
+                        <td>2 a 13 (y A0 a A5 como digitales)</td>
+                    </tr>
+                    <tr>
+                        <td>digitalWrite(pin, valor)</td>
+                        <td>Salida digital</td>
+                        <td>HIGH o LOW</td>
+                        <td>2 a 13 (y A0 a A5 como digitales)</td>
+                    </tr>
+                    <tr>
+                        <td>analogRead(pin)</td>
+                        <td>Entrada analógica</td>
+                        <td>0 a 1023</td>
+                        <td>A0 a A5</td>
+                    </tr>
+                    <tr>
+                        <td>analogWrite(pin, valor)</td>
+                        <td>Salida analógica (PWM)</td>
+                        <td>0 a 255</td>
+                        <td>3, 5, 6, 9, 10 y 11 (marcados con ~)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== SALIDAS DIGITALES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Salidas digitales</h2>
+
+        <p>
+            Se usan para encender o apagar componentes. Primero se configura
+            el pin como salida y luego se le envía HIGH o LOW.
+        </p>
+
+        <div class="cod">
+            <code>
+pinMode(pin, OUTPUT);       // configura el pin como salida
+digitalWrite(pin, HIGH);    // envía 5 V (encendido)
+digitalWrite(pin, LOW);     // envía 0 V (apagado)
+            </code>
+        </div>
+
+        <div class="nota">
+            <p>
+                <strong>Importante:</strong> un LED siempre debe llevar una
+                resistencia en serie (por ejemplo, 220 Ω) para limitar la
+                corriente. Puedes calcularla con la Ley de Ohm del Módulo 2.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== ENTRADAS DIGITALES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Entradas digitales</h2>
+
+        <p>
+            Permiten saber si un pulsador o interruptor está activado. El pin
+            se configura como entrada y se lee con digitalRead().
+        </p>
+
+        <div class="cod">
+            <code>
+pinMode(pin, INPUT);          // entrada (requiere resistencia externa)
+pinMode(pin, INPUT_PULLUP);   // entrada con resistencia interna a 5 V
+int estado = digitalRead(pin);   // devuelve HIGH o LOW
+            </code>
+        </div>
+
+        <h3 class="sub">¿Por qué usar INPUT_PULLUP?</h3>
+
+        <ul class="lista">
+            <li>Un pin de entrada sin conexión definida "flota" y lee valores al azar.</li>
+            <li>Con INPUT_PULLUP, el pin lee HIGH por defecto gracias a una resistencia interna.</li>
+            <li>El pulsador se conecta entre el pin y GND: al presionarlo, el pin lee LOW.</li>
+            <li>Así no necesitas agregar una resistencia externa al circuito.</li>
+        </ul>
+
+        <!-- ===== ESPACIO PARA IMAGEN 2 ===== -->
+        <!-- Reemplaza el texto del interior por: <img src="/img/pulsador_pullup.png" alt="Conexión de un pulsador con INPUT_PULLUP"> -->
+        <figure class="espacio-imagen">
+            <img src="/img.kit/figura2moduloE7.png" alt="Conexión de un pulsador con INPUT_PULLUP">
+
+        </figure>
+
+    </section>
+
+
+    <!-- ==================== ENTRADAS ANALÓGICAS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Entradas analógicas</h2>
+
+        <p>
+            Arduino UNO convierte el voltaje de los pines A0 a A5 en un número
+            entero entre 0 y 1023 (conversor de 10 bits). Con 0 V lee 0 y con
+            5 V lee 1023.
+        </p>
+
+        <div class="cod">
+            <code>
+int valor = analogRead(A0);           // valor entre 0 y 1023
+float voltaje = valor * 5.0 / 1023.0; // convierte a voltios
+            </code>
+        </div>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Potenciómetro</h4>
+                <p>Resistencia variable que entrega un voltaje distinto según la posición de su perilla.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Sensor de luz (LDR)</h4>
+                <p>Su resistencia cambia con la cantidad de luz que recibe.</p>
+            </article>
+
+            <article class="ej">
+                <h4>Sensor de temperatura</h4>
+                <p>Entrega un voltaje que depende de la temperatura del ambiente.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== SALIDAS ANALÓGICAS ==================== -->
+
+    <section class="bloque">
+
+        <h2>Salidas analógicas: PWM</h2>
+
+        <p>
+            Arduino UNO no tiene un verdadero convertidor digital a analógico.
+            Simula una salida analógica con <strong>PWM</strong> (modulación
+            por ancho de pulso): enciende y apaga el pin muy rápido, y el
+            porcentaje de tiempo encendido define la energía que recibe el
+            componente.
+        </p>
+
+        <div class="cod">
+            <code>
+analogWrite(pin, 0);     // siempre apagado (0 %)
+analogWrite(pin, 127);   // mitad del tiempo encendido (50 %)
+analogWrite(pin, 255);   // siempre encendido (100 %)
+            </code>
+        </div>
+
+        <div class="nota">
+            <p>
+                <strong>Recuerda:</strong> analogWrite solo funciona en los
+                pines con el símbolo ~ (3, 5, 6, 9, 10 y 11 en Arduino UNO).
+            </p>
+        </div>
+
+
+
+    </section>
+
+
+    <!-- ==================== EJEMPLO 1 ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo práctico 1: LED intermitente (salida digital)</h2>
+
+        <p>
+            Un LED conectado al pin 13 que se enciende y se apaga cada segundo.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej">
+                <h4>Código</h4>
+
+                <div class="cod">
+                    <code>
+void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}
+                    </code>
+                </div>
+            </article>
+
+            <article class="ej">
+                <h4>Cómo funciona</h4>
+
+                <ul class="lista">
+                    <li><strong>setup():</strong> se ejecuta una sola vez y configura el pin 13 como salida.</li>
+                    <li><strong>loop():</strong> se repite sin parar.</li>
+                    <li><strong>delay(1000):</strong> espera 1000 milisegundos (1 segundo).</li>
+                </ul>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLO 2 ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo práctico 2: pulsador que enciende un LED (entrada y salida digital)</h2>
+
+        <p>
+            Pulsador en el pin 2 (con INPUT_PULLUP) y LED en el pin 13.
+        </p>
+
+        <div class="cod">
+            <code>
+void setup() {
+  pinMode(2, INPUT_PULLUP);
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(2) == LOW) {   // pulsador presionado
+    digitalWrite(13, HIGH);
+  } else {
+    digitalWrite(13, LOW);
+  }
+}
+            </code>
+        </div>
+
+        <div class="pasos">
+
+            <article class="paso c1">
+                <span class="num">1</span>
+                <h4>Leer la entrada</h4>
+                <p>digitalRead(2) devuelve LOW si el pulsador está presionado.</p>
+            </article>
+
+            <article class="paso c2">
+                <span class="num">2</span>
+                <h4>Tomar la decisión</h4>
+                <p>El if compara el estado leído con LOW.</p>
+            </article>
+
+            <article class="paso c3">
+                <span class="num">3</span>
+                <h4>Actuar en la salida</h4>
+                <p>Se enciende o se apaga el LED del pin 13.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================== EJEMPLO 3 ==================== -->
+
+    <section class="bloque">
+
+        <h2>Ejemplo práctico 3: controlar el brillo con un potenciómetro</h2>
+
+        <p>
+            Potenciómetro en A0 (entrada analógica) y LED en el pin 9 (salida PWM).
+        </p>
+
+        <div class="cod">
+            <code>
+void setup() {
+  pinMode(9, OUTPUT);
+}
+
+void loop() {
+  int lectura = analogRead(A0);              // 0 a 1023
+  int brillo = map(lectura, 0, 1023, 0, 255); // convierte a 0 a 255
+  analogWrite(9, brillo);
+}
+            </code>
+        </div>
+
+        <div class="nota">
+            <p>
+                <strong>Clave:</strong> analogRead entrega valores de 0 a 1023
+                y analogWrite solo acepta de 0 a 255. La función
+                <strong>map()</strong> convierte un rango en el otro.
+            </p>
+        </div>
+
+        <h3 class="sub">Ejemplo de conversión</h3>
+
+        <ul class="lista">
+            <li><strong>Lectura 0:</strong> brillo 0 (LED apagado).</li>
+            <li><strong>Lectura 512:</strong> brillo 127 (aproximadamente medio brillo).</li>
+            <li><strong>Lectura 1023:</strong> brillo 255 (brillo máximo).</li>
+        </ul>
+
+    </section>
+
+
+    <!-- ==================== ERRORES COMUNES ==================== -->
+
+    <section class="bloque">
+
+        <h2>Errores comunes con entradas y salidas</h2>
+
+        <p>
+            Evítalos para que tus circuitos funcionen a la primera.
+        </p>
+
+        <div class="tarjetas">
+
+            <article class="ej mal">
+                <h4>01. Olvidar pinMode()</h4>
+                <p>Sin configurar el pin, el LED puede no encender o la lectura ser incorrecta.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>02. Conectar un LED sin resistencia</h4>
+                <p>Un exceso de corriente puede dañar el LED o el pin de Arduino.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>03. Dejar un pulsador sin INPUT_PULLUP</h4>
+                <p>El pin queda flotando y lee valores aleatorios.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>04. Usar analogWrite en un pin sin ~</h4>
+                <p>Solo funciona con PWM en los pines 3, 5, 6, 9, 10 y 11 de Arduino UNO.</p>
+            </article>
+
+            <article class="ej mal">
+                <h4>05. Confundir los rangos 0-1023 y 0-255</h4>
+                <p>Usa map() para convertir la lectura analógica antes de escribirla.</p>
+            </article>
+
+        </div>
+
+        <div class="nota">
+            <p>Probar cada parte del circuito por separado te ayuda a encontrar fallos más rápido.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ==================== RESUMEN ==================== -->
+
+    <section class="bloque resumen">
+
+        <h2>Resumen</h2>
+
+        <p>
+            Lo esencial que necesitas dominar: los pines de Arduino pueden ser
+            entradas o salidas; las señales digitales solo tienen dos estados
+            (HIGH y LOW); la lectura analógica va de 0 a 1023 y la escritura
+            PWM va de 0 a 255; y pinMode, digitalRead, digitalWrite,
+            analogRead y analogWrite son las cinco funciones base.
+            <br>Con ellas puedes leer sensores, controlar LEDs y motores, y
+            construir tus primeros proyectos con Arduino.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+    <h2>TecnoLiceo</h2>
+
+    <p>
+        Plataforma informativa con módulos educativos sobre la
+        Modalidad Técnica en Informática.
+    </p>
+
+    <p class="footer-copy">
+        © 2026 - Institución Educativa Liceo Tame
+    </p>
+
+</footer>
+<script src="/js/seguimiento.js" data-tipo="modulo"></script>
+</body>
+</html>
